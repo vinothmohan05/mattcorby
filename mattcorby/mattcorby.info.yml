@@ -1,0 +1,7 @@
+name: mattcorby
+type: theme
+description: This is the Angular Based theme in Drupal Lightning
+package: Custom
+version: '1.2'
+core: '8.x'
+project: 'drupal'
