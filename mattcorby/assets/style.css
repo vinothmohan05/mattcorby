@@ -1,6 +1,13 @@
-@import url("fonts/icomoon/style.css");
+@import url("fonts/style.css");
 
-/* Loader */
+app-social-buttons {
+    display: inline-block;
+}
+app-mailing-list-block {
+    background: #101011;
+    display: block;
+    padding: 20px;
+}
 
 .aniLoader {
   display: inline-block;
@@ -51,7 +58,6 @@
     height: 100%;
     width: 100%;
     margin: 0;
-    /* max-width: 600px; */
     min-width: calc(120vw * 1.5);
     min-height: calc(120vw * 1.5);
     min-width: -weblit-calc(120vw * 1.5);
@@ -404,18 +410,20 @@ body > img {
     display: none;
 }
 body {
-  font-family: proxima-nova, Arial, Helvetica, sans-serif;
-  color:#1b214e;
-  background-color: #f6f5fd;
+  font-family: texgy-regular, Arial, Helvetica, sans-serif;
+  color:#ffffff;
+  background-color: #000000;
   line-height: 1;
   box-sizing: border-box;
-  font-weight: 400;
   padding: 50px 0 0;
   margin: 0;
 }
 a {
-  color: #fff568;
+  color: #ffffff;
   text-decoration: none;
+}
+a:hover {
+  color: #fff568;
 }
 p {
     margin: 0;
@@ -437,14 +445,13 @@ ul[class*=grid] {
     margin: 0 -1rem;
 }
 nav.g-layout {
-  padding: 17px 0;
+  padding: 20px 0;
   text-align: center;
 }
 .detail-list .g-layout{
     position: relative;
 }
 .buttonWrapper.interiorPages {
-    text-align: center;
     padding-bottom: 60px;
     padding-top: 20px;
 }
@@ -533,22 +540,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     margin: 0;
     background-color: #000000;
 }
-.mailinglistPanel .mailing-list-copy-outer {
-    font-size: 22px;
-    text-align: center;
-    line-height: 1.3;
-    letter-spacing: 1px;
-}
-/*
-.homePanelCon.mailinglistPanel h2 {
-    letter-spacing: 9px;
-    font-weight: 300;
-    color: #f6f5fd;
-    text-shadow: 0 0 25px #f6f5fd;
-    font-family: proxima-nova-condensed,Arial, Helvetica, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
-}*/
+
 .homePanelCon.mailinglistPanel h2, .internal.mailinglistPanel h2 {
     color: #f6f5fd;
     padding: 0 0;
@@ -571,7 +563,6 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     width: 100%;
 }
 .internal.mailinglistPanel{
-    background-color: #1A214F;
     padding: 0 19px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -590,35 +581,43 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
 }
 
 .button{
-  background-color: transparent;  
+    position: relative;
+    padding: 10px 20px 20px;
+    font-size: 22px;
+    font-family: ruby;
+    transition: 0.3s linear;
+}
+
+a.button:after {
+  content: "";
+  position: absolute;
   display: inline-block;
-  border-radius: 3px;
-  text-transform: uppercase;
-  padding: 13px 57px;
-  border: 2px solid #1b214e;
-  line-height: 1;
-  font-size: 19px;
-  color:#1b214e;
-  cursor: pointer;
-  transition: all 1s ease 0s;
+  height: 2px;
+  width: 100%;
+  background: #fff568;
+  left: 0;
+  margin: 0 auto;
+  transition: 0.3s linear;
+  bottom:100%;  
 }
 
-.button:hover{
-  color: #1b214e;
-  background-color: #fff;
+a.button:hover:after{
+    transition: 0.3s linear;
+    bottom:0;
 }
 
-.reverse-button {
-  color: #fff;
-  border: 2px solid #fff;
+a.button:hover{
+    transition: 0.3s linear;
 }
 
 body.show-SideDrawer ,body.show-photo-lightbox {
     overflow: hidden;
 }
-
+app-tour-block {
+    padding-bottom: 30px;
+}
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block {display:block;}
 
 app-lightbox {
     position: fixed;
@@ -727,7 +726,7 @@ span.social-links {
 	margin-top: 35px;
 	color: #ffffff;
 	letter-spacing: 3px;
-  font-weight: 300;
+  font-size: 10px;
 }
 .footer-block .copy{
 	margin-bottom: 18px;
@@ -849,6 +848,11 @@ div.cta{
 }
 
 @media only screen and (max-width: 768px) {
+  #fixed-nav {
+    background: url(/assets/images/nav-mobile.png) no-repeat;
+    height: 48px;
+    background-size: cover;
+  }
   div.cta {
       text-align: center;
       margin-top: 20px;
@@ -866,14 +870,7 @@ div.cta{
 	}
 }
 
-/**/
-.logo-block a {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
-    margin-top: 10px;
-}
+
 .login-menu {
   display: none;
   font-size: 14px;
@@ -938,9 +935,7 @@ div.cta{
 .breadcrumb li:last-child {
     border-right: none;
 }
-.breadcrumb li:last-child a, .breadcrumb li:last-child span{
-    font-weight: 600;
-}
+
 .g-layout.breadcrumb-layout {
     padding-bottom: 0;
 }
