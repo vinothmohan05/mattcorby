@@ -759,46 +759,46 @@ span.social-links {
 }
 **/
 .footer-social .fs-fb a {
-    background: transparent url(/assets/i/fb.svg) no-repeat scroll 0 0;
+    background: transparent url(i/fb.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-fb a:hover {
-    background: transparent url(/assets/i/fb-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/fb-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a {
-    background: transparent url(/assets/i/in.svg) no-repeat scroll 0 0;
+    background: transparent url(i/in.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a:hover {
-    background: transparent url(/assets/i/in-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/in-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a {
-    background: transparent url(/assets/i/twitter.svg) no-repeat scroll 0 0;
+    background: transparent url(i/twitter.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a:hover {
-    background: transparent url(/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/twitter-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a {
-    background: transparent url(/assets/i/spotify.svg) no-repeat scroll 0 0;
+    background: transparent url(i/spotify.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a:hover {
-    background: transparent url(/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/spotify-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a {
-    background: transparent url(/assets/i/pinterest.svg) no-repeat scroll 0 0;
+    background: transparent url(i/pinterest.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a:hover {
-    background: transparent url(/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/pinterest-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a {
-    background: transparent url(/assets/i/yt.svg) no-repeat scroll 0 0;
+    background: transparent url(i/yt.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a:hover {
-    background: transparent url(/assets/i/yt-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/yt-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a {
-    background: transparent url(/assets/i/vimeo.svg) no-repeat scroll 0 0;
+    background: transparent url(i/vimeo.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a:hover {
-    background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(i/vimeo-hover.svg) no-repeat scroll 0 0;
 }
 ul.footer-social li+li {
     margin-left: 20px;

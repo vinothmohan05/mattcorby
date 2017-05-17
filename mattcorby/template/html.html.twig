@@ -41,11 +41,11 @@
     <js-placeholder token="{{ placeholder_token|raw }}">
 	
 	<!-- Hammer JS -->
-	<script type="text/javascript" src="/themes/custom/mattcorby/lib/hammer.js"></script>	
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js"></script>	
 	
-	<link href="/themes/custom/mattcorby/assets/normalize.css?cache=v1.0" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/assets/normalize.css?cache=v1.0" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
-	<link href="/themes/custom/mattcorby/assets/style.css?cache=v5.0" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/assets/style.css?cache=v5.0" rel="stylesheet" />
        <script src="https://use.typekit.net/ajy3tuh.js"></script>
        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	     <script>digitalData={}</script>
@@ -58,11 +58,9 @@
 	
 	Original Location {{ base_path ~ directory }}
 	
-	<img src="{{ base_path ~ directory }}/images/logo.png" alt="My Logo" />
-	
-    <script type="text/javascript" src="/themes/custom/mattcorby/inline.46243f36f2099366ed34.bundle.js?v1.0"></script>	
-	<script type="text/javascript" src="/themes/custom/mattcorby/vendor.1a37022ce5d76e3a0ec1.bundle.js?v2.0"></script>
-    <script type="text/javascript" src="/themes/custom/mattcorby/main.ffd0af6bb1d772f8c2fe.bundle.js?v1.0"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.46243f36f2099366ed34.bundle.js?v1.0"></script>	
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.1a37022ce5d76e3a0ec1.bundle.js?v2.0"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/main.ffd0af6bb1d772f8c2fe.bundle.js?v1.0"></script>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
