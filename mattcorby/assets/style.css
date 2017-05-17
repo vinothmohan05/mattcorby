@@ -849,7 +849,7 @@ div.cta{
 
 @media only screen and (max-width: 768px) {
   #fixed-nav {
-    background: url(/assets/images/nav-mobile.png) no-repeat;
+    background: url(./images/nav-mobile.png) no-repeat;
     height: 48px;
     background-size: cover;
   }
