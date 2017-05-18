@@ -449,11 +449,11 @@ nav.g-layout {
   text-align: center;
 }
 .detail-list .g-layout{
-    position: relative;
+  position: relative;
+  padding: 0;
 }
 .buttonWrapper.interiorPages {
-    padding-bottom: 60px;
-    padding-top: 20px;
+  padding: 30px 0 60px 0;
 }
 .mailinglistPanel.internal .g-layout.internal h2{
     text-align: center;
@@ -849,7 +849,7 @@ div.cta{
 
 @media only screen and (max-width: 768px) {
   #fixed-nav {
-    background: url(./images/nav-mobile.png) no-repeat;
+    background: url(images/nav-mobile.png) no-repeat;
     height: 48px;
     background-size: cover;
   }
@@ -962,4 +962,27 @@ ul.breadcrumb.news-detail li span{
 ul.breadcrumb.news-detail li {    
     padding-right: 0;
     line-height: 1;
+}
+.newsPanel, .tourPanel.tour-in{
+    background-image: url("images/background-repeat.jpg");
+}
+.videoPanel {
+  background: url("i/bg_videos.jpg") no-repeat;
+}
+.musicPanel, .merchPanel {
+    background-image: url(images/Music-Bkg.jpg);
+}
+.footer-block {    
+    background: url("images/footer-bg.jpg") no-repeat;
+}
+.contact-us-wrapper {
+    background-image: url(images/background-repeat.jpg);
+}
+@media only screen and (min-width: 1024px) {  
+  .fixed-nav{
+    background-image: url("images/menu-bg.jpg");
+  }
+}
+.thumbnail:hover:after {
+    background: url(images/video-play.png) no-repeat 0 0 transparent;
 }
