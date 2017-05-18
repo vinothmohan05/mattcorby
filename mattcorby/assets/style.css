@@ -4,7 +4,7 @@ app-social-buttons {
     display: inline-block;
 }
 app-mailing-list-block {
-    background: #101011;
+    background-color: #101011;
     display: block;
     padding: 20px;
 }
@@ -63,7 +63,7 @@ app-mailing-list-block {
     min-width: -weblit-calc(120vw * 1.5);
     min-height: -webkit-calc(120vw * 1.5);
     display: block;
-    background: #FFF;
+    background-color: #FFF;
 }
 .css-gradients {
   position: absolute;
@@ -594,7 +594,7 @@ a.button:after {
   display: inline-block;
   height: 2px;
   width: 100%;
-  background: #fff568;
+  background-color: #fff568;
   left: 0;
   margin: 0 auto;
   transition: 0.3s linear;
@@ -628,7 +628,7 @@ app-lightbox {
     z-index: 20;
     width: 100%;
     height: 100%;
-    background: rgba(4, 5, 8, 0.8);
+    background-color: rgba(4, 5, 8, 0.8);
 }
 
 .heroBlockCon {
@@ -698,7 +698,7 @@ app-home{
 
 /* Footer Stuff */
 .footer-block{
-	background: #b8b7bf;
+	background-color: #b8b7bf;
 	font-size:14px;	
 	text-align: center;
   padding: 43px 10px;
@@ -839,7 +839,7 @@ a.cta {
     margin: 0 auto;
 }
 a.cta:hover{
-  background: #1b214e;
+  background-color: #1b214e;
   color: #fff;
 }
 
@@ -890,7 +890,7 @@ div.cta{
     top: 0;
     left: 0;
     z-index: 1;
-    background: #f6f5fd;
+    background-color: #f6f5fd;
     z-index: 9;
 }
 /*.side_drawer::-webkit-scrollbar {
