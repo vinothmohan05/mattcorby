@@ -849,7 +849,7 @@ div.cta{
 
 @media only screen and (max-width: 768px) {
   #fixed-nav {
-    background: url(images/nav-mobile.png) no-repeat;
+    background: url(/assets/images/nav-mobile.png) no-repeat;
     height: 48px;
     background-size: cover;
   }
@@ -963,13 +963,13 @@ ul.breadcrumb.news-detail li {
     padding-right: 0;
     line-height: 1;
 }
-.newsPanel, .tourPanel.tour-in{
+.newsPanel, .tourPanel.tour-in, .merchPanel{
     background-image: url("images/background-repeat.jpg");
 }
 .videoPanel {
   background: url("i/bg_videos.jpg") no-repeat;
 }
-.musicPanel, .merchPanel {
+.musicPanel{
     background-image: url(images/Music-Bkg.jpg);
 }
 .footer-block {    
@@ -985,4 +985,83 @@ ul.breadcrumb.news-detail li {
 }
 .thumbnail:hover:after {
     background: url(images/video-play.png) no-repeat 0 0 transparent;
+}
+.spotify div{
+    background: url("i/spotify.png") no-repeat;    
+}
+.apple div{
+    background: url("i/apple.png") no-repeat;
+}
+.youtube div{
+    background: url("i/youtube.png") no-repeat;
+}
+.soundcloud div{
+    background: url("i/soundcloud.png") no-repeat;
+}
+.service span.Apple {
+    background: url("i/streaming-apple.png")no-repeat;    
+}
+.service span.Youtube {
+    background: url("i/streaming-youtube.png")no-repeat;    
+}
+.service span.Soundcloud {
+    background: url("i/streaming-soundcloud.png")no-repeat;   
+}
+
+.service span.Deezer{
+    background: url("i/streaming-deezer.png")no-repeat;    
+}
+.service span.Spotify{
+    background: url("i/streaming-spotify.png")no-repeat;
+}
+.hover-node span.main-title::before {
+    background-image: url(i/instagram-image.png);    
+}
+a.preplay span.play {    
+    background-image: url(i/video-play.png);
+}
+a.preplay span.play {
+    background-image: url(i/video-play.png);
+}
+.hover-node span.main-title::before {
+    background-image: url(i/instagram-image.png);
+}
+.side_drawer .Amazon{
+    background: url("i/amazon-sd.png") no-repeat;
+}
+.side_drawer .iTunes{
+    background: url("i/itunes-sd.png") no-repeat;
+}
+
+.side_drawer .stream .iTunes{
+    background: url("i/itunes_stream-sd.png") no-repeat;
+}
+
+.side_drawer .Store{
+    background: url("i/store-sd.png") no-repeat;
+}
+
+.side_drawer .Google.Play{
+    background: url("i/google_play-sd.png") no-repeat;
+}
+.side_drawer .Spotify{
+    background: url("i/spotify-sd.png") no-repeat;
+}
+.side_drawer .stream .Google.Play{
+    background: url("i/google_play_stream-sd.png") no-repeat;
+}
+.side_drawer .Tidal{
+    background: url("i/tidal-sd.png") no-repeat;
+}
+.carousel-nav .carousel-prev, .carousel-nav .carousel-next{    
+    background-image: url(i/arrows.png);
+}
+.play a {
+    background: url("i/track-play.png") no-repeat center center transparent;
+}
+.pause a {
+    background: url("i/pause.png") no-repeat center center transparent;
+}
+.tour.tour-list-block input:not(:valid){
+    background: url(i/searchbutton.png) no-repeat scroll 97% center;
 }
