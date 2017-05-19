@@ -502,7 +502,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0 auto;
-  }	
+  }
 }
 @media (min-width: 1024px) {
 	.g-layout {
@@ -951,7 +951,6 @@ ul.breadcrumb.news-detail li a{
     letter-spacing: 1px;
     font-size: 13px;
     text-decoration: underline;
-    font-family: "proxima-nova-condensed";
 }
 ul.breadcrumb.news-detail li span{
   font-size: 13px;
@@ -963,7 +962,7 @@ ul.breadcrumb.news-detail li {
     padding-right: 0;
     line-height: 1;
 }
-.newsPanel, .tourPanel.tour-in, .merchPanel{
+.newsPanel, .tourPanel.tour-in, .merchPanel, .contact-us-wrapper{
     background-image: url("images/background-repeat.jpg");
 }
 .videoPanel {
@@ -983,7 +982,11 @@ ul.breadcrumb.news-detail li {
     background-image: url("images/menu-bg.jpg");
   }
 }
-.thumbnail:hover:after {
+
+.merchPanel-tour .carousel-controls {
+    display: none;
+}
+.videos .thumbnail:hover:after {
     background: url(images/video-play.png) no-repeat 0 0 transparent;
 }
 .spotify div{
