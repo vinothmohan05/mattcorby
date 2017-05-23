@@ -610,7 +610,7 @@ a.button:hover{
     transition: 0.3s linear;
 }
 
-body.show-SideDrawer ,body.show-photo-lightbox {
+body.show-SideDrawer ,body.show-photo-lightbox,body.show-menu {
     overflow: hidden;
 }
 app-tour-block {
@@ -847,7 +847,7 @@ div.cta{
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
   #fixed-nav {
     background: url(/assets/images/nav-mobile.png) no-repeat;
     height: 48px;
@@ -962,7 +962,7 @@ ul.breadcrumb.news-detail li {
     padding-right: 0;
     line-height: 1;
 }
-.newsPanel, .tourPanel.tour-in, .merchPanel, .contact-us-wrapper{
+.newsPanel, .tourPanel.tour-in, .merchPanel{
     background-image: url("images/background-repeat.jpg");
 }
 .videoPanel {
@@ -980,6 +980,12 @@ ul.breadcrumb.news-detail li {
 @media only screen and (min-width: 1024px) {  
   .fixed-nav{
     background-image: url("images/menu-bg.jpg");
+  }
+}
+
+@media only screen and (max-width:767px){
+  .footer-block {    
+      background-image: url("images/footer-mobile.jpg");
   }
 }
 

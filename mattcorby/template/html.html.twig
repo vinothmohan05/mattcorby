@@ -41,24 +41,23 @@
     <js-placeholder token="{{ placeholder_token|raw }}">
 	
 	<!-- Hammer JS -->
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js"></script>	
+	<script type="text/javascript" src="/themes/custom/mattcorby/lib/hammer.js"></script>	
 	
-	<link href="/{{ base_path ~ directory }}/assets/normalize.css?cache=v2.1" rel="stylesheet" />
+	<link href="/themes/custom/mattcorby/assets/normalize.css?cache=v1.0" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
-	<link href="/{{ base_path ~ directory }}/assets/style.css?cache=v2.4" rel="stylesheet" />       
-	<script>digitalData={}</script>
-	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
+	<link href="/themes/custom/mattcorby/assets/style.css?cache=v6.0" rel="stylesheet" />
+       <script src="https://use.typekit.net/ajy3tuh.js"></script>
+       <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	     <script>digitalData={}</script>
+  <script src="http://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
   </head>
-  <body{{ attributes.addClass(body_classes) }}>
+  <body{{ attributes.addClass(body_classes) }}>   
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-	<!--
-	Original Location {{ base_path ~ directory }}
-	-->
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.413b49cea35bcfbe2205.bundle.js?v2.1"></script>	
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.97d3881edf82b3479f23.bundle.js?v2.1"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/main.8d9b9973739ba1c30534.bundle.js?v2.3"></script>
+    <script type="text/javascript" src="/themes/custom/mattcorby/inline.674a5656c94d5e651bfb.bundle.js?v3.0"></script>	
+	<script type="text/javascript" src="/themes/custom/mattcorby/vendor.1a37022ce5d76e3a0ec1.bundle.js?v3.0"></script>
+    <script type="text/javascript" src="/themes/custom/mattcorby/main.8bed31c12a84fc3a9e15.bundle.js?v3.0"></script>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
