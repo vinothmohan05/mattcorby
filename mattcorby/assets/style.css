@@ -450,7 +450,6 @@ nav.g-layout {
 }
 .detail-list .g-layout{
   position: relative;
-  padding: 0;
 }
 .buttonWrapper.interiorPages {
   padding: 30px 0 60px 0;
@@ -639,13 +638,12 @@ app-lightbox {
 @media only screen and (max-width: 767px) {
   .heroBlockCon {
     min-height: 350px;
-  }/*
-  .mailinglistPanel h2 {
-    letter-spacing: 9px;
-    line-height: 1.3;
-    max-width: 236px;
-    margin: 4% auto 7%;
-  }*/
+  }
+  
+  .carousel-controls {
+      display: none;
+  }
+
   .mailinglistPanel h2 {
     padding: 0px;
   }
@@ -849,7 +847,7 @@ div.cta{
 
 @media only screen and (max-width: 1023px) {
   #fixed-nav {
-    background: url(/assets/images/nav-mobile.png) no-repeat;
+    background: url(images/nav-mobile.png) no-repeat;
     height: 48px;
     background-size: cover;
   }
@@ -965,9 +963,7 @@ ul.breadcrumb.news-detail li {
 .newsPanel, .tourPanel.tour-in, .merchPanel{
     background-image: url("images/background-repeat.jpg");
 }
-.videoPanel {
-  background: url("i/bg_videos.jpg") no-repeat;
-}
+
 .musicPanel{
     background-image: url(images/Music-Bkg.jpg);
 }
@@ -976,6 +972,38 @@ ul.breadcrumb.news-detail li {
 }
 .contact-us-wrapper {
     background-image: url(images/background-repeat.jpg);
+}
+a.site-logo {
+    display: inline-block;
+    width: 157px;
+    height: 57px;
+    line-height: 57px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    background: url(images/logo.png) no-repeat;
+    background-position: 50%;
+}
+.site-logo:hover {
+    opacity: 0.5;
+}
+@media only screen and (max-width: 1024px) {
+a.site-logo {
+    background: url(images/logo-mobile.png) no-repeat;
+    height: 48px;
+    background-position: 50%;
+    left: 50px;
+}
+}
+@media only screen and (min-width: 1024px)  and (max-width: 1365px) {
+a.site-logo {
+    width: 138px;
+    position: absolute;
+    left: 0px;
+    background: url(images/logo.png) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
 }
 @media only screen and (min-width: 1024px) {  
   .fixed-nav{
@@ -986,6 +1014,21 @@ ul.breadcrumb.news-detail li {
 @media only screen and (max-width:767px){
   .footer-block {    
       background-image: url("images/footer-mobile.jpg");
+  }
+  .landing-list .videoPanelCon + .g-layout {
+      padding: 0;
+  }
+  .videoPanel .carousel-controls {
+    text-align: center;
+    margin-top: -20px;
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .videoPanel .carousel-prev {
+      border-right: 2px solid #ffffff;
+      padding: 0 10px;
+      margin-right:6px;
   }
 }
 
