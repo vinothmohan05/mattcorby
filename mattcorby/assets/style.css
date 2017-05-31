@@ -19,6 +19,10 @@ app-lightbox app-mailing-list-block {
   transform: translateX(-50%) translateY(-50%);
   z-index: 99;
 }
+app-heroblock {
+    display: block;
+    min-height: 100vh;
+}
 .loader {
   border: 4px solid #ffffff;
   border-radius: 50%;
@@ -851,6 +855,22 @@ a.cta:hover{
 div.cta{
     text-align: center;
 }
+.hero span.ctatext:before {
+  content: "";
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(images/cta.png);
+  margin-right: 10px;
+}
+.hero span.image{
+  background-image: url(images/hero-mobile.png);
+  width: 100%;
+  height: 50%;
+  display: block;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+}
 
 @media only screen and (max-width: 1023px) {
   #fixed-nav {
@@ -893,6 +913,13 @@ div.cta{
     right: 15px;
     display:block;
     z-index: 3;
+  }
+  .hero span.image{
+    width: 100%;
+    height: 50%;
+    background: url(images/hero.png) no-repeat;
+    display: block;
+    background-position: center 100%;
   }
 }
 .fixed-nav {
@@ -1031,11 +1058,10 @@ a.site-logo {
   .landing-list .videoPanelCon + .g-layout {
       padding: 0;
   }
-
   .videoPanel .carousel-prev {
-      border-right: 2px solid #ffffff;
-      padding: 0 10px;
-      margin-right:6px;
+    border-right: 2px solid #ffffff;
+    padding: 0 10px;
+    margin-right:6px;
   }
 }
 
