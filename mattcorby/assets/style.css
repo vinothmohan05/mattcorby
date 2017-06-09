@@ -734,8 +734,9 @@ span.social-links {
 .footer-block .copyright-bar{
 	margin-top: 35px;
 	color: #ffffff;
-	letter-spacing: 3px;
-  font-size: 10px;
+	letter-spacing: 2px;
+  font-size: 9px;
+  line-height: 1.25;
 }
 .footer-block .copy{
 	margin-bottom: 18px;
