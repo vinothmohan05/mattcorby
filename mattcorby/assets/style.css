@@ -511,7 +511,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
   .merch .carousel.viewport {
     width: 80%;
     margin: 0 auto;
-  }
+  }  
 }
 
 @media (min-width: 1024px) {
@@ -549,6 +549,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     padding: 0;
     margin: 0;
     background-color: #000000;
+    position:relative;
 }
 
 .homePanelCon.mailinglistPanel h2, .internal.mailinglistPanel h2 {
@@ -879,6 +880,11 @@ div.cta{
     height: 48px;
     background-size: cover;
   }
+  .videoPanel .carousel-prev {
+    border-right: 2px solid #ffffff;
+    padding: 0 10px;
+    margin-right:6px;
+  }
   div.cta {
       text-align: center;
       margin-top: 20px;
@@ -1058,11 +1064,6 @@ a.site-logo {
   }
   .landing-list .videoPanelCon + .g-layout {
       padding: 0;
-  }
-  .videoPanel .carousel-prev {
-    border-right: 2px solid #ffffff;
-    padding: 0 10px;
-    margin-right:6px;
   }
 }
 
