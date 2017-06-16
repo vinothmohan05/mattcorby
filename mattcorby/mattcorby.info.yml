@@ -1,7 +1,7 @@
-name: mattcorby
+name: Mattcorby
 type: theme
 description: This is the Angular Based theme in Drupal Lightning
 package: Custom
-version: '3.8'
+version: '3.9'
 core: '8.x'
 project: 'drupal'
