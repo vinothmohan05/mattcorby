@@ -905,6 +905,9 @@ a.site-logo {
     padding: 0 10px;
     margin-right:6px;
   }
+  .carousel .carousel-stage{
+    touch-action: pan-y !important;
+  }
   div.cta {
       text-align: center;
       margin-top: 20px;
