@@ -1063,28 +1063,28 @@ ul.breadcrumb.news-detail li {
     color: #fff;
     cursor: pointer;
 }
-ul.artists li{
+.grid.view ul.artists li{
     width: 50%;
     float: left;
     position: relative;
 }
-ul.artists h3 {
+.grid.view ul.artists h3 {
     position: absolute;
     bottom: 0;
     text-align: right;
     width: 100%;
 }
-ul.artists li h3 a {
+.grid.view ul.artists li h3 a {
     padding-bottom: 10px;
     border-bottom: 1px solid;
 }
-ul.artists .thumbnail {
+.grid.view ul.artists .thumbnail {
     font-size: 0;
 }
-.homePanelCon.artistsPanel {
+ .homePanelCon.artistsPanel {
     background: #000;
 }
-.view-more.view-all-artists {
+ .view-more.view-all-artists {
     display: inline-block;
     width: 50%;
     text-align: center;
@@ -1170,15 +1170,133 @@ span.social-links li a {
 }
 .tab.tab1.artist-options li {
     display: inline-block;
-    width: 8%;
+    width: 22%;
     box-sizing: border-box;
 }
 
 .tab.tab1.artist-options li a {
-    color: #fff;
+    color: #111111;
 }
 
-.tab.tab1.artist-options {
+.artistLandingNav {
     background: #1564a7;
     height: 40px;
+}
+body.home .artistLandingNav, body.home .BackToTop {
+    display:none;
+}
+
+.tab.tab1.artist-options, .tab.tab1.view-options {
+    display: inline-block;
+    width: 49%;
+}
+
+
+.tab.tab1.view-options li {
+    display: inline-block;
+    width: 5%;
+    box-sizing: border-box;
+
+}
+.tab.tab1.view-options {
+    text-align:right
+}
+
+.List.view .thumbnail {
+    display:none;
+}
+
+
+.item-wrapper:hover .thumbnail {
+    display: block;
+}
+.List.view .item-wrapper {
+    text-align: right;
+}
+
+.List.view {
+    POSITION: relative;
+}
+
+.List.view .imagewrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+}
+
+.List.view .item-wrapper h3 {
+    text-align: center;
+    color:#fff;
+}
+
+.category.landing {
+    background: #000;
+}
+
+.category.landing .BackToTop {
+    text-align: center;
+    margin: 0 auto;
+     padding: 20px;
+    background: #111111;
+    width: 100%;
+    cursor: pointer;
+}
+
+.category.landing .BackToTop a.btt {
+    color: #fff;
+    line-height: 50px;
+}
+li.col.List {
+    display: inline-block;
+    width: 100%;
+}
+.List.view .item-wrapper h3 {
+    color: #fff;
+    width: 50%;
+    text-align: left;
+    float: right;
+}
+app-artists-carousel {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.newsCategoryMenu .tab.tab1.artist-drop-down-options {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    float: right;
+}
+
+.newsCategoryMenu .tab.tab1.artist-drop-down-options li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+} 
+.newsCategoryMenu {
+    display: block;
+    width: 100%;
+    background: #1564a7;
+    height: 30px;
+}
+.newsCategoryMenu ul{
+  margin:0;
+}
+.dropdown{
+  min-height: 30px;
+}
+.news_header_block .social-block .share {
+    position: relative !important;
+    top: 0 !important;
+}
+
+.news_header_block .social-block .share > div {
+    display: inline-block !important;
+}
+.newsImagecouraosel {
+    display: block;
+    position: relative;
 }
