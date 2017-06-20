@@ -906,7 +906,7 @@ a.site-logo {
     margin-right:6px;
   }
   .carousel .carousel-stage{
-    touch-action: pan-y !important;
+      touch-action: auto !important;
   }
   div.cta {
       text-align: center;
