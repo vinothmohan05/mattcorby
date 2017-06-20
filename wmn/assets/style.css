@@ -1,14 +1,61 @@
-@import url("fonts/style.css");
-
-app-social-buttons {
-    display: inline-block;
-}
-app-lightbox app-mailing-list-block {
-    background-color: #101011;
+/* Loader */
+body app-root {
     display: block;
-    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+body app-root > div.loading:not(.backgroundLoader){
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  animation: showContainer 2s ease-in-out 1s forwards;
+  -webkit-animation: showContainer 2s ease-in-out 1s forwards;
+  overflow: hidden;
+  transform: translateY(-5%) translate3d(0,0,0);
+  -webkit-transform: translateY(-5%) translate3d(0,0,0);
+}
+@keyframes showContainer {
+    0% {opacity: 0; transform: translateY(-8%) translate3d(0,0,0);	}
+    30% {opacity: 0;}
+    100% {opacity: 1; transform: translateY(0) translate3d(0,0,0);}
+}
+@-webkit-keyframes showContainer {
+    0% {opacity: 0; -webkit-transform: translateY(-8%) translate3d(0,0,0);	}
+    30% {opacity: 0;}
+    100% {opacity: 1; -webkit-transform: translateY(0) translate3d(0,0,0);}
 }
 
+.home div#fixed-nav {
+    position: absolute;
+    top: 0;
+}
+body.home div#fixed-nav.sticky {
+    position: inherit;
+}
+body.home div#logo {
+  display: none;
+}
+
+body.home div#fixed-nav {
+    background:transparent;
+}
+.home div#fixed-nav.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+div#smartHeader {
+  display: none;
+}
+.fixed-nav.sticky ~ app-home #smartHeader {
+    display: inline;
+    position: fixed;
+    top: 16px;
+    right: 150px;
+    z-index: 4;
+    color: black;
+    text-transform: uppercase;
+}
 .aniLoader {
   display: inline-block;
   width: auto;
@@ -18,10 +65,6 @@ app-lightbox app-mailing-list-block {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 99;
-}
-app-heroblock {
-    display: block;
-    min-height: 100vh;
 }
 .loader {
   border: 4px solid #ffffff;
@@ -62,12 +105,13 @@ app-heroblock {
     height: 100%;
     width: 100%;
     margin: 0;
+    /* max-width: 600px; */
     min-width: calc(120vw * 1.5);
     min-height: calc(120vw * 1.5);
     min-width: -weblit-calc(120vw * 1.5);
     min-height: -webkit-calc(120vw * 1.5);
     display: block;
-    background-color: #FFF;
+    background: #FFF;
 }
 .css-gradients {
   position: absolute;
@@ -414,20 +458,17 @@ body > img {
     display: none;
 }
 body {
-  font-family: texgy-regular, Arial, Helvetica, sans-serif;
-  color:#ffffff;
-  background-color: #000000;
+  font-family: proxima-nova, Arial, Helvetica, sans-serif;
+  color:#1b214e;
+  background-color: #f6f5fd;
   line-height: 1;
   box-sizing: border-box;
-  padding: 50px 0 0;
+  font-weight: 400;
   margin: 0;
 }
 a {
-  color: #ffffff;
+  color: #359be9;
   text-decoration: none;
-}
-a:hover {
-  color: #fff568;
 }
 p {
     margin: 0;
@@ -449,14 +490,16 @@ ul[class*=grid] {
     margin: 0 -1rem;
 }
 nav.g-layout {
-  padding: 20px 0;
-  text-align: center;
+  padding: 17px 0;
+  text-align: right;
 }
 .detail-list .g-layout{
-  position: relative;
+    position: relative;
 }
 .buttonWrapper.interiorPages {
-  padding: 30px 0 60px 0;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 20px;
 }
 .mailinglistPanel.internal .g-layout.internal h2{
     text-align: center;
@@ -505,18 +548,11 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0 auto;
-  }
+  }	
 }
-@media (min-width: 768px) and (max-width:1023px) {
-  .merch .carousel.viewport {
-    width: 80%;
-    margin: 0 auto;
-  }  
-}
-
 @media (min-width: 1024px) {
 	.g-layout {
-    width: 968px;
+    width: 100%;
     margin: 0 auto;
   }
   .g-layout h2{
@@ -548,17 +584,28 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: #000000;
-    position:relative;
+    background-color: #0d0e1c;
 }
-
+/*
+.homePanelCon.mailinglistPanel h2 {
+    letter-spacing: 9px;
+    font-weight: 300;
+    color: #f6f5fd;
+    text-shadow: 0 0 25px #f6f5fd;
+    font-family: proxima-nova-condensed,Arial, Helvetica, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+}*/
 .homePanelCon.mailinglistPanel h2, .internal.mailinglistPanel h2 {
     color: #f6f5fd;
-    padding: 0 0;
+    text-align: center;
+    letter-spacing: 6px;
+    font-weight: 300;
+    padding: 0 0 20px;
     font-weight: bold;
-    display: inline-block;
-    letter-spacing: 1px;
-    font-size: 22px;
+}
+.internal.mailinglistPanel h2 {
+  display: block;
 }
 .internal.mailinglistPanel .mailing-list-copy-outer {
     color: #f6f5fd;
@@ -574,6 +621,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     width: 100%;
 }
 .internal.mailinglistPanel{
+    background-color: #1A214F;
     padding: 0 19px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -592,43 +640,35 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
 }
 
 .button{
-    position: relative;
-    padding: 10px 20px 20px;
-    font-size: 22px;
-    font-family: ruby;
-    transition: 0.3s linear;
-}
-
-a.button:after {
-  content: "";
-  position: absolute;
+  background-color: transparent;  
   display: inline-block;
-  height: 2px;
-  width: 100%;
-  background-color: #fff568;
-  left: 0;
-  margin: 0 auto;
-  transition: 0.3s linear;
-  bottom:100%;  
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 13px 57px;
+  border: 2px solid #1b214e;
+  line-height: 1;
+  font-size: 19px;
+  color:#1b214e;
+  cursor: pointer;
+  transition: all 1s ease 0s;
 }
 
-a.button:hover:after{
-    transition: 0.3s linear;
-    bottom:0;
+.button:hover{
+  color: #1b214e;
+  background-color: #fff;
 }
 
-a.button:hover{
-    transition: 0.3s linear;
+.reverse-button {
+  color: #fff;
+  border: 2px solid #fff;
 }
 
-body.show-SideDrawer ,body.show-photo-lightbox,body.show-menu {
+body.show-SideDrawer ,body.show-photo-lightbox {
     overflow: hidden;
 }
-app-tour-block {
-    padding-bottom: 30px;
-}
-app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block {display:block;}
+
+app-news-block,app-photo-block,app-music,app-track-block,
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons {display:block;}
 
 app-lightbox {
     position: fixed;
@@ -639,7 +679,7 @@ app-lightbox {
     z-index: 20;
     width: 100%;
     height: 100%;
-    background-color: rgba(4, 5, 8, 0.8);
+    background: rgba(4, 5, 8, 0.8);
 }
 
 .heroBlockCon {
@@ -647,17 +687,30 @@ app-lightbox {
     background-size: cover;
     min-height: 700px;
 }
+.content {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding-top:50px;
+  }
 @media only screen and (max-width: 767px) {
   .heroBlockCon {
     min-height: 350px;
-  }
-  
-  .carousel-controls {
-      display: none;
-  }
-
+  }/*
+  .mailinglistPanel h2 {
+    letter-spacing: 9px;
+    line-height: 1.3;
+    max-width: 236px;
+    margin: 4% auto 7%;
+  }*/
   .mailinglistPanel h2 {
     padding: 0px;
+  }
+  .content {
+    padding-top: 50px;
+  }
+  .home .content{
+    padding-top: 0px;
   }
   .internal.mailinglistPanel h2 {
     padding: 0px;
@@ -708,7 +761,7 @@ app-home{
 
 /* Footer Stuff */
 .footer-block{
-	background-color: #b8b7bf;
+	background: #b8b7bf;
 	font-size:14px;	
 	text-align: center;
   padding: 43px 10px;
@@ -734,10 +787,9 @@ span.social-links {
 
 .footer-block .copyright-bar{
 	margin-top: 35px;
-	color: #ffffff;
-	letter-spacing: 2px;
-  font-size: 9px;
-  line-height: 1.25;
+	color: #1b214e;
+	letter-spacing: 3px;
+  font-weight: 300;
 }
 .footer-block .copy{
 	margin-bottom: 18px;
@@ -770,46 +822,46 @@ span.social-links {
 }
 **/
 .footer-social .fs-fb a {
-    background: transparent url(i/fb.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/fb.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-fb a:hover {
-    background: transparent url(i/fb-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/fb-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a {
-    background: transparent url(i/in.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/in.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a:hover {
-    background: transparent url(i/in-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/in-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a {
-    background: transparent url(i/twitter.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/twitter.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a:hover {
-    background: transparent url(i/twitter-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a {
-    background: transparent url(i/spotify.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/spotify.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a:hover {
-    background: transparent url(i/spotify-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a {
-    background: transparent url(i/pinterest.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/pinterest.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a:hover {
-    background: transparent url(i/pinterest-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a {
-    background: transparent url(i/yt.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/yt.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a:hover {
-    background: transparent url(i/yt-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/yt-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a {
-    background: transparent url(i/vimeo.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/vimeo.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a:hover {
-    background: transparent url(i/vimeo-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
 }
 ul.footer-social li+li {
     margin-left: 20px;
@@ -850,74 +902,25 @@ a.cta {
     margin: 0 auto;
 }
 a.cta:hover{
-  background-color: #1b214e;
+  background: #1b214e;
   color: #fff;
 }
 
 div.cta{
     text-align: center;
 }
-.hero span.ctatext:before {
-  content: "";
-  width: 17px;
-  height: 16px;
-  display: inline-block;
-  background-image: url(images/cta.png);
-  margin-right: 10px;
-}
-.hero span.image{
-  background-image: url(images/hero-mobile.png);
-  width: 100%;
-  height: 50%;
-  display: block;
-  background-position: center 100%;
-  background-repeat: no-repeat;
-}
-a.site-logo {
-    display: inline-block;
-    width: 157px;
-    height: 57px;
-    line-height: 57px;
-    position: absolute;
-    top: 0;
-    left: 25px;
-    background: url(images/matt-corby-logo.svg) no-repeat;
-    background-position: 50%;
-}
 
-@media only screen and (max-width: 1023px) {
-  a.site-logo {
-    height: 48px;
-    background-position: 50%;
-    left: 60px;
-    width: 100px;
-  }
-  .homePanelCon.videoPanel .button {
-    color: #fff568;
-  }
-  #fixed-nav {
-    background: url(images/nav-mobile.png) no-repeat;
-    height: 48px;
-    background-size: cover;
-  }
-  .videoPanel .carousel-prev {
-    border-right: 2px solid #ffffff;
-    padding: 0 10px;
-    margin-right:6px;
-  }
-  .carousel .carousel-stage{
-      touch-action: auto !important;
-  }
+@media only screen and (max-width: 768px) {
   div.cta {
       text-align: center;
       margin-top: 20px;
       margin-bottom: 20px;
   }
-    .videoPanel .carousel-controls {
-    text-align: center;
-    margin-top: -20px;
-    display: block;
-    padding-bottom: 15px;
+  .fixed-nav.sticky ~ app-home #smartHeader {
+    display: none;
+  }
+  .home div#fixed-nav {
+      top: calc(100vh - 50px);
   }
 }
 
@@ -931,7 +934,14 @@ a.site-logo {
 	}
 }
 
-
+/**/
+.logo-block a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
 .login-menu {
   display: none;
   font-size: 14px;
@@ -944,13 +954,6 @@ a.site-logo {
     display:block;
     z-index: 3;
   }
-  .hero span.image{
-    width: 100%;
-    height: 50%;
-    background: url(images/hero.png) no-repeat;
-    display: block;
-    background-position: center 100%;
-  }
 }
 .fixed-nav {
     position: fixed;
@@ -958,7 +961,7 @@ a.site-logo {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #f6f5fd;
+    background: #000;
     z-index: 9;
 }
 /*.side_drawer::-webkit-scrollbar {
@@ -1003,7 +1006,9 @@ a.site-logo {
 .breadcrumb li:last-child {
     border-right: none;
 }
-
+.breadcrumb li:last-child a, .breadcrumb li:last-child span{
+    font-weight: 600;
+}
 .g-layout.breadcrumb-layout {
     padding-bottom: 0;
 }
@@ -1019,6 +1024,7 @@ ul.breadcrumb.news-detail li a{
     letter-spacing: 1px;
     font-size: 13px;
     text-decoration: underline;
+    font-family: "proxima-nova-condensed";
 }
 ul.breadcrumb.news-detail li span{
   font-size: 13px;
@@ -1030,119 +1036,149 @@ ul.breadcrumb.news-detail li {
     padding-right: 0;
     line-height: 1;
 }
-.newsPanel, .tourPanel.tour-in, .merchPanel{
-    background-image: url("images/background-repeat.jpg");
+.homePanelCon.mailinglistPanel {
+   display: none;
+    position: fixed;
+    z-index: 208;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+.homePanelCon.mailinglistPanel.show{
+  display: block;
+}
+.homePanelCon.mailinglistPanel.show .g-layout{
+  position: absolute;
+  top:50%;
+  left:50%;
+  max-width: 700px;
+  transform: translate(-50%, -50%);
+  background: #000;
 }
 
-.musicPanel{
-    background-image: url(images/Music-Bkg.jpg);
+.homePanelCon.mailinglistPanel.show .g-layout a.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
 }
-.footer-block {    
-    background: url("images/footer-bg.jpg") no-repeat;
+ul.artists li{
+    width: 50%;
+    float: left;
+    position: relative;
 }
-.contact-us-wrapper {
-    background-image: url(images/background-repeat.jpg);
+ul.artists h3 {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
 }
-.site-logo:hover {
-    opacity: 0.5;
+ul.artists li h3 a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
 }
-@media only screen and (min-width: 1024px) {  
-  .fixed-nav{
-    background-image: url("images/menu-bg.jpg");
-  }
+ul.artists .thumbnail {
+    font-size: 0;
 }
-
-@media only screen and (max-width:767px){
-  .footer-block {    
-      background-image: url("images/footer-mobile.jpg");
-  }
-  .landing-list .videoPanelCon + .g-layout {
-      padding: 0;
-  }
+.homePanelCon.artistsPanel {
+    background: #000;
 }
-
-.merchPanel-tour .carousel-controls {
-    display: none;
+.view-more.view-all-artists {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    line-height: 1;
+    padding: 13.34vw 0;
 }
-.videos .thumbnail:hover:after {
-    background: url(images/video-play.png) no-repeat 0 0 transparent;
-}
-.spotify div{
-    background: url("i/spotify.png") no-repeat;    
-}
-.apple div{
-    background: url("i/apple.png") no-repeat;
-}
-.youtube div{
-    background: url("i/youtube.png") no-repeat;
-}
-.soundcloud div{
-    background: url("i/soundcloud.png") no-repeat;
-}
-.service span.Apple {
-    background: url("i/streaming-apple.png")no-repeat;    
-}
-.service span.Youtube {
-    background: url("i/streaming-youtube.png")no-repeat;    
-}
-.service span.Soundcloud {
-    background: url("i/streaming-soundcloud.png")no-repeat;   
+.footerWrapperBlock {
+    display: block;
+    width: 100%;
+    background: #000;
 }
 
-.service span.Deezer{
-    background: url("i/streaming-deezer.png")no-repeat;    
-}
-.service span.Spotify{
-    background: url("i/streaming-spotify.png")no-repeat;
-}
-.hover-node span.main-title::before {
-    background-image: url(i/instagram-image.png);    
-}
-a.preplay span.play {    
-    background-image: url(i/video-play.png);
-}
-a.preplay span.play {
-    background-image: url(i/video-play.png);
-}
-.hover-node span.main-title::before {
-    background-image: url(i/instagram-image.png);
-}
-.side_drawer .Amazon{
-    background: url("i/amazon-sd.png") no-repeat;
-}
-.side_drawer .iTunes{
-    background: url("i/itunes-sd.png") no-repeat;
+
+
+.footerWrapperBlock .footer-block {
+   background: #000;
 }
 
-.side_drawer .stream .iTunes{
-    background: url("i/itunes_stream-sd.png") no-repeat;
+.mailing-list-outer-wrapper.mailing-footer-block {
+
+    width: 20%;
+    display: inline-block;
 }
 
-.side_drawer .Store{
-    background: url("i/store-sd.png") no-repeat;
+.footerWrapperBlock app-block {
+      display: inline-block;
+      width: 71%;
+      vertical-align: top;
+}
+.nashvillelogo {
+    max-width: 130px;
 }
 
-.side_drawer .Google.Play{
-    background: url("i/google_play-sd.png") no-repeat;
+
+.copyrightinfo {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    color:#fff;
 }
-.side_drawer .Spotify{
-    background: url("i/spotify-sd.png") no-repeat;
+
+.footer-block {
+    display: block;
+    width: 100%;
 }
-.side_drawer .stream .Google.Play{
-    background: url("i/google_play_stream-sd.png") no-repeat;
+
+
+.footerNavSoical {
+    display: inline-block;
+    width: 60%;
+    padding-left: 30px;
+    box-sizing: border-box;
 }
-.side_drawer .Tidal{
-    background: url("i/tidal-sd.png") no-repeat;
+
+.follow.soicals  span {
+    display: block;
+    width: 100%;
+    text-align: left;
 }
-.carousel-nav .carousel-prev, .carousel-nav .carousel-next{    
-    background-image: url(i/arrows.png);
+
+span.social-links li {
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    display: inline-block;
+    width: 11%;
+     
 }
-.play a {
-    background: url("i/track-play.png") no-repeat center center transparent;
+span.social-links li a {
+    color:#fff;
 }
-.pause a {
-    background: url("i/pause.png") no-repeat center center transparent;
+.footerNavSoical .nav {
+    text-align: left;
 }
-.tour.tour-list-block input:not(:valid){
-    background: url(i/searchbutton.png) no-repeat scroll 97% center;
+.footerNavSoical .nav a {
+    color:#fff;
+}
+.footer-block .footer-links a{
+	color: #fff;
+	text-transform: capitalize;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+.tab.tab1.artist-options li {
+    display: inline-block;
+    width: 8%;
+    box-sizing: border-box;
+}
+
+.tab.tab1.artist-options li a {
+    color: #fff;
+}
+
+.tab.tab1.artist-options {
+    background: #1564a7;
+    height: 40px;
 }

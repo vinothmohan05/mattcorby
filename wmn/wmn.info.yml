@@ -1,7 +1,7 @@
-name: Mattcorby
+name: WMN
 type: theme
 description: This is the Angular Based theme in Drupal Lightning
 package: Custom
-version: '4.0'
+version: '3.8'
 core: '8.x'
 project: 'drupal'
