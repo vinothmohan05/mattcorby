@@ -1,4 +1,78 @@
 /* Loader */
+
+
+@font-face {
+    font-family: 'crimson_textroman';
+    src: url('Fonts-Gotham/crimsontext-roman-webfont.eot');
+    src: url('Fonts-Gotham/crimsontext-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/crimsontext-roman-webfont.woff') format('woff'),
+         url('Fonts-Gotham/crimsontext-roman-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/crimsontext-roman-webfont.svg#crimson_textroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothamblack';
+    src: url('Fonts-Gotham/gotham-black-webfont.eot');
+    src: url('Fonts-Gotham/gotham-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/gotham-black-webfont.woff') format('woff'),
+         url('Fonts-Gotham/gotham-black-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/gotham-black-webfont.svg#gothamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothambold';
+    src: url('Fonts-Gotham/gotham-bold-webfont.eot');
+    src: url('Fonts-Gotham/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/gotham-bold-webfont.woff') format('woff'),
+         url('Fonts-Gotham/gotham-bold-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/gotham-bold-webfont.svg#gothambold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothambook';
+    src: url('Fonts-Gotham/gotham-book-webfont.eot');
+    src: url('Fonts-Gotham/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/gotham-book-webfont.woff') format('woff'),
+         url('Fonts-Gotham/gotham-book-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/gotham-book-webfont.svg#gothamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothamlight';
+    src: url('Fonts-Gotham/gotham-light-webfont.eot');
+    src: url('Fonts-Gotham/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/gotham-light-webfont.woff') format('woff'),
+         url('Fonts-Gotham/gotham-light-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/ gotham-light-webfont.svg#gothamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothammedium';
+    src: url('Fonts-Gotham/gotham-medium-webfont.eot');
+    src: url('Fonts-Gotham/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts-Gotham/gotham-medium-webfont.woff') format('woff'),
+         url('Fonts-Gotham/gotham-medium-webfont.ttf') format('truetype'),
+         url('Fonts-Gotham/gotham-medium-webfont.svg#gothamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body app-root {
     display: block;
     width: 100%;
@@ -26,8 +100,7 @@ body app-root > div.loading:not(.backgroundLoader){
 }
 
 .home div#fixed-nav {
-    position: absolute;
-    top: 0;
+    
 }
 body.home div#fixed-nav.sticky {
     position: inherit;
@@ -458,9 +531,9 @@ body > img {
     display: none;
 }
 body {
-  font-family: proxima-nova, Arial, Helvetica, sans-serif;
-  color:#1b214e;
-  background-color: #f6f5fd;
+  font-family: 'gothambook';
+  color:#fff;
+  background-color: #000;
   line-height: 1;
   box-sizing: border-box;
   font-weight: 400;
@@ -490,8 +563,11 @@ ul[class*=grid] {
     margin: 0 -1rem;
 }
 nav.g-layout {
-  padding: 17px 0;
+  padding: 25px 0;
   text-align: right;
+}
+div#fixed-nav nav.g-layout {
+    width: 100%;
 }
 .detail-list .g-layout{
     position: relative;
@@ -504,24 +580,7 @@ nav.g-layout {
 .mailinglistPanel.internal .g-layout.internal h2{
     text-align: center;
 }
-/*Container Styles*/
-/*
-$mq-mobile-narrower: "only screen and (max-width : 320px)";
-$mq-mobile-wider: "only screen and (min-width : 320px)";
 
-$mq-tablet-narrower: "only screen and (max-width : 767px)";
-$mq-tablet-wider: "only screen and (min-width : 768px)";
-
-$mq-desktop-narrower: "only screen and (max-width : 1023px)";
-$mq-desktop-wider: "only screen and (min-width : 1024px)";
-
-$mq-large-desktop-narrower: "only screen and (max-width : 1379px)";
-$mq-large-desktop-wider: "only screen and (min-width : 1380px)";
-
-$mq-tablet: "only screen and (min-width : 768px) and (max-width : 1023px)";
-$mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
-
-*/
 
 /*Block Stylings*/
 .g-layout {
@@ -586,16 +645,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     margin: 0;
     background-color: #0d0e1c;
 }
-/*
-.homePanelCon.mailinglistPanel h2 {
-    letter-spacing: 9px;
-    font-weight: 300;
-    color: #f6f5fd;
-    text-shadow: 0 0 25px #f6f5fd;
-    font-family: proxima-nova-condensed,Arial, Helvetica, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
-}*/
+
 .homePanelCon.mailinglistPanel h2, .internal.mailinglistPanel h2 {
     color: #f6f5fd;
     text-align: center;
@@ -919,9 +969,7 @@ div.cta{
   .fixed-nav.sticky ~ app-home #smartHeader {
     display: none;
   }
-  .home div#fixed-nav {
-      top: calc(100vh - 50px);
-  }
+ 
 }
 
 @media only screen and (max-width: 435px) {
@@ -956,7 +1004,7 @@ div.cta{
   }
 }
 .fixed-nav {
-    position: fixed;
+  
     width: 100%;
     top: 0;
     left: 0;
@@ -1051,7 +1099,7 @@ ul.breadcrumb.news-detail li {
   position: absolute;
   top:50%;
   left:50%;
-  max-width: 700px;
+  max-width: 1300px;
   transform: translate(-50%, -50%);
   background: #000;
 }
@@ -1299,4 +1347,49 @@ app-artists-carousel {
 .newsImagecouraosel {
     display: block;
     position: relative;
+}
+@media only screen and (min-width: 768px){
+  .livefyreBlockWrapper .livefyreBlockInnerWrapper .aboutLivefyreBlock div.LivefyreBlockContents {
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-count: 2;
+    -moz-column-gap: 30px;
+    -webkit-column-gap: 30px;
+  }
+  .livefyrePage .LivefyreBlockContents {
+      -webkit-column-count: 4;
+      column-count: 4;
+      -moz-column-count: 4;
+      -moz-column-gap: 30px;
+      -webkit-column-gap: 30px;
+  }
+  .livefyreBlockWrapper .livefyreBlockInnerWrapper .aboutLivefyreBlock .LivefyreBlockContents {
+    max-width: 80%;
+  }
+}
+
+
+.aboutHeaderBlock {
+  padding: 185px 0;
+}
+.aboutHeaderBlock .aboutHeaderContent-wrapper {
+  max-width: 785px;
+  margin: 0 auto;
+  font-family: gothamlight;
+  letter-spacing: 1.4px;
+}
+.aboutHeaderBlock .aboutHeaderContent-wrapper span.wmnTitle {
+  font-size: 27px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.livefyreBlockWrapper span.lightbox-title {
+    pointer-events: none;
+}
+.livefyrePage{
+  padding: 40px;
+  background: #004980;
+  color: #ffffff;
+  clear: both;
+  display: block;
 }
