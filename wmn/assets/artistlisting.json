@@ -1,0 +1,42 @@
+[
+{
+"title": "Blake Shelton",
+"field_banner_image": " <img src="http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/styles/artist_listing_1350_760/public/ed_sheeran_0.jpg?itok=KKURmDxD" width="1350" height="760" alt="Ed sheeran" typeof="foaf:Image" class="image-style-artist-listing-1350-760" /> ",
+"path": "/artist/blake-shelton",
+"field_type": "Artists",
+"field_main_image": " <img src="http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/16123932_212985495839852_8538459670950445056_n.jpg" width="1080" height="1080" alt="Blake shelton" typeof="foaf:Image" /> ",
+"field_artist_newsletter_id": "14073870"
+},
+{
+"title": "Ed sheeran",
+"field_banner_image": " <img src="http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/styles/artist_listing_1350_760/public/ed_sheeran_0.jpg?itok=KKURmDxD" width="1350" height="760" alt="Ed sheeran" typeof="foaf:Image" class="image-style-artist-listing-1350-760" /> ",
+"path": "/artist/ed-sheeran",
+"field_type": "Artists",
+"field_main_image": " <img src="http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/ed_sheeran_0.jpg" width="1296" height="730" alt="Ed sheeran" typeof="foaf:Image" /> ",
+"field_artist_newsletter_id": "14073864"
+},
+{
+"title": "Jana kramer",
+"field_banner_image": " <img src="/sites/g/files/g2000006676/files/styles/artist_listing_1350_760/public/avatars-000169027680-lfiqwx-t500x500_0.jpg?itok=4cjNa0Uc" width="1350" height="760" alt="Jana kramer" typeof="foaf:Image" class="image-style-artist-listing-1350-760" /> ",
+"path": "/artist/jana-kramer",
+"field_type": "Artists",
+"field_main_image": " <img src="/sites/g/files/g2000006676/files/avatars-000169027680-lfiqwx-t500x500_0.jpg" width="500" height="500" alt="Jana kramer" typeof="foaf:Image" /> ",
+"field_artist_newsletter_id": "14073867"
+},
+{
+"title": "Raelynn",
+"field_banner_image": " <img src="/sites/g/files/g2000006676/files/styles/artist_listing_1350_760/public/17076406_1413980092010434_4504665032662974464_n.jpg?itok=Dy6-EWG_" width="1350" height="760" alt="Raelynn" typeof="foaf:Image" class="image-style-artist-listing-1350-760" /> ",
+"path": "/artist/raelynn",
+"field_type": "Artists",
+"field_main_image": " <img src="/sites/g/files/g2000006676/files/17076406_1413980092010434_4504665032662974464_n.jpg" width="1080" height="1080" alt="Raelynn" typeof="foaf:Image" /> ",
+"field_artist_newsletter_id": "14073869"
+},
+{
+"title": "The Bone Collector",
+"field_banner_image": " <img src="/sites/g/files/g2000006676/files/styles/artist_listing_1350_760/public/BONECOLLECTOR-CVR.jpg?itok=GpNbL6Js" width="1350" height="760" alt="bonecollector" typeof="foaf:Image" class="image-style-artist-listing-1350-760" /> ",
+"path": "/artist/bone-collector",
+"field_type": "Other",
+"field_main_image": " <img src="/sites/g/files/g2000006676/files/BONECOLLECTOR-CVR.jpg" width="1425" height="1425" alt="bonecollector" typeof="foaf:Image" /> ",
+"field_artist_newsletter_id": "14073866"
+}
+]
