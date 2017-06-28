@@ -831,7 +831,7 @@ app-home{
 	background: #b8b7bf;
 	font-size:14px;	
 	text-align: center;
-  padding: 43px 10px;
+
 }
 .footer-social li a{
   /**background: transparent url("i/footer-social.png") no-repeat scroll 0 0;**/
@@ -858,81 +858,24 @@ span.social-links {
 	letter-spacing: 3px;
   font-weight: 300;
 }
-.footer-block .copy{
-	margin-bottom: 18px;
+
+.footer-block .copy > span +span  {
+    display: block;
+    width: 100%;
+    text-transform: none;
 }
-.footer-block .footer-links a{
-	color: #1b214e;
-	white-space: nowrap;
+
+
+.footer-block .copy > span {
+    text-transform: uppercase;
+    line-height: 22px;
 }
-/**
-.footer-social li a.fs-fb-link {
-  width: 0.875em;
+
+.footer-block .copy {
+    padding-top: 6px;
 }
-.footer-social li.fs-ig a {
-    background-position: -61px 0px;
-}
-.footer-social li.fs-tw a {
-    background-position: -123px 0px;
-}
-.footer-social li.fs-sp a {
-    background-position: -186px 0px;
-}
-.footer-social li.fs-pin a {
-    background-position: -253px 0px;
-}
-.footer-social li.fs-yt a {
-    background-position: -315px 0px;
-}
-.footer-social li.fs-vi a {
-    background-position: -381px 0px;
-}
-**/
-.footer-social .fs-fb a {
-    background: transparent url(/assets/i/fb.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-fb a:hover {
-    background: transparent url(/assets/i/fb-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-ig a {
-    background: transparent url(/assets/i/in.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-ig a:hover {
-    background: transparent url(/assets/i/in-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-tw a {
-    background: transparent url(/assets/i/twitter.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-tw a:hover {
-    background: transparent url(/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-sp a {
-    background: transparent url(/assets/i/spotify.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-sp a:hover {
-    background: transparent url(/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-pin a {
-    background: transparent url(/assets/i/pinterest.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-pin a:hover {
-    background: transparent url(/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-yt a {
-    background: transparent url(/assets/i/yt.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-yt a:hover {
-    background: transparent url(/assets/i/yt-hover.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-vi a {
-    background: transparent url(/assets/i/vimeo.svg) no-repeat scroll 0 0;
-}
-.footer-social .fs-vi a:hover {
-    background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
-}
-ul.footer-social li+li {
-    margin-left: 20px;
-}
+
+
 carousel {
   display: block;
   height: auto;
@@ -1101,18 +1044,18 @@ ul.breadcrumb.news-detail li {
     padding-right: 0;
     line-height: 1;
 }
-.homePanelCon.mailinglistPanel {
-   display: none;
+.homePanelCon.mailinglistPanel  {
+    display: none;
     position: fixed;
     z-index: 208;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.5);
 }
-.homePanelCon.mailinglistPanel.show{
-  display: block;
+.homePanelCon.mailinglistPanel.show {
+    display: block;
 }
-.homePanelCon.mailinglistPanel.show .g-layout{
+.homePanelCon.mailinglistPanel.show .g-layout {
   position: absolute;
   top:50%;
   left:50%;
@@ -1128,6 +1071,18 @@ ul.breadcrumb.news-detail li {
     color: #fff;
     cursor: pointer;
 }
+.footerWrapperBlock .footerinnerwrapper .mailing-list-copy, .footerWrapperBlock .footerinnerwrapper .mailing-list-second-form-copy {
+    font-size:14px;
+    line-height:20px;
+    font-family: 'gothamlight';
+    padding-bottom:2px;
+}
+
+.footerinnerwrapper  .mailing-list-outer-wrapper.mailing-footer-block .form-group input, .footerinnerwrapper .mailing-list-outer-wrapper.mailing-footer-block .form-group select {
+    font-size:14px;
+
+}
+
 .grid.view ul.artists li{
     width: 50%;
     float: left;
@@ -1166,21 +1121,23 @@ ul.breadcrumb.news-detail li {
 
 .footerWrapperBlock .footer-block {
    background: #000;
+   text-align:left;
+   font-size: 0;
 }
 
 .mailing-list-outer-wrapper.mailing-footer-block {
 
-    width: 20%;
+    width: 33%;
     display: inline-block;
 }
 
 .footerWrapperBlock app-block {
       display: inline-block;
-      width: 71%;
+      width: 62%;
       vertical-align: top;
 }
 .nashvillelogo {
-    max-width: 130px;
+    max-width: 175px;
 }
 
 
@@ -1188,9 +1145,14 @@ ul.breadcrumb.news-detail li {
     display: inline-block;
     width: 25%;
     vertical-align: top;
-    color:#fff;
+    color: #777;
+    font-size: 10px;
+    text-align: left;
 }
 
+.copyrightinfo .footer-links a :hover{
+  color:#fff;
+}
 .footer-block {
     display: block;
     width: 100%;
@@ -1199,9 +1161,11 @@ ul.breadcrumb.news-detail li {
 
 .footerNavSoical {
     display: inline-block;
-    width: 60%;
+    width: 75%;
     padding-left: 30px;
     box-sizing: border-box;
+    font-size: 14px;
+    line-height: 14px;
 }
 
 .follow.soicals  span {
@@ -1215,23 +1179,37 @@ span.social-links li {
     list-style-image: none;
     list-style-type: none;
     display: inline-block;
-    width: 11%;
+    margin-right: 20px;
      
 }
 span.social-links li a {
     color:#fff;
 }
-.footerNavSoical .nav {
-    text-align: left;
-}
+
 .footerNavSoical .nav a {
     color:#fff;
+   margin-right: 20px;
+}
+.follow.soicals > span.follow {
+    text-transform: capitalize;
+    color: #005daa;
+    padding: 30px 0 17px;
+}
+
+
+
+
+.footerNavSoical .nav a:last-child {
+    margin-right: 0;
 }
 .footer-block .footer-links a{
-	color: #fff;
-	text-transform: capitalize;
-	text-decoration: underline;
-	white-space: nowrap;
+    color: #777;
+    font-size: 10px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    white-space: nowrap;
+    line-height: 15px;
+    word-spacing: 1px;
 }
 .tab.tab1.artist-options li {
     display: inline-block;
@@ -1421,6 +1399,7 @@ app-artists-carousel {
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+    opacity: 0.75;
   }
 }
 @media only screen and (max-width: 1023px){
@@ -1430,8 +1409,11 @@ app-artists-carousel {
   .aboutHeaderBlock .aboutHeaderContent-wrapper {
       max-width: 90%;
       margin: 30px auto 60px;
-      font-size: 20px;
+      font-size: 16px;
       opacity: 0.75;
+  }
+  .aboutHeaderBlock .aboutHeaderContent-wrapper span.wmnTitle{
+      font-size: 26px;
   }
 }
 
@@ -1467,12 +1449,19 @@ h3.featuredArtistname a {
     text-align: center;
     text-transform: uppercase;
 }
+.footerinnerwrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1160px;
+    padding: 43px 10px;
+}
 @media only screen and (min-width: 1024px){
 
     .herovideoBlock span.sitelogo {
       width: 100%;
        height: 100%;
-      background: url(/assets/i/site-logo.png) no-repeat;
+      background: url(i/site-logo.png) no-repeat;
     display: block;
      background-position: center 100%;
   }
@@ -1530,39 +1519,21 @@ h3.featuredArtistname a {
   background: #ffffff;
   color: #1564a8;
 }
-
+/*footer mlist*/
 
 /* View More Button Styles ENDS */
 
 /*About News Block Styles */
 .artistNews {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .artistNews .block-title-wrapper.newsBlock {
     margin: 47px auto 50px;
 }
-.news_block ul.news li.col .body {
-    margin-top: 15px;
-}
-.news_block ul.news li.col .body h3 {
-    font-size: 14px !important;
-    line-height: 1.6;
-}
-.news_block ul.news li.col  .item-wrapper.col{
-    padding-bottom: 75px;
-    position: relative;
-}
-.news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper{
-  position: absolute;
-  bottom: 0;
-}
-.news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
-    text-transform: capitalize;
-    font-size: 15px;
-}
-.news-artist {
-    font-size: 13px;
+
+.artistNews .view-more-wrapper{
+  margin: 40px auto 60px;
 }
 @media only screen and (max-width: 1023px){
   .block-title-wrapper.newsBlock.left{
@@ -1572,8 +1543,47 @@ h3.featuredArtistname a {
     max-width: 90%;
   } 
 }
-@media only screen and (max-width: 767px){
-  
-}
+
 /* About News Block Styes ENDS */
 
+.livefyreBlockWrapper .livefyreBlockInnerWrapper .livefyreSideBlock .livefyreSBInWrapper .livefyreSideHeader span.instaImage {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  vertical-align: middle;
+  display: inline-block;
+  background: url("i/Insta-Logo.png") no-repeat;
+  background-size: cover;
+}
+
+/* About News Block Styes ENDS */
+
+
+.featuredArtist  .innerBodyWrapper{
+  background: url("/assets/i/bg.png") repeat;
+  display: block;
+    width: 100%;
+    font-size: 0;
+}
+ul.artists li.col .titleWrapper{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+ul.artists li.col .titleWrapper h3{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+ul.artists li.col .thumbnail:hover .titleWrapper{
+  display: block;
+} 
