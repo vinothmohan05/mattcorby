@@ -892,12 +892,9 @@ a.site-logo {
     left: 60px;
     width: 100px;
   }
-  .homePanelCon.videoPanel .button {
-    color: #fff568;
-  }
   #fixed-nav {
     background: url(images/nav-mobile.png) no-repeat;
-    height: 48px;
+    height: 50px;
     background-size: cover;
   }
   .videoPanel .carousel-prev {
@@ -910,11 +907,10 @@ a.site-logo {
       margin-top: 20px;
       margin-bottom: 20px;
   }
-    .videoPanel .carousel-controls {
+  .videoPanel .carousel-controls {
     text-align: center;
-    margin-top: -20px;
     display: block;
-    padding-bottom: 15px;
+    font-family: ruby;
   }
 }
 
