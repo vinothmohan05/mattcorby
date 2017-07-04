@@ -546,7 +546,7 @@ body {
 body:not(.home) nav.g-layout {
     position: fixed;
     z-index: 9;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.702);
 }
 body:not(.home) .logo-block {
     position: fixed;
@@ -875,7 +875,7 @@ span.social-links {
 }
 .footer-block .copy > span {
     text-transform: uppercase;
-    line-height: 22px;
+    line-height: 20px;
 }
 .footer-block .copy {
     padding-top: 6px;
@@ -944,8 +944,7 @@ div.cta {
 .logo-block a {
     display: block;
     width: 30px;
-    height: 30px;
-    margin: 0 auto;
+    
     margin-top: 10px;
 }
 .login-menu {
@@ -1103,6 +1102,33 @@ ul.breadcrumb.news-detail li {
     text-align: right;
     width: 100%;
 }
+.view-more.view-all-artists {
+	display:none;
+    
+}
+.artists-home .view-more.view-all-artists {
+	display: block;
+    width: 100%;
+    padding: 195px 0 0 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: #1563a8;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-family: 'gothammedium';
+
+}
+.artists-home .view-more.view-all-artists a {
+    background: transparent url(i/viewallarrow.png) no-repeat scroll center right;
+    box-sizing: border-box;
+    padding-right: 120px;
+}
+.grid.view ul.artists li:last-child {
+    height: 385px;
+}
+.category.landing .grid.view {
+    margin: 0;
+}
 .grid.view ul.artists li h3 a {
     padding-bottom: 10px;
     border-bottom: 1px solid;
@@ -1113,13 +1139,7 @@ ul.breadcrumb.news-detail li {
 .homePanelCon.artistsPanel {
     background: #000;
 }
-.view-more.view-all-artists {
-    display: inline-block;
-    width: 50%;
-    text-align: center;
-    line-height: 1;
-    padding: 13.34vw 0;
-}
+
 .footerWrapperBlock {
     display: block;
     width: 100%;
@@ -1133,6 +1153,7 @@ ul.breadcrumb.news-detail li {
 .mailing-list-outer-wrapper.mailing-footer-block {
     width: 38%;
     display: inline-block;
+    max-width:380px;
 }
 .footerWrapperBlock app-block {
     display: inline-block;
@@ -1150,6 +1171,7 @@ ul.breadcrumb.news-detail li {
     color: #777;
     font-size: 10px;
     text-align: left;
+    letter-spacing: .3px;
 }
 .copyrightinfo .footer-links a:hover {
     color: #fff;
@@ -1165,6 +1187,7 @@ ul.breadcrumb.news-detail li {
     box-sizing: border-box;
     font-size: 14px;
     line-height: 14px;
+    letter-spacing: .5px;
 }
 .follow.soicals span {
     display: block;
@@ -1199,7 +1222,7 @@ span.social-links li a {
     text-transform: capitalize;
     text-decoration: underline;
     white-space: nowrap;
-    line-height: 15px;
+    line-height: 20px;
     word-spacing: 1px;
 }
 .footer-block .footer-links a:hover {
@@ -1291,6 +1314,11 @@ app-artists-carousel {
     overflow: hidden;
     width: 100%;
     position: relative;
+}
+
+.scrolltoArtist a{
+   padding-bottom: 40px;
+    background: transparent url(i/Artist_drop_down.png) no-repeat scroll center bottom;
 }
 .newsCategoryMenu .tab.tab1.artist-drop-down-options {
     display: block;
@@ -1414,25 +1442,31 @@ h3.featuredArtistname a {
     font-size: 44px;
     color: #fff;
     line-height: 44px;
-    font-family: 'gothamlight';
+    font-family: 'gothamxlight';
     font-weight: normal;
+    letter-spacing: 4px;
 }
 .featuredArtistpath a {
     color: #fff;
     border: 1px solid #fff;
     box-sizing: border-box;
     display: block;
-    height: 35px;
-    line-height: 35px;
-    max-width: 185px;
+    height: 48px;
+    line-height: 48px;
+    max-width: 265px;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.featuredArtistpath a:hover {
+    color: #1564a8;
+    background: #fff;
 }
 .footerinnerwrapper {
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: 1160px;
+    max-width: 1240px;
     padding: 43px 10px;
     font-size: 0;
     box-sizing: border-box;
@@ -1457,7 +1491,7 @@ h3.featuredArtistname a {
     text-align: left;
 }
 .block-title-wrapper .block-title {
-    font-size: 15px;
+    font-size: 14px;
     display: inline-block;
     border-bottom: 1px solid #ffffff;
     font-family: gothambook;
@@ -1534,10 +1568,12 @@ ul.featuredArtist h2.block-title {
 /* About News Block Styes ENDS */
 
 .featuredArtist .innerBodyWrapper {
-    background: url("i/bg.png") repeat;
+   background: url(i/bg.png) repeat-y;
+    background-size: cover;
     display: block;
     width: 100%;
     font-size: 0;
+    min-height:240px;
 }
 ul.artists li.col .titleWrapper {
     width: 100%;
@@ -1553,8 +1589,14 @@ ul.artists li.col .titleWrapper {
 ul.artists li.col .titleWrapper h3 {
     position: absolute;
     bottom: 0;
-    padding: 10px;
+    margin: 30px;
     box-sizing: border-box;
+    right: 0;
+    width: auto;
+    border-bottom:1px solid rgba(255, 255, 255, 0.58);
+   font-size: 26px;
+    line-height: 60px;
+     cursor: pointer;
 }
 ul.artists li.col:hover .titleWrapper {
     display: block;
