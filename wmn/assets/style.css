@@ -1122,9 +1122,13 @@ ul.breadcrumb.news-detail li {
     background: transparent url(i/viewallarrow.png) no-repeat scroll center right;
     box-sizing: border-box;
     padding-right: 120px;
+    color: #1563a8;
+}
+.artists-home .view-more.view-all-artists a:hover {
+    opacity: .5;
 }
 .grid.view ul.artists li:last-child {
-    height: 385px;
+    min-height: 380px;
 }
 .category.landing .grid.view {
     margin: 0;
@@ -1183,7 +1187,7 @@ ul.breadcrumb.news-detail li {
 .footerNavSoical {
     display: inline-block;
     width: 75%;
-    padding-left: 30px;
+    padding-left: 60px;
     box-sizing: border-box;
     font-size: 14px;
     line-height: 14px;
@@ -1586,7 +1590,7 @@ ul.artists li.col .titleWrapper {
     display: none;
     background: rgba(0, 0, 0, 0.5);
 }
-ul.artists li.col .titleWrapper h3 {
+ul.artists li.col .titleWrapper a {
     position: absolute;
     bottom: 0;
     margin: 30px;
@@ -1594,17 +1598,17 @@ ul.artists li.col .titleWrapper h3 {
     right: 0;
     width: auto;
     border-bottom:1px solid rgba(255, 255, 255, 0.58);
-   font-size: 26px;
+    font-size: 26px;
     line-height: 60px;
      cursor: pointer;
+     color:#fff;
+         text-transform: uppercase;
+    letter-spacing: 3px;
 }
 ul.artists li.col:hover .titleWrapper {
     display: block;
 }
-nav a:hover,
-nav a.active {
-    background: transparent url(i/nav_hover.jpg) no-repeat scroll bottom;
-}
+
 .nav-toggle.show span {
     background: transparent url(i/play.svg) no-repeat scroll 0 0;
 }
@@ -1630,3 +1634,91 @@ nav a.active {
     display: block;
 }
 }
+
+/*Footer Block mobile Styles*/
+
+@media only screen and (max-width: 767px) {
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper {
+    max-width: 90%;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .form-group.email, .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper button.btn.btn-default.submit {
+    max-width: 100%;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .firstForm .submit {
+    background-position-x: calc(50% + 43px) !important;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .thirdForm ul {
+    position: relative;
+    bottom: auto;
+    padding: 0 0 20px;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical {
+    font-size: 0;
+    padding: 20px 0 40px;
+    max-width: 90%;
+    margin: 0 auto;
+    width: auto;
+    display: block;
+    letter-spacing: normal;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical .nav, .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical .follow.soicals {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 2.5;
+    font-weight: normal;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical .follow.soicals .followWMN {
+    color: #005daa;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical .follow.soicals .social-links li {
+    display: block;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .footerNavSoical .nav a {
+    display: block;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .nashvillelogo {
+    display: inline-block;
+    width: 40%;
+    max-width: 130px;
+    vertical-align: middle;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .copy {
+    font-size: 10px;
+    width: calc(100% - 130px);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .copy span {
+    text-transform: none;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .footer-links {
+    display: block;
+    font-size: 10px;
+    max-width: 96%;
+    margin: 10px auto;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .footer-links a {
+    margin-right: 5%;
+  }
+  .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .footer-links a:last-child {
+    margin-right: 0;
+  }
+}
+
+
+
+/*Footer Block mobile Styles ENDS*/
