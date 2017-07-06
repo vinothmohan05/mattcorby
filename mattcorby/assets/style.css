@@ -628,7 +628,8 @@ app-tour-block {
     padding-bottom: 30px;
 }
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-video-detail-block
+ {display:block;}
 
 app-lightbox {
     position: fixed;
