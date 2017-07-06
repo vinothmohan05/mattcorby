@@ -769,6 +769,9 @@ app-lightbox {
      body:not(.home) nav.g-layout {
         background:#000;
     }
+    h3.featuredArtistname a {
+        font-size: 30px;
+    }
     body.home app-block.logo-block {
         display:none;
     }
@@ -1072,6 +1075,9 @@ ul.breadcrumb.news-detail li {
     cursor: pointer;
     font-size: 28px;
 }
+.homePanelCon.mailinglistPanel.show .g-layout a.close:hover{
+    color:#777;
+}
 .footerWrapperBlock .footerinnerwrapper .thirdForm .heading,
 .footerWrapperBlock .footerinnerwrapper .welcome-msg,
 .footerWrapperBlock .footerinnerwrapper .mailing-list-copy,
@@ -1087,6 +1093,11 @@ ul.breadcrumb.news-detail li {
     background: transparent url(i/sidearrow.svg) no-repeat scroll right;
     text-align: left;
     letter-spacing: 2px;
+    transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
 }
 .mailing-list-outer-wrapper .firstForm .submit:hover {
     background: transparent url(i/sidearrow_hover.svg) no-repeat scroll right;
@@ -1325,7 +1336,8 @@ app-artists-carousel {
 }
 
 .scrolltoArtist a{
-   padding-bottom: 40px;
+    font-family: 'gothamlight';
+    padding-bottom: 40px;
     background: transparent url(i/Artist_drop_down.png) no-repeat scroll center bottom;
 }
 .newsCategoryMenu .tab.tab1.artist-drop-down-options {
@@ -1435,6 +1447,10 @@ app-artists-carousel {
         -webkit-transform: translate(-50%, -50%);
         opacity: 0.75;
     }
+    .livefyrePage .LivefyreBlockContents{
+        max-width: 1250px;
+        margin: 0 auto;
+    }
 }
 @media only screen and (max-width: 1023px) {
     .logo-block a {
@@ -1499,8 +1515,9 @@ h3.featuredArtistname a {
 }
  .herovideoBlock span.sitelogo {
         width: 100%;
-        height: 100%;
+        height: calc(100% - 153px);
         background: url(i/site-logo.png) no-repeat;
+        background-size:100%;
         display: block;
         background-position: center center;
     }
@@ -1538,7 +1555,7 @@ ul.featuredArtist h2.block-title {
 
 .view-more-wrapper {
     text-align: center;
-    padding: 35px 0 50px;
+    padding: 20px 0 40px;
 }
 .view-more-wrapper a.view-more {
     font-size: 11px;
@@ -1571,7 +1588,7 @@ ul.featuredArtist h2.block-title {
     margin: 47px auto 50px;
 }
 .artistNews .view-more-wrapper {
-    margin: 40px auto 60px;
+    padding: 40px 0 60px;
 }
 @media only screen and (max-width: 1023px) {
     .block-title-wrapper.newsBlock.left {
@@ -1580,9 +1597,11 @@ ul.featuredArtist h2.block-title {
     .artistNews {
         max-width: 90%;
     }
+    .block-title-wrapper .block-title{
+        font-size: 13px;
+    }
 }
 /* About News Block Styes ENDS */
-
 .livefyreBlockWrapper .livefyreBlockInnerWrapper .livefyreSideBlock .livefyreSBInWrapper .livefyreSideHeader span.instaImage {
     width: 30px;
     height: 30px;
@@ -1613,7 +1632,7 @@ ul.artists li.col .titleWrapper {
     display: none;
     background: rgba(0, 0, 0, 0.5);
 }
-ul.artists li.col .titleWrapper a {
+ul.artists li.col .titleWrapper span {
     position: absolute;
     bottom: 0;
     margin: 30px;
@@ -1621,7 +1640,7 @@ ul.artists li.col .titleWrapper a {
     right: 0;
     width: auto;
     border-bottom:1px solid rgba(255, 255, 255, 0.58);
-    font-size: 26px;
+    font-size: 27px;
     line-height: 60px;
      cursor: pointer;
      color:#fff;
@@ -1674,8 +1693,10 @@ ul.artists li.col:hover .titleWrapper {
             margin: 0px 10px 0 10px;
         }
    
-    .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper {
+    .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper, .footerWrapperBlock .MobileWrapper .footer-block .footerNavSoical {
+        width: 350px !important;
         max-width: 90%;
+        margin: 0 auto;
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .form-group.email, .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper button.btn.btn-default.submit {
         max-width: 100%;
@@ -1731,13 +1752,13 @@ ul.artists li.col:hover .titleWrapper {
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .nashvillelogo {
         display: inline-block;
-        width: 40%;
+        /*width: 40%;*/
         max-width: 130px;
         vertical-align: middle;
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .copy {
         font-size: 10px;
-        width: calc(100% - 130px);
+        /*width: calc(100% - 130px);*/
         display: inline-block;
         vertical-align: middle;
         text-align: left;
@@ -1793,13 +1814,19 @@ ul.artists li.col:hover .titleWrapper {
 
 
 /*Footer Block mobile Styles ENDS*/
+.news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .news-artist a{
+    color: #ffffff;
+}
+.news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .news-artist a:hover{
+    color: #359be9;
+}
 
 @media only screen and (max-width: 1023px) {
     ul.artists li.col .titleWrapper{
         display: block;
         background: none;
     }
-     ul.artists li.col .titleWrapper a{
+     ul.artists li.col .titleWrapper span{
         font-size: 12.62px;
         line-height: 25px;
         margin: 15px;
@@ -1859,4 +1886,9 @@ ul.artists li.col:hover .titleWrapper {
             -webkit-column-gap: 10px;
             margin: 0px 10px 0 10px;
         }
+}
+@media only screen and (min-width:768px ){
+    .terms-wrapper .terms {
+        margin-left: 10px;
+    }
 }
