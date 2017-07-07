@@ -90,21 +90,25 @@ body app-root > div.loading:not(.backgroundLoader) {
         -webkit-transform: translateY(0) translate3d(0, 0, 0);
     }
 }
-body.home div#fixed-nav.sticky {
+body.home #fixed-nav.sticky {
     position: inherit;
 }
-body.home div#logo {
+body.home #logo {
     display: none;
 }
-body.home div#fixed-nav {
+#logo {
+    padding: 0;
+    margin: 0;
+}
+body.home #fixed-nav {
     background: transparent;
 }
-.home div#fixed-nav.sticky {
+.home #fixed-nav.sticky {
     position: fixed;
     top: 0;
     z-index: 3;
 }
-div#smartHeader {
+#smartHeader {
     display: none;
 }
 .fixed-nav.sticky ~ app-home #smartHeader {
@@ -552,6 +556,10 @@ body:not(.home) .logo-block {
     position: fixed;
     z-index: 10;
 }
+body:not(.home) .nav-toggle span{
+     position: fixed;
+     left: inherit;
+}
 a {
     color: #359be9;
     text-decoration: none;
@@ -765,7 +773,9 @@ app-lightbox {
     width: 100%;
     height: auto;
 }
+
 /* mobile  resolution*/
+
 @media only screen and (max-width: 767px) {
     .herovideoBlock span.sitelogo {
 
@@ -814,6 +824,11 @@ app-lightbox {
     .nav-toggle.show{
         position: fixed;
     }
+    .homePanelCon.mailinglistPanel.show .g-layout {
+		width: 90%;
+		overflow-y: scroll;
+		max-height: 90vh;
+	}
 }
 .heroBlock h1 {
     margin: 0;
@@ -981,6 +996,7 @@ div.cta {
     z-index: 1;
     background: #000;
     z-index: 9;
+    position: relative;
 }
 /*.side_drawer::-webkit-scrollbar {
 	background: transparent;
@@ -1239,6 +1255,7 @@ span.social-links li a {
     text-transform: capitalize;
     color: #005daa;
     padding: 30px 0 17px;
+    font-family: gothambold;
 }
 .footerNavSoical .nav a:last-child {
     margin-right: 0;
@@ -1478,6 +1495,8 @@ app-artists-carousel {
     .aboutHeaderBlock .aboutHeaderContent-wrapper span.wmnTitle {
         font-size: 26px;
     }
+}
+@media only screen and (max-width: 1024px){
     .home .heroBlock{
         background: rgba(0,0,0,0.5);
     }
@@ -1537,7 +1556,21 @@ h3.featuredArtistname a {
 /* Desktop Wider */
 
 @media only screen and (min-width: 1024px) {
-   
+       .home .category.landing .grid.view ul.artists li .view-more.view-all-artists a{
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 62.5px);
+        transform: translate(-50% , -50% );
+        width: 100%;
+        padding: 0;
+        background-position-x: calc(50% + 240px);
+    }
+    .footerNavSoical{
+        margin-top: 1px;
+    }
+    ul.featuredArtist h2.block-title {
+        padding-top: 20px;
+    }
 }
 /* Title Styles */
 
@@ -1669,11 +1702,8 @@ ul.artists li.col:hover .titleWrapper {
 .nav-toggle.show span {
     background: transparent url(i/play.svg) no-repeat scroll 0 0;
 }
-.nav-toggle.show span {
- 
-    position: fixed;
-    left: initial;
-}
+
+
 .nav-toggle span {
     width: 100%;
     display: block;
@@ -1682,6 +1712,11 @@ ul.artists li.col:hover .titleWrapper {
     left: 0;
     opacity: 1;
     background: transparent url(i/menu.svg) no-repeat scroll 0 0;
+}
+.nav-toggle.show span {
+ 
+    position: fixed;
+    left: initial;
 }
 @media only screen and (max-width: 768px) {
     .copyrightinfo {
@@ -1715,6 +1750,9 @@ ul.artists li.col:hover .titleWrapper {
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .form-group.email, .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper button.btn.btn-default.submit {
         max-width: 100%;
+    }
+    .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper button.btn.btn-default.submit{
+        margin: 10px 0;
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .firstForm .submit {
         background-position-x: calc(50% + 38px) !important;
@@ -1798,6 +1836,7 @@ ul.artists li.col:hover .titleWrapper {
     }
 }
 
+/* tablet resolution */
 
 @media only screen and (min-width:768px ) and (max-width: 1023px){
 
@@ -1824,6 +1863,15 @@ ul.artists li.col:hover .titleWrapper {
         padding: 0 0 0 20px;
         box-sizing: border-box;
     }
+    .home .category.landing .grid.view ul.artists li .view-more.view-all-artists a{
+        left: 50%;
+        transform: translate(-50% , -50% );
+        background-position-x: calc(50% + 140px);
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+    }
 }
 
 
@@ -1831,6 +1879,7 @@ ul.artists li.col:hover .titleWrapper {
 /*Footer Block mobile Styles ENDS*/
 .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .news-artist a{
     color: #ffffff;
+    text-decoration: underline;
 }
 .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .news-artist a:hover{
     color: #359be9;
@@ -1847,7 +1896,6 @@ ul.artists li.col:hover .titleWrapper {
         margin: 15px;
      }
      .artists-home .view-more.view-all-artists{
-            position: relative;
             line-height: 1;
             position: absolute;
             top: 50%;
@@ -1930,7 +1978,7 @@ ul.artists li.col:hover .titleWrapper {
     .home .category.landing .grid.view ul.artists li {
         flex: initial;
     }
-    .home .category.landing .grid.view ul.artists li :last-child{
+    .home .category.landing .grid.view ul.artists li:last-child{
         min-height: auto;
     }
     .home .category.landing .grid.view ul.artists li .view-more.view-all-artists{
@@ -1938,15 +1986,6 @@ ul.artists li.col:hover .titleWrapper {
         height: 100%;
         width: 100%;
         padding: 0;
-    }
-    .home .category.landing .grid.view ul.artists li .view-more.view-all-artists a{
-        position: absolute;
-        top: 50%;
-        left: calc(50% - 62.5px);
-        transform: translate(-50% , -50% );
-        width: 100%;
-        padding: 0;
-        background-position-x: calc(50% + 240px);
     }
 }
 
