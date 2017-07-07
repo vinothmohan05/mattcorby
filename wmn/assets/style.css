@@ -765,7 +765,12 @@ app-lightbox {
     width: 100%;
     height: auto;
 }
+/* mobile  resolution*/
 @media only screen and (max-width: 767px) {
+    .herovideoBlock span.sitelogo {
+
+         height: calc(100% - 103px);
+    }
      body:not(.home) nav.g-layout {
         background:#000;
     }
@@ -805,6 +810,9 @@ app-lightbox {
     }
     .mailinglistPanel .g-layout {
         padding: 20px 20px 60px;
+    }
+    .nav-toggle.show{
+        position: fixed;
     }
 }
 .heroBlock h1 {
@@ -1452,6 +1460,7 @@ app-artists-carousel {
         margin: 0 auto;
     }
 }
+/*Tablet narrower*/
 @media only screen and (max-width: 1023px) {
     .logo-block a {
         display: block;
@@ -1468,6 +1477,9 @@ app-artists-carousel {
     }
     .aboutHeaderBlock .aboutHeaderContent-wrapper span.wmnTitle {
         font-size: 26px;
+    }
+    .home .heroBlock{
+        background: rgba(0,0,0,0.5);
     }
 }
 .livefyreBlockWrapper span.lightbox-title {
@@ -1521,6 +1533,9 @@ h3.featuredArtistname a {
         display: block;
         background-position: center center;
     }
+
+/* Desktop Wider */
+
 @media only screen and (min-width: 1024px) {
    
 }
@@ -1702,7 +1717,7 @@ ul.artists li.col:hover .titleWrapper {
         max-width: 100%;
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .firstForm .submit {
-        background-position-x: calc(50% + 43px) !important;
+        background-position-x: calc(50% + 38px) !important;
         font-size: 12px;
     }
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper .thirdForm ul {
@@ -1841,9 +1856,9 @@ ul.artists li.col:hover .titleWrapper {
             padding: 0;
             box-sizing: border-box;
      }
-         .grid.view ul.artists li:last-child {
-            min-height: 170px;
-        }
+    .grid.view ul.artists li:last-child {
+        min-height: 170px;
+    }
      .artists-home .view-more.view-all-artists a{
         text-align: center;
         background-position-x: calc(50% + 140px);
@@ -1877,6 +1892,9 @@ ul.artists li.col:hover .titleWrapper {
     }
 }
 @media only screen and (min-width:768px ) and (max-width: 1024px){
+    .HerovideoblockOuterWrapper {
+        margin-top:-68px;
+    }
 
      .homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
             -webkit-column-count: 3;
@@ -1886,9 +1904,49 @@ ul.artists li.col:hover .titleWrapper {
             -webkit-column-gap: 10px;
             margin: 0px 10px 0 10px;
         }
+        span.social-links li{
+            margin-right: 10px;
+
+        }
+        .footerNavSoical .nav a {
+            margin-right: 3px;
+        }
+        .footerNavSoical{
+            font-size:13px;
+        }
+        .footer-block .footer-links a {
+            font-size: 8px;
+        }
 }
+/* tablet Wider */
 @media only screen and (min-width:768px ){
     .terms-wrapper .terms {
         margin-left: 10px;
     }
+    .home .category.landing .grid.view ul.artists {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .home .category.landing .grid.view ul.artists li {
+        flex: initial;
+    }
+    .home .category.landing .grid.view ul.artists li :last-child{
+        min-height: auto;
+    }
+    .home .category.landing .grid.view ul.artists li .view-more.view-all-artists{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    .home .category.landing .grid.view ul.artists li .view-more.view-all-artists a{
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 62.5px);
+        transform: translate(-50% , -50% );
+        width: 100%;
+        padding: 0;
+        background-position-x: calc(50% + 240px);
+    }
 }
+
