@@ -1372,25 +1372,48 @@ app-artists-carousel {
     padding-bottom: 40px;
     background: transparent url(i/Artist_drop_down.png) no-repeat scroll center bottom;
 }
+
+.newsCategory {
+    padding-top: 68px;
+}
+.newsCategoryMenu .dropdrown {
+    font-size: 20px;
+    color: #000;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+
 .newsCategoryMenu .tab.tab1.artist-drop-down-options {
     display: block;
     width: 100%;
     max-width: 200px;
     float: right;
+    position: relative;
 }
 .newsCategoryMenu .tab.tab1.artist-drop-down-options li {
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
+.newsCategoryMenu .tab.tab1.artist-drop-down-options li a{
+    color:#fff;
+    cursor:pointer;
+    margin-top: 25px;
+    display: block;
+}
 .newsCategoryMenu {
     display: block;
     width: 100%;
     background: #1564a7;
-    height: 30px;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 .newsCategoryMenu ul {
     margin: 0;
+    margin: 0;
+    position: absolute;
 }
 .dropdown {
     min-height: 30px;
