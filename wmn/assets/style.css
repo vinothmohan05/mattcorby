@@ -1377,19 +1377,17 @@ app-artists-carousel {
     padding-top: 68px;
 }
 .newsCategoryMenu .dropdrown {
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     line-height: 50px;
     text-transform: uppercase;
+    font-family: gothambook;
+    letter-spacing: 1px;
+    padding-left: 10px;
 }
-
-
 .newsCategoryMenu .tab.tab1.artist-drop-down-options {
     display: block;
     width: 100%;
-    max-width: 200px;
-    float: right;
-    position: relative;
 }
 .newsCategoryMenu .tab.tab1.artist-drop-down-options li {
     display: block;
@@ -1402,6 +1400,14 @@ app-artists-carousel {
     margin-top: 25px;
     display: block;
 }
+.newsCategoryMenu .dropdrownWrapper {
+    display: block;
+    text-align: right;
+    position: relative;
+    max-width: 210px;
+    float: right;
+    margin-right: 7px;
+}
 .newsCategoryMenu {
     display: block;
     width: 100%;
@@ -1412,10 +1418,18 @@ app-artists-carousel {
 }
 .newsCategoryMenu ul {
     margin: 0;
-    margin: 0;
     position: absolute;
     color:#000;
     z-index: 99;
+    max-width: 210px;
+    text-align: left;
+    text-transform: uppercase;
+    background: #000;
+    padding: 0 10px 20px;
+    box-sizing: border-box;
+}
+.newsCategoryMenu .tab.tab1.artist-drop-down-options li a:hover{
+    color: #1564a8;
 }
 .dropdown {
     min-height: 30px;
@@ -2159,6 +2173,7 @@ app-news-list .g-layout.other{
   padding: 90px 110px;
   box-sizing: border-box;
 }
+
 .block.news-list ul.news li  .item-wrapper.col .ArtistNDateWrapper .news-artist a{
     font-size: 14px;
     display: inline-block;
@@ -2197,10 +2212,45 @@ app-news-list .g-layout.other{
     display: inline-block;
     padding: 0;
 }
-
+@media only screen and (max-width: 767px){
+    .block-title-wrapper.newsBlock{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .block-title-wrapper.newsBlock h2.block-title.newsBlock{
+        letter-spacing: 2px;
+        font-size: 12px;
+        line-height: 2.5;
+    }
+    .newsCategory .newsCategoryMenu {
+        background: #000;
+        padding: 0;
+        height: auto;
+    }
+    .newsCategoryMenu .dropdrownWrapper {
+        float: none;
+        background: #000;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+    .newsCategoryMenu .dropdrownWrapper .dropdrown{
+        color: #1564a8;
+        font-size: 12px;
+        padding: 0;
+        letter-spacing: 2px;
+    }   
+    .newsCategoryMenu ul{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 /*News Page Styles ENDs*/
 
 /*News Detail page Styles*/
+body.path-node.page-node-type-news article{
+    display: none;
+}
 
 .breadcrumb-wrapper.news-detail .detail-list .news_header_block {
     padding: 80px 0 30px;
@@ -2237,7 +2287,7 @@ app-news-list .g-layout.other{
     padding-bottom: 10px;
 }
 .detail-list .RecomededReads{
-    background: #fff;
+    background: #ebebeb;
     color: #000;
     padding-top: 40px;
 }
