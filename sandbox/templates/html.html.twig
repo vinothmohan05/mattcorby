@@ -47,16 +47,16 @@
 	<script src="https://use.typekit.net/ajy3tuh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<!-- Hammer JS -->
-	<script type="text/javascript" src="/themes/custom/sandbox/lib/hammer.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js"></script>
 	<script>digitalData={}</script>	
 	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
 	
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/gridlex/2.0.9/gridlex.min.css">
 	
-	<link href="/themes/custom/sandbox/assets/normalize.css?cache=v4.6" rel="stylesheet" />
-	<link href="/themes/custom/sandbox/css/global-style.css?cache=v4.6" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/assets/normalize.css?cache=v4.8" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/css/global-style.css?cache=v4.8" rel="stylesheet" />
 	
-	<link href="/themes/custom/sandbox/styles.8a6199e4fde5d755fffd.bundle.css?cache=v4.6" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/styles.8a6199e4fde5d755fffd.bundle.css?cache=v4.8" rel="stylesheet" />
     
   </head>
   <body{{ attributes.addClass(body_classes) }}>
@@ -91,10 +91,10 @@
     {{ page }}
     {{ page_bottom }}
 	
-	<script type="text/javascript" src="/themes/custom/sandbox/inline.a24f5d6f7d762db43482.bundle.js?v4.6"></script>
-	<script type="text/javascript" src="/themes/custom/sandbox/polyfills.47fff8d090a3a5aa870c.bundle.js?v4.6"></script>
-	<script type="text/javascript" src="/themes/custom/sandbox/vendor.e305672a6641aa74724b.bundle.js?v4.6"></script>
-	<script type="text/javascript" src="/themes/custom/sandbox/main.80ff63204acbe4bcf522.bundle.js?v4.6"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.a24f5d6f7d762db43482.bundle.js?v4.8"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.47fff8d090a3a5aa870c.bundle.js?v4.8"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.e305672a6641aa74724b.bundle.js?v4.8"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.80ff63204acbe4bcf522.bundle.js?v4.8"></script>
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
