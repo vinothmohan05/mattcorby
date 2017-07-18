@@ -1377,13 +1377,20 @@ app-artists-carousel {
     padding-top: 68px;
 }
 .newsCategoryMenu .dropdrown {
-    font-size: 18px;
-    color: #000;
+    font-size: 16px;
+    color: #082d4c;
     line-height: 50px;
     text-transform: uppercase;
     font-family: gothambook;
     letter-spacing: 1px;
     padding-left: 10px;
+}
+.featured-news .news-artist a {
+    text-decoration:underline;
+
+}
+.featured-news .news-artist a:hover{
+    color:#777;
 }
 .newsCategoryMenu .tab.tab1.artist-drop-down-options {
     display: block;
@@ -1648,6 +1655,9 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     .livefyrePage .LivefyreBlockContents{
         max-width: 1250px;
         margin: 0 auto;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
     }
 }
 /*Tablet narrower*/
@@ -2334,7 +2344,7 @@ body.path-node.page-node-type-news article{
     text-decoration: underline;
 }
 .detail-list  .body-footer-socials .relatedArtisttags a:hover{
-    color: #15648a;
+    color: #777;
 }
 i.fa.fa-caret-left {
     font-size: 18px;
