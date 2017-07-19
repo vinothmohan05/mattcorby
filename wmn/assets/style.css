@@ -2370,8 +2370,9 @@ body.path-node.page-node-type-news article{
 i.fa.fa-caret-left {
     font-size: 18px;
     color: #15648a;
-    line-height: 1.2;
+    line-height: 20px;
     vertical-align: middle;
+
 }
 
 @media only screen and (max-width:1023px){
@@ -2442,4 +2443,10 @@ ul.news li .item-wrapper .body .share .fs-tw i,ul.news li .item-wrapper .body .s
 }    
 .view-more-wrapper.news-landing{
     padding: 40px 0 40px;
+}
+.breadcrumb-wrapper.news-detail .view-more-wrapper.Mob{
+    padding: 20px 0 20px;
+}
+.RecomededReads .news_block ul.news li.col{
+    margin-right: 5%;
 }
