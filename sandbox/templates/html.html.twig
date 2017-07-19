@@ -56,7 +56,7 @@
 	<link href="/{{ base_path ~ directory }}/assets/normalize.css?cache=v4.1" rel="stylesheet" />
 	<link href="/{{ base_path ~ directory }}/css/global-style.css?cache=v4.1" rel="stylesheet" />
 	
-	<link href="/{{ base_path ~ directory }}/styles.8a6199e4fde5d755fffd.bundle.css?cache=v4.1" rel="stylesheet" />
+	<link href="/{{ base_path ~ directory }}/styles.8a6199e4fde5d755fffd.bundle.css" rel="stylesheet" />
     
   </head>
   <body{{ attributes.addClass(body_classes) }}>
@@ -89,13 +89,12 @@
 	-->
     {{ page_top }}
     {{ page }}
-    {{ page_bottom }}
-	
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.5d48c1d0cd3956460629.bundle.js?v4.1"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.47fff8d090a3a5aa870c.bundle.js?v4.1"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.e305672a6641aa74724b.bundle.js?v4.1"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.9a6077208a09ac5483f1.bundle.js?v4.1"></script>
+    {{ page_bottom }}	
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.5d48c1d0cd3956460629.bundle.js?v4.1"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.47fff8d090a3a5aa870c.bundle.js?v4.1"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.e305672a6641aa74724b.bundle.js?v4.1"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.9a6077208a09ac5483f1.bundle.js?v4.1"></script>
 </html>
