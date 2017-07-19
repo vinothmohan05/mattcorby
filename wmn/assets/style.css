@@ -642,7 +642,7 @@ div#fixed-nav nav.g-layout {
 }
 @media (min-width: 1380px) {
     .g-layout {
-        width: 1280px;
+        /*width: 1280px;*/
         margin: 0 auto;
     }
 }
@@ -2193,6 +2193,7 @@ app-news-list .g-layout.other{
     color: #1564a8;
     font-family: gothambook;
     text-decoration: underline;
+    line-height: 1.5;
 }
 .block.news-list ul.news li  .item-wrapper.col .ArtistNDateWrapper .news-artist a:hover {
     color: #797979;
@@ -2214,11 +2215,14 @@ app-news-list .g-layout.other{
 }
 .block.news-list .featured-news ul.news li .item-wrapper.col .body .readNShare{
     display: block;
+    padding-top: 15px;
+
 }
 .block.news-list .featured-news ul.news li .item-wrapper.col .body .share .fs-tw,.block.news-list .featured-news ul.news li .item-wrapper.col .body .share .fs-fb{
     border: 1px solid #fff;
     display: inline-block;
     margin-left: 10px;
+    height: 33px;
 }
 .block.news-list .featured-news ul.news li .item-wrapper.col .body .share {
     position: relative;
@@ -2310,10 +2314,9 @@ body.path-node.page-node-type-news article{
     margin: 0 auto;
     padding-bottom: 55px;
 }
-.detail-list .RecomededReads .RecomededReads-InnerWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper{
-    color: #000;
-}
-.detail-list .RecomededReads .RecomededReads-InnerWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
+
+
+.detail-list .RecomededReads .RecomededReads-InnerWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created , .detail-list .RecomededReads .RecomededReads-InnerWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper{
     color: #797979;
 }
 .detail-list  .body-footer-socials .share{
@@ -2390,6 +2393,7 @@ ul.news li .item-wrapper .body .share .fs-tw:hover, ul.news li .item-wrapper .bo
     font-size: 20px;
     line-height: 36px;
     width: 25px;
+    display: inline-block;
 }
 .detail-list  .body-footer-socials .share .fs-fb:hover, .detail-list  .body-footer-socials .share .fs-tw:hover{
     color: #1564a8;
@@ -2400,4 +2404,8 @@ ul.news li .item-wrapper .body .share .fs-tw i,ul.news li .item-wrapper .body .s
     display: block;
     line-height: 36px;
     text-align: center;
+}
+.breadcrumb-wrapper.news-detail .detail-list .g-layout{
+    font-size: 0;
+    width: 100%;
 }
