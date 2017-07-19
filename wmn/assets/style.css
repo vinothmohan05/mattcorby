@@ -1597,10 +1597,29 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width:768px) and (max-width: 1023px){
+/*@media only screen and (max-width: 1023px){
+  .livefyreBlockWrapper .livefyreBlockInnerWrapper {
+    max-width: 95%;
+  }
+}*/
+
+@media only screen  and (max-width: 1023px){
   .livefyreBlockWrapper .livefyreBlockInnerWrapper {
     max-width: 90%;
   }
+}
+@media only screen and (min-width:1023px) and (max-width: 1024px){
+  .livefyreBlockWrapper .livefyreBlockInnerWrapper {
+    max-width: 95%;
+  }
+}
+
+.detail-list .news_header_block .titleWrap .news-artist a{
+    text-decoration: underline;
+}
+.detail-list .news_header_block .titleWrap .news-artist a:hover{
+    color: #777777;
+    text-decoration: underline;
 }
 
 /*Livefyre block Styles Global ENDS*/
@@ -1665,6 +1684,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
         -moz-backface-visibility: hidden;
     }
 }
+
 /*Tablet narrower*/
 @media only screen and (max-width: 1023px) {
       .detail-list .body-thubnail-Wrapper .news-body iframe{
@@ -1837,12 +1857,16 @@ ul.featuredArtist h2.block-title {
 @media only screen and (max-width: 1023px) {
     .block-title-wrapper.newsBlock.left {
         text-align: center;
+
     }
     .artistNews {
         max-width: 90%;
     }
     .block-title-wrapper .block-title{
         font-size: 13px;
+    }
+    .RecomededReads-InnerWrapper .block-title-wrapper.newsBlock.left{
+        margin-bottom: 25px;
     }
 }
 /* About News Block Styes ENDS */
@@ -2357,6 +2381,7 @@ body.path-node.page-node-type-news article{
     width: 50%;
     text-align: right;
     font-size: 12px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 .detail-list  .body-footer-socials .relatedArtisttags a{
@@ -2446,7 +2471,4 @@ ul.news li .item-wrapper .body .share .fs-tw i,ul.news li .item-wrapper .body .s
 }
 .breadcrumb-wrapper.news-detail .view-more-wrapper.Mob{
     padding: 20px 0 20px;
-}
-.RecomededReads .news_block ul.news li.col{
-    margin-right: 5%;
 }
