@@ -1,5 +1,5 @@
 /* Loader */
-
+@import 'https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.15/css/perfect-scrollbar.min.css';
 @font-face {
     font-family: 'crimson_textroman';
     src: url('Fonts-Gotham/crimsontext-roman-webfont.eot');
@@ -1178,6 +1178,7 @@ ul.breadcrumb.news-detail li {
     width: 50%;
     float: left;
     position: relative;
+    margin: 0;
 }
 .grid.view ul.artists h3 {
     position: absolute;
@@ -1320,52 +1321,33 @@ span.social-links li a {
 span.social-links li a:hover {
     color: #777;
 }
-.tab.tab1.artist-options li {
-    display: inline-block;
-    width: 22%;
-    box-sizing: border-box;
-}
-.tab.tab1.artist-options li a {
-    color: #111111;
-}
+
 .artistLandingNav {
     background: #1564a7;
-    height: 40px;
+    position: relative;
 }
 body.home .artistLandingNav,
 body.home .BackToTop {
     display: none;
 }
-.tab.tab1.artist-options,
-.tab.tab1.view-options {
-    display: inline-block;
-    width: 49%;
-}
 .tab.tab1.view-options li {
     display: inline-block;
-    width: 5%;
     box-sizing: border-box;
 }
 .tab.tab1.view-options {
     text-align: right
 }
-.List.view .thumbnail {
-    display: none;
-}
-.item-wrapper:hover .thumbnail {
-    display: block;
-}
 .List.view .item-wrapper {
     text-align: right;
 }
 .List.view {
-    POSITION: relative;
+    position: relative;
 }
 .List.view .imagewrapper {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 450px;
+    max-width: 50%;
 }
 .List.view .item-wrapper h3 {
     text-align: center;
@@ -1374,15 +1356,15 @@ body.home .BackToTop {
 .category.landing {
     background: #000;
 }
-.category.landing .BackToTop {
+.tab-container .BackToTop {
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     background: #111111;
     width: 100%;
-    cursor: pointer;
+    box-sizing: border-box;
 }
-.category.landing .BackToTop a.btt {
+.tab-container .BackToTop a.btt {
     color: #fff;
     line-height: 50px;
 }
@@ -1390,11 +1372,21 @@ li.col.List {
     display: inline-block;
     width: 100%;
 }
+li.col.List:first-child{
+    margin-top: 40px;
+}
 .List.view .item-wrapper h3 {
     color: #fff;
-    width: 50%;
+    width: 44%;
     text-align: left;
     float: right;
+    font-family: gothambook;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    margin: 0;
 }
 app-artists-carousel {
     display: block;
@@ -1407,7 +1399,10 @@ app-artists-carousel {
 .scrolltoArtist a{
     font-family: 'gothamlight';
     padding-bottom: 40px;
-    background: transparent url(i/Artist_drop_down.png) no-repeat scroll center bottom;
+    /*background: transparent url(i/Artist_drop_down.png) no-repeat scroll center bottom;*/
+}
+.scrolltoArtist i{
+    padding-top: 20px;
 }
 
 .newsCategory {
@@ -1926,35 +1921,7 @@ ul.featuredArtist h2.block-title {
     font-size: 0;
     min-height:240px;
 }
-ul.artists li .titleWrapper {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    box-sizing: border-box;
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-}
-ul.artists li .titleWrapper span {
-    position: absolute;
-    bottom: 0;
-    margin: 30px;
-    box-sizing: border-box;
-    right: 0;
-    width: auto;
-    border-bottom:1px solid rgba(255, 255, 255, 0.58);
-    font-size: 27px;
-    line-height: 60px;
-     cursor: pointer;
-     color:#fff;
-         text-transform: uppercase;
-    letter-spacing: 3px;
-}
-ul.artists li:hover .titleWrapper {
-    display: block;
-}
+
 
 .nav-toggle.show span {
     background: transparent url(i/play.svg) no-repeat scroll 0 0;
@@ -2509,4 +2476,361 @@ ul.news li .item-wrapper .body .share .fs-tw i,ul.news li .item-wrapper .body .s
 }
 .breadcrumb-wrapper.news-detail .view-more-wrapper.Mob{
     padding: 20px 0 20px;
+}
+
+/* Artist Landing Page Styles */
+app-artists{
+    padding-top: 67px;
+    display: block;
+}
+.grid.view ul.artists li{
+    overflow: hidden;
+}
+.grid.view ul.artists li .titleWrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+
+}
+.grid.view ul.artists li .titleWrapper span {
+    width: auto;
+    /*border-bottom:1px solid rgba(255, 255, 255, 0.58);*/
+    font-size: 27px;
+    line-height: 60px;
+    cursor: pointer;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+}
+.grid.view ul.artists li .titleWrapper .titleInnerWraper{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 30px;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.grid.view ul.artists li .titleWrapper .titleInnerWraper:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin-top: 0px;
+    right: 0;
+    width: 0;
+    background: #e9e8d4;
+    transition: width .4s ease;
+    -webkit-transition: width .4s ease;
+}
+.grid.view ul.artists li:hover .titleWrapper .titleInnerWraper:after{
+    width: 100%;
+}
+
+/*.grid.view ul.artists li .thumbnail img{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease ;
+    transition: all 0.5s ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}    
+.grid.view ul.artists li:hover .thumbnail img{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}*/
+.List.view {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+/*.List.view .imagewrapper {
+    -webkit-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.item-wrapper:hover .imagewrapper {
+    opacity: 1;
+    -webkit-transform: scale(1,1);
+    -webkit-transform-origin: top right;
+    -moz-transform: scale(1,1);
+    -moz-transform-origin: top right;
+    -o-transform: scale(1,1);
+    -o-transform-origin: top right;
+    transform: scale(1,1);
+    transform-origin: top right;
+}*/
+
+
+.List.view .imagewrapper {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+.item-wrapper:hover .imagewrapper {
+    visibility: visible;
+    opacity: 1;
+}
+.List.view .item-wrapper h3:hover {
+    margin-right: 20px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.1s;
+    color: #1564a8;
+}
+.artistLandingNav .tab.artist-options{
+    width: 100%;
+    text-align: center;
+}
+.artistLandingNav .tab.artist-options ul li {
+    display: inline-block;
+    padding: 15px 10px;
+    font-family: gothambook;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #082d4d;
+    text-transform: uppercase;
+}
+i{
+    transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+}
+.artistLandingNav .tab.artist-options ul li a,.artistLandingNav .tab.view-options i{
+    color: #082d4d;
+    cursor: pointer;
+}
+.artistLandingNav .tab.artist-options ul li a.active,.artistLandingNav .tab.view-options i:hover{
+    color: #fff;
+}
+.artistLandingNav .tab.view-options a{
+    font-size: 0;
+}
+.artistLandingNav .tab.view-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.artistLandingNav .tab.view-options ul {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 0 20px 0 10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 100px;
+}
+.artistLandingNav .tab.view-options a{
+    cursor: pointer;
+}
+.tab-container .BackToTop{
+    position: relative;
+}
+.tab-container .BackToTop a{
+    font-family: gothamlight;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.tab-container .BackToTop a:hover, .tab-container .BackToTop i:hover{
+    color: #777777;
+}
+.tab-container .BackToTop i{
+    display: block;
+    font-size: 20px;
+}
+@-ms-keyframes scrollWheel {
+  0% {
+    top: 5px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+@keyframes scrollWheel {
+  0% {
+    top: 5px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+.bounce{
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -webkit-animation: scrollWheel 1s linear infinite;
+    -moz-animation: scrollWheel1s 1s linear infinite;
+    -o-animation: scrollWheel 1s linear infinite;
+    animation: scrollWheel 1s linear infinite;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+/*Scroll bar */
+.ps-container>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y, .ps-container>.ps-scrollbar-y-rail:active>.ps-scrollbar-y{
+    width: 6px;
+}
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1564a8 !important;
+}
+.ps-container.ps-active-x>.ps-scrollbar-x-rail, .ps-container.ps-active-y>.ps-scrollbar-y-rail{
+    background: transparent !important;
+    left: 50% !important;
+}
+/*Scroll bar */
+/* Artist landing page Styles ENDs */
+
+
+.sliderOuterWrapper {
+    overflow: hidden;
+}
+
+.sliderOuterWrapper .sliderInnerWrapper {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    -webkit-transition: all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
+}
+
+.sliderOuterWrapper .sliderInnerWrapper .category.landing {
+    width: 25%;
+    float: left;
+}
+.sliderInnerWrapper.Artists{
+    transform: translateX(0%);
+    -moz-transform: translateX(-0%);
+    -ms-transform: translateX(-0%);
+    -webkit-transform: translateX(-0%);
+}
+.sliderInnerWrapper.Comedians{
+    transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+}
+.sliderInnerWrapper.Others{
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.sliderInnerWrapper.All{
+    transform: translateX(-75%);
+    -moz-transform: translateX(-75%);
+    -ms-transform: translateX(-75%);
+    -webkit-transform: translateX(-75%);
+}
+.category.landing .grid.view ul.artists li.col.grid.view-more{
+    display:none;
+}
+@media only screen and (min-width:1025px){
+    .artistLandingNav .tab.artist-options ul li a:hover{
+        color: #fff;
+    }
+}
+@media only screen and (min-width:1024px){
+    .grid.view ul.artists li .thumbnail img{
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease ;
+        transition: all 0.5s ease;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }    
+    .grid.view ul.artists li:hover .thumbnail img{
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    .grid.view ul.artists li .titleWrapper {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        box-sizing: border-box;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease ;
+        transition: all 0.1s ease;
+    }
+    .grid.view ul.artists li:hover .titleWrapper{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .artistLandingNav .tab.artist-options ul li{
+        font-size: 12px;
+    }
+    .artistLandingNav .tab.view-options{
+        display: none;
+    }
+    .grid.view ul.artists li .titleWrapper .titleInnerWraper{
+        margin: 10px;
+    }
+    .grid.view ul.artists li .titleWrapper span{
+        margin: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .grid.view ul.artists li .titleWrapper{
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
+@media only screen and (max-width: 767px){
+    .grid.view ul.artists li {
+        display: block;
+        width: 100%;
+    }
 }
