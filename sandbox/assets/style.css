@@ -859,12 +859,12 @@ span.social-links {
 .footer-social .fs-vi a:hover {
     background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
 }
-.galleryPage ul.photos li {
+/* .galleryPage ul.photos li {
     background-image: url(/assets/i/gallery.svg?fi);
     background-repeat: repeat;
     background-size: 51% auto;
     background-position: 0 0;
-}
+} */
 ul.footer-social li+li {
     margin-left: 20px;
 }
