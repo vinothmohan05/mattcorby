@@ -1877,7 +1877,7 @@ ul.featuredArtist h2.block-title {
 /*About News Block Styles */
 
 .artistNews {
-    max-width: 1000px;
+    max-width: 984px;
     margin: 0 auto;
 }
 .artistNews .block-title-wrapper.newsBlock {
@@ -2833,4 +2833,10 @@ i{
         display: block;
         width: 100%;
     }
+}
+
+
+.artistNews .news_block   ul.news  li.col{
+    margin:0;
+    padding-right:8%;
 }
