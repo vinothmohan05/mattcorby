@@ -773,6 +773,7 @@ app-lightbox {
     display: inline-block;
     width: 100%;
     height: auto;
+    min-height: calc(100vh - 240px);
 }
 
 /* mobile  resolution*/
@@ -2844,8 +2845,10 @@ i{
     }
 }
 
-
-.artistNews .news_block   ul.news  li.col{
+ul.artists.artist-detail li.col.List{
+    margin: 0;
+}
+.artistNews .news_block ul.news li.col{
     margin:0;
     padding-right:8%;
 }
@@ -2875,22 +2878,25 @@ i{
 .artistbioWrapper .TitleWrapper.dropDownVisible .TitleInnerWrapper h2{
     cursor: default;
 }
+.artistbioWrapper .TitleWrapper .TitleInnerWrapper h2{
+    margin: 0;
+}
 .artistbioWrapper .TitleWrapper .TitleInnerWrapper .title-Wrapper-inner{
     display: inline;
-    padding: 28px 40px 80px;
+    padding: 28px 40px 60px;
     box-sizing: border-box;
     z-index: 2;
     position: relative;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    -ms-transition: all 0.3s ease 0s;
-    transition-delay: 0.8sec;
-    -webkit-transition-delay: 0.8s;
-    -moz-transition-delay: 0.8s;
-    -o-transition-delay: 0.8s;
-    -ms-transition-delay: 0.8s;
+    transition: all 0s ease 0s;
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    -ms-transition: all 0s ease 0s;
+    transition-delay: 0.4sec;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
 }
 .artistbioWrapper .TitleWrapper.dropDownVisible .TitleInnerWrapper .title-Wrapper-inner{
     background: #000;
@@ -2906,19 +2912,23 @@ i{
 .ArtistInnerWrapper .artistbioWrapper .DropDownWrapper {
     position: absolute;
     background: #000;
-    padding: 0px 40px 20px;
-    top: 74px;
+    padding: 0px 20px 0px;
+    top: 78px;
     left: 50%;
     z-index: 1;
     transform: translate(-50% , -100%);
     -moz-transform:  translate(-50% , -100%);
     -ms-transform:  translate(-50% , -100%);
     -webkit-transform:  translate(-50% , -100%);
-    -webkit-transition: all 0.8s ease-in-out 0s;
-    -moz-transition: all 0.8s ease-in-out 0s;
-    transition: all 0.8s ease-in-out 0s;
+    transition-delay: 0.2sec;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
     width: 100%;
-    opacity: 0;
     visibility: hidden;
     box-sizing: border-box;
 }
@@ -2929,22 +2939,30 @@ i{
     -moz-transform:  translate(-50% , 0);
     -ms-transform:  translate(-50% , 0);
     -webkit-transform:  translate(-50% , 0);
-    -webkit-transition: all 0.8s ease-in-out 0s;
-    -moz-transition: all 0.8s ease-in-out 0s;
-    transition: all 0.8s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
 }
 
 .List.view .artist-detail .item-wrapper h3:hover{
     margin-right: 0;
 }
 
-.artistbioWrapper .TitleWrapper i.fa.fa-caret-down,.artistbioWrapper .TitleWrapper i.fa.fa-times {
+.artistbioWrapper .TitleWrapper i.fa.fa-caret-down,.artistbioWrapper .TitleWrapper span.close {
     margin-left: 10px;
     cursor: pointer;
     z-index: 2;
     width: 10px;
 } 
-
+.artistbioWrapper .TitleWrapper span.close {
+    font-family: gothambook;
+}
+.List.view .artist-detail .item-wrapper h3 {
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+}
 
 
 
@@ -2966,8 +2984,9 @@ i{
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    padding: 0 60px 0 20px;
+    padding: 0 60px 0 20px
 }
+
 .ArtistOuterWrapper .music-tour-wrapper{
     width: 75%;
     display: inline-block;
@@ -2975,4 +2994,191 @@ i{
 }
 .ArtistOuterWrapper .spotifyWrapper .player {
     display: none !important;
+}
+body.home .category.landing .grid.view ul.artists li.col.grid.view-more {
+    display: block !important;
+}
+@media only screen and (min-width:1024px){
+    .category.landing .List.view {
+        max-width: 1366px;
+        margin: 0 auto;
+        min-height: 380px;
+    }
+}
+
+/*tour default style*/
+div#tourdates {
+    margin: 0 auto;
+}
+
+#tourdates .bit-widget {
+    font-family: 'gothambook';
+    font-size: 16px;
+    padding: 0;
+}
+
+#tourdates .bit-local-events-container {
+    display: none;
+}
+
+#tourdates .bit-nav-bar-container {
+    display: none;
+}
+
+#tourdates .bit-upcoming-events {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#tourdates a.bit-event {
+    padding: 0;
+    white-space: normal;
+    border: none;
+    display: block;
+    text-align: left;
+    font-size: 0;
+    margin-bottom: 40px;
+}
+
+#tourdates .bit-offers.bit-button, #tourdates .bit-details {
+    display: inline-block;
+    vertical-align: top;
+    flex: 0;
+    font-weight: normal;
+    padding: 0;
+    font-size: 16px;
+    transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+}
+
+#tourdates .bit-offers.bit-button {
+    width: 25%;
+    background: none;
+    border: 1px solid #1564a8;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    margin: 0;
+    font-family: gothammedium;
+}
+
+#tourdates .bit-details {
+    width: 75%;
+}
+
+#tourdates .bit-date {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 16px;
+}
+
+#tourdates .bit-venue {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 77%;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 16px;
+}
+
+#tourdates .bit-location {
+    display: block;
+    font-weight: normal;
+    white-space: normal;
+    width: 77%;
+    margin-left: 21%;
+    font-family: gothammedium;
+}
+
+#tourdates a.bit-event:hover {
+    background: none;
+}
+
+#tourdates .bit-offers.bit-button:hover {
+    background: #1564a8;
+}
+.bit-widget .bit-upcoming-events-show-all-button, .bit-past-events-show-all-button{
+    border: 1px solid #1564a8 !important;
+    color: #fff !important;
+    font-family: gothammedium;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    height: 36px;
+    line-height: 36px !important;
+    padding: 0 !important;
+    letter-spacing: 1px !important;
+    transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+}
+.bit-widget .bit-upcoming-events-show-all-button:hover, .bit-past-events-show-all-button:hover{
+    background: #1564a8!important;
+}
+.bit-widget .bit-upcoming-events-show-all-button, .bit-widget .bit-past-events-show-all-button{
+    width: 190px;
+    margin: 0 auto !important;
+}
+
+	/*tour styles ends*/
+
+.ArtistOuterWrapper .block-title-wrapper h2.block-title {
+    font-family: gothamlight;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width:767px){
+    .ArtistOuterWrapper .spotifyWrapper {
+        width: 100%;
+        display: block;
+    }
+    .ArtistOuterWrapper .music-tour-wrapper{
+        width: 100%;
+        display: block;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    #tourdates .bit-date,#tourdates .bit-venue,#tourdates .bit-location,.bit-widget .bit-upcoming-events-show-all-button, .bit-widget .bit-past-events-show-all-button{
+        font-size: 12px;
+    }
+    #tourdates .bit-details {
+        width: 60%;
+    }
+    #tourdates .bit-date {
+        width: 30%;
+    }
+    #tourdates .bit-venue {
+        width: 67%;
+    }
+    #tourdates .bit-location {
+        width: 77%;
+        margin-left: 32%;
+    }
+    #tourdates .bit-offers.bit-button{
+        width: 40%;
+    }
+    #tourdates .bit-offers.bit-button{
+        font-size: 10px;
+    }
+    #tourdates a.bit-event{
+        max-width: 360px;
+        margin: 0 auto 40px;
+    }
+    .artistNews .block-title-wrapper.newsBlock.left{
+        margin: 0;
+        padding: 30px 0 30px;
+    }
 }
