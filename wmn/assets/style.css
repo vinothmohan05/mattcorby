@@ -2203,6 +2203,7 @@ ul.featuredArtist h2.block-title {
     }
     .home .category.landing .grid.view ul.artists li {
         flex: initial;
+        cursor: pointer;
         margin:0;
     }
     .home .category.landing .grid.view ul.artists li:last-child{
@@ -2416,6 +2417,7 @@ i.fa.fa-caret-left {
     .detail-list .RecomededReads .RecomededReads-InnerWrapper{
             max-width: 90%;
     }
+    
 }
 
 /*News Detail page Styles ENDs*/
@@ -2829,13 +2831,6 @@ i{
     .grid.view ul.artists li .titleWrapper{
         background: rgba(0, 0, 0, 0.25);
     }
-    .category.landing{
-        max-height: 20px;
-    }
-    .category.landing.active{
-        max-height: auto;
-        max-height: none;
-    }
 
 }
 @media only screen and (max-width: 767px){
@@ -2844,7 +2839,13 @@ i{
         width: 100%;
     }
 }
-
+.category.landing{
+    max-height: 20px;
+}
+.category.landing.active{
+    max-height: auto;
+    max-height: none;
+}
 ul.artists.artist-detail li.col.List{
     margin: 0;
 }
@@ -2934,7 +2935,6 @@ ul.artists.artist-detail li.col.List{
 }
 .ArtistInnerWrapper .artistbioWrapper .DropDownWrapper.show{
     visibility: visible;
-    opacity: 1;
     transform: translate(-50% , 0);
     -moz-transform:  translate(-50% , 0);
     -ms-transform:  translate(-50% , 0);
@@ -3138,12 +3138,95 @@ div#tourdates {
 .ArtistOuterWrapper .block-title-wrapper h2.block-title {
     font-family: gothamlight;
     margin-bottom: 60px;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ArtistOuterWrapper .block-title-wrapper h2.block-title.spotify{
+    margin-bottom: 25px;
+}
+.ArtistOuterWrapper .SpotiftSubTitle{
+    color: rgba(242, 242, 242, 0.5);
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail:before{
+    background: rgba(0,0,0,0.78);
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail img{
+    outline:none;
+    font-size: 0;
+    border: none;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyDetailsWrapper {
+    font-size: 14px;
+    text-align: center;
+    /*color: rgba(255, 255, 255, 0.78);*/
+    color: rgba(242, 242, 242, 0.5);
+    font-family: gothambook;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyTitle {
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyAlbum {
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyUrl a {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border: 1px solid #1564a8;
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    height: 25px;
+    line-height: 25px;
+}
+.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyUrl a:hover{
+    background: #1564a8;
+}
+.ArtistInnerWrapper .ArtistOuterWrapper .follow-button-wrapper{
+    text-align: center;
+    margin: 25px 0;
+}
+.ArtistInnerWrapper .ArtistOuterWrapper .follow-button-wrapper iframe{
+    height: 24px;
+    width: 93px;
+    vertical-align: bottom;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .ArtistOuterWrapper {
+        max-width: 95%;
+    }
+    .ArtistOuterWrapper .spotifyWrapper {
+        width: 30%;
+    }
+
+    .ArtistOuterWrapper .music-tour-wrapper {
+        width: 70%;
+    }
+        #tourdates .bit-details {
+        width: 70%;
+    }
+
+    #tourdates .bit-offers.bit-button {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width:767px){
     .ArtistOuterWrapper .spotifyWrapper {
-        width: 100%;
+         width: 100%;
         display: block;
+        overflow: hidden;
+        padding: 0 40px;
+          max-width: 300px;
+        margin: 0 auto;
     }
     .ArtistOuterWrapper .music-tour-wrapper{
         width: 100%;
@@ -3182,3 +3265,4 @@ div#tourdates {
         padding: 30px 0 30px;
     }
 }
+
