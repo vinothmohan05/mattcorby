@@ -658,7 +658,7 @@ body.show-SideDrawer ,body.show-photo-lightbox {
 }
 
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons,app-lightbox {display:block;}
 @media only screen and (min-width: 767px) {
   body:not(.user-logged-in) app-news-detail {
       width: 100%;
@@ -666,7 +666,7 @@ app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app
   }
 }
 
-app-lightbox {
+/* app-lightbox {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -677,7 +677,7 @@ app-lightbox {
     height: 100%;
     background: rgba(4, 5, 8, 0.8);
     display: block;
-}
+} */
 
 .heroBlockCon {
     background: url(i/bg_hero.jpg) no-repeat;
