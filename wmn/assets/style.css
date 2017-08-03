@@ -1180,6 +1180,7 @@ ul.breadcrumb.news-detail li {
     float: left;
     position: relative;
     margin: 0;
+    cursor: pointer;
 }
 .grid.view ul.artists h3 {
     position: absolute;
@@ -2314,9 +2315,10 @@ background: #ebebeb;
 /*News Page Styles ENDs*/
 
 /*News Detail page Styles*/
-body.path-node.page-node-type-news article{
+body.path-node article{
     display: none;
 }
+
 
 .breadcrumb-wrapper.news-detail .detail-list .news_header_block {
     padding: 80px 0 30px;
@@ -2411,14 +2413,17 @@ i.fa.fa-caret-left {
    .detail-list .RecomededReads .RecomededReads-InnerWrapper{
         max-width: 90%;
         margin: 0 auto;
+   }  
+    .grid.view ul.artists li .titleWrapper .titleInnerWraper:after{
+       display: none;
+   }
+   .grid.view ul.artists li .titleWrapper span{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+        line-height: 20px;
+        padding-bottom: 5px;
    }
 }
-@media only screen and (min-width:1023px) and (max-width: 1024px) and (orientation: landscape){
-    .detail-list .RecomededReads .RecomededReads-InnerWrapper{
-            max-width: 90%;
-    }
-    
-}
+
 
 /*News Detail page Styles ENDs*/
 
@@ -2625,7 +2630,7 @@ i{
     color: #082d4d;
     cursor: pointer;
 }
-.artistLandingNav .tab.artist-options ul li a.active,.artistLandingNav .tab.view-options i:hover{
+.artistLandingNav .tab.artist-options ul li a.active,.artistLandingNav .tab.view-options i:hover,.artistLandingNav .tab.view-options i.active{
     color: #fff;
 }
 .artistLandingNav .tab.view-options a{
@@ -2771,6 +2776,7 @@ i{
 .category.landing .grid.view ul.artists li.col.grid.view-more{
     display:none;
 }
+
 @media only screen and (min-width:1025px){
     .artistLandingNav .tab.artist-options ul li a:hover{
         color: #fff;
@@ -2840,7 +2846,7 @@ i{
     }
 }
 .category.landing{
-    max-height: 20px;
+    max-height: 59vh;
 }
 .category.landing.active{
     max-height: auto;
@@ -2859,6 +2865,7 @@ ul.artists.artist-detail li.col.List{
 .artistbioWrapper .TitleWrapper .TitleInnerWrapper {
     display: inline;
     position: relative;
+    font-size: 16px;
 }
 
  /* .artistbioWrapper .TitleWrapper.dropDownVisible .TitleInnerWrapper{
@@ -2953,6 +2960,8 @@ ul.artists.artist-detail li.col.List{
     cursor: pointer;
     z-index: 2;
     width: 10px;
+    position: relative;
+    top: 2px;
 } 
 .artistbioWrapper .TitleWrapper span.close {
     font-family: gothambook;
@@ -2976,7 +2985,7 @@ ul.artists.artist-detail li.col.List{
 .ArtistOuterWrapper{
     font-size: 0;
     display: block;
-    max-width: 984px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 .ArtistOuterWrapper .spotifyWrapper {
@@ -3149,6 +3158,7 @@ div#tourdates {
     font-size: 10px;
     text-transform: uppercase;
     margin-bottom: 35px;
+    letter-spacing: 1px;
 }
 .spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail:before{
     background: rgba(0,0,0,0.78);
@@ -3198,10 +3208,68 @@ div#tourdates {
     width: 93px;
     vertical-align: bottom;
 }
+.no-results-behaviour {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+.play a {
+    background: url("i/Play-image.png") no-repeat center center transparent;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-size: 50px;
+}
+.pause a {
+    background: url("i/pause.png") no-repeat center center transparent;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-size: 50px;
+}
+.artistPage-NewsWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
+    line-height: 2;
+}
+.artistPage-NewsWrapper .artistNews .view-more-wrapper{
+    padding: 40px 0 40px;
+}    
 
+@media only screen and (min-width:1023px) and (max-width: 1024px) and (orientation: landscape){
+    .detail-list .RecomededReads .RecomededReads-InnerWrapper{
+            max-width: 90%;
+    }
+    .grid.view ul.artists li .titleWrapper .titleInnerWraper:after, .artistlanding .artistLandingNav{
+       display: none;
+   }
+   .grid.view ul.artists li .titleWrapper span{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+        line-height: 20px;
+        padding-bottom: 5px;
+        font-size: 20px;
+   }
+    .grid.view ul.artists li .titleWrapper {
+        display: block;
+        background: none;
+        opacity: 1;
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+
+}
 @media only screen and (min-width:768px) and (max-width:1024px){
     .ArtistOuterWrapper {
-        max-width: 95%;
+        max-width: calc(93% + 40px);
     }
     .ArtistOuterWrapper .spotifyWrapper {
         width: 30%;
@@ -3217,6 +3285,12 @@ div#tourdates {
     #tourdates .bit-offers.bit-button {
         width: 30%;
     }
+    .artistPage-NewsWrapper .block-title-wrapper.newsBlock.left{
+        padding-top: 30px; 
+    }
+    .artistPage-NewsWrapper .artistNews{
+        max-width: 93%;
+    }
 }
 
 @media only screen and (max-width:767px){
@@ -3225,7 +3299,7 @@ div#tourdates {
         display: block;
         overflow: hidden;
         padding: 0 40px;
-          max-width: 300px;
+        max-width: 300px;
         margin: 0 auto;
     }
     .ArtistOuterWrapper .music-tour-wrapper{
@@ -3233,12 +3307,13 @@ div#tourdates {
         display: block;
         max-width: 95%;
         margin: 0 auto;
+        margin-bottom: 45px;
     }
     #tourdates .bit-date,#tourdates .bit-venue,#tourdates .bit-location,.bit-widget .bit-upcoming-events-show-all-button, .bit-widget .bit-past-events-show-all-button{
         font-size: 12px;
     }
     #tourdates .bit-details {
-        width: 60%;
+        width: 62%;
     }
     #tourdates .bit-date {
         width: 30%;
@@ -3247,14 +3322,14 @@ div#tourdates {
         width: 67%;
     }
     #tourdates .bit-location {
-        width: 77%;
+        width: 67%;
         margin-left: 32%;
     }
     #tourdates .bit-offers.bit-button{
-        width: 40%;
-    }
-    #tourdates .bit-offers.bit-button{
         font-size: 10px;
+        letter-spacing: 0;
+        width: 37%;
+        margin-left: 1%;
     }
     #tourdates a.bit-event{
         max-width: 360px;
@@ -3263,6 +3338,26 @@ div#tourdates {
     .artistNews .block-title-wrapper.newsBlock.left{
         margin: 0;
         padding: 30px 0 30px;
+    }
+    .block-title-wrapper.left, .ArtistOuterWrapper .block-title-wrapper h2.block-title {
+        text-align: center;
+        color: #fff;
+    }
+    .ArtistOuterWrapper .SpotiftSubTitle{
+        text-align: center;
+    }
+    .ArtistOuterWrapper .ArtistInnerWrapper .block-title-wrapper{
+         margin: 0;
+     }
+    .ArtistOuterWrapper .ArtistInnerWrapper .block-title-wrapper h2.block-title.spotify{
+        margin: 25px 0 10px;
+    }
+    .ArtistOuterWrapper .block-title-wrapper.left, .ArtistOuterWrapper .SpotiftSubTitle, .ArtistOuterWrapper .block-title-wrapper h2.block-title{
+        margin: 10px 0 25px;
+    }
+    .ArtistOuterWrapper .SpotiftSubTitle {
+        padding-bottom: 30px;
+        margin-bottom: 0;
     }
 }
 
