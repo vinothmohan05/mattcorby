@@ -1361,7 +1361,7 @@ body.home .BackToTop {
 .tab-container .BackToTop {
     text-align: center;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.5vw;
     background: #111111;
     width: 100%;
     box-sizing: border-box;
@@ -2612,7 +2612,7 @@ app-artists{
 }
 .artistLandingNav .tab.artist-options ul li {
     display: inline-block;
-    padding: 15px 10px;
+    padding: 20px 10px;
     font-family: gothambook;
     font-size: 16px;
     letter-spacing: 1px;
@@ -2820,6 +2820,7 @@ i{
     }
 }
 @media only screen and (max-width: 1023px){
+
     .artistLandingNav .tab.artist-options ul li{
         font-size: 12px;
     }
@@ -2827,7 +2828,9 @@ i{
         display: none;
     }
     .grid.view ul.artists li .titleWrapper .titleInnerWraper{
-        margin: 10px;
+        margin: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+
     }
     .grid.view ul.artists li .titleWrapper span{
         margin: 0;
@@ -2840,15 +2843,21 @@ i{
 
 }
 @media only screen and (max-width: 767px){
+    i.fa.fa-angle-up.bounce {
+        padding-top: 50px;
+        }
+    .tab-container .BackToTop {
+        padding: 80px;
+    }
     .grid.view ul.artists li {
         display: block;
         width: 100%;
     }
 }
-.category.landing{
+.artistlanding .category.landing{
     max-height: 59vh;
 }
-.category.landing.active{
+.artistlanding .category.landing.active, .artists-home  .artistlanding .category.landing{
     max-height: auto;
     max-height: none;
 }
@@ -3161,7 +3170,7 @@ div#tourdates {
     letter-spacing: 1px;
 }
 .spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail:before{
-    background: rgba(0,0,0,0.78);
+    background: rgba(0,0,0,0.42);
 }
 .spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail img{
     outline:none;
@@ -3214,16 +3223,17 @@ div#tourdates {
     line-height: 1.5;
 }
 .play a {
-    background: url("i/Play-image.png") no-repeat center center transparent;
+    background: url(i/play1.png) no-repeat center center transparent;
     width: 100%;
     height: 100%;
     display: inline-block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     cursor: pointer;
     text-indent: -9999px;
-    background-size: 50px;
+    transform: translate(-50%, -50%);
+    background-size: 60px;
 }
 .pause a {
     background: url("i/pause.png") no-repeat center center transparent;
@@ -3248,7 +3258,7 @@ div#tourdates {
     .detail-list .RecomededReads .RecomededReads-InnerWrapper{
             max-width: 90%;
     }
-    .grid.view ul.artists li .titleWrapper .titleInnerWraper:after, .artistlanding .artistLandingNav{
+    .artistLandingNav .tab.view-options{
        display: none;
    }
    .grid.view ul.artists li .titleWrapper span{
@@ -3361,3 +3371,16 @@ div#tourdates {
     }
 }
 
+@media only screen and (min-width:1440px){
+   .artistLandingNav .tab.artist-options ul li {
+        padding: 30px 20px;
+        font-size: 20px;
+    }
+    .artistLandingNav .tab.tab1.view-options li {
+        font-size: 24px;
+    }
+
+
+
+
+}
