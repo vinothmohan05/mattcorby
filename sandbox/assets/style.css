@@ -658,7 +658,11 @@ body.show-SideDrawer ,body.show-photo-lightbox {
 }
 
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons,app-lightbox {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-lightbox {display:block;}
+
+app-social-buttons{
+  display: inline-block;
+}
 @media only screen and (min-width: 767px) {
   body:not(.user-logged-in) app-news-detail {
       width: 100%;
