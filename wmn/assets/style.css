@@ -2940,7 +2940,7 @@ ul.artists.artist-detail li.col.List{
     position: absolute;
     background: #000;
     padding: 40px 20px 0px;
-    top: 40px;
+    top: 25px;
     left: 50%;
     z-index: 1;
     transform: translate(-50% , -100%);
@@ -3382,7 +3382,10 @@ div#tourdates {
     }
     .artistbioWrapper .TitleWrapper i.fa.fa-caret-down, .artistbioWrapper .TitleWrapper span.close{
         top: 30px;
-        right: 20px;
+        right: 12px;
+    }
+    .artistbioWrapper .TitleWrapper .TitleInnerWrapper .title-Wrapper-inner{
+        padding: 28px 30px 0px;
     }
 }
 
@@ -3394,8 +3397,5 @@ div#tourdates {
     .artistLandingNav .tab.tab1.view-options li {
         font-size: 24px;
     }
-
-
-
 
 }
