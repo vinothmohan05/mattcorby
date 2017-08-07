@@ -1,4 +1,7 @@
 /* Loader */
+
+@import "../app/base.css";
+
 body app-root {
     display: block;
     width: 100%;
@@ -629,28 +632,13 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
   vertical-align: top;
 }
 
-.button{
-  background-color: transparent;  
-  display: inline-block;
-  border-radius: 3px;
-  text-transform: uppercase;
-  padding: 13px 57px;
-  border: 2px solid #1b214e;
-  line-height: 1;
-  font-size: 19px;
-  color:#1b214e;
-  cursor: pointer;
-  transition: all 1s ease 0s;
-}
-
-.button:hover{
-  color: #1b214e;
-  background-color: #fff;
-}
-
-.reverse-button {
-  color: #fff;
-  border: 2px solid #fff;
+.button {
+	&:not(.reverse-button) {
+		@apply --dark-button;
+	}
+	&.reverse-button {
+		@apply --bright-button;
+	}
 }
 
 body.show-SideDrawer ,body.show-photo-lightbox {
