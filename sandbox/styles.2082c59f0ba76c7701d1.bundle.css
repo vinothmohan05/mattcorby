@@ -1,5 +1,53 @@
 /* Loader */
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url(icomoon.eot);
+  src:  url(icomoon.eot#iefix) format('embedded-opentype'),
+    url(data:application/x-font-ttf;base64,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) format('truetype'),
+    url(data:application/font-woff;base64,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) format('woff'),
+    url(icomoon.svg#icomoon) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left:before {
+  content: "\E904";
+}
+
+.icon-right:before {
+  content: "\E903";
+}
+
+.icon-comment:before {
+  content: "\E900";
+}
+
+.icon-twitter:before {
+  content: "\E901";
+}
+
+.icon-facebook:before {
+  content: "\E902";
+}
+
 body app-root {
     display: block;
     width: 100%;
@@ -499,73 +547,73 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
 }
 
 .button:not(.reverse-button) {
-    background-color: transparent;
-    display: inline-block;
-    border-radius: 3px;
-    text-transform: uppercase;
-    padding: 13px 57px;
-    border: 2px solid #1b214e;
-    line-height: 1;
-    font-size: 19px;
-    color: #1b214e;
-    cursor: pointer;
-    -webkit-transition: all 1s ease 0s;
-    transition: all 1s ease 0s;
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 13px 57px;
+  border: 2px solid #1b214e;
+  line-height: 1;
+  font-size: 19px;
+  color: #1b214e;
+  cursor: pointer;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .button:not(.reverse-button):hover {
-    color: #1b214e;
-    background-color: #ffffff;
+  color: #1b214e;
+  background-color: #ffffff;
 }
 
 .button:not(.reverse-button) {
-    border: 1px solid;
-    border-radius: 5px;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 @media only (max-width: 767px) {
 
-    .button:not(.reverse-button) {
-        padding: 12px 62px;
-    }
+  .button:not(.reverse-button) {
+    padding: 12px 62px;
+  }
 }
 
 .button:not(.reverse-button):hover {
-    background-color: #1b214e;
-    color: #807c9c;
+  background-color: #1b214e;
+  color: #807c9c;
 }
 
 .button.reverse-button {
-    background-color: transparent;
-    display: inline-block;
-    border-radius: 3px;
-    text-transform: uppercase;
-    padding: 13px 57px;
-    border: 2px solid #1b214e;
-    line-height: 1;
-    font-size: 19px;
-    color: #1b214e;
-    cursor: pointer;
-    -webkit-transition: all 1s ease 0s;
-    transition: all 1s ease 0s;
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 13px 57px;
+  border: 2px solid #1b214e;
+  line-height: 1;
+  font-size: 19px;
+  color: #1b214e;
+  cursor: pointer;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .button.reverse-button:hover {
-    color: #1b214e;
-    background-color: #ffffff;
+  color: #1b214e;
+  background-color: #ffffff;
 }
 
 .button.reverse-button {
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
 @media only (max-width: 767px) {
 
-    .button.reverse-button {
-        padding: 12px 62px;
-    }
+  .button.reverse-button {
+    padding: 12px 62px;
+  }
 }
 
 body.show-SideDrawer, body.show-photo-lightbox {

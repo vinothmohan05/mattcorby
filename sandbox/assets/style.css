@@ -1,6 +1,7 @@
 /* Loader */
 
 @import "../app/base.css";
+@import "fonts/style.css";
 
 body app-root {
     display: block;
