@@ -3416,7 +3416,7 @@ h1#logo a img {
 /* Artist detail page header Animation */
 
 
-.thumbnail-wrapper{
+.detail-list.artist .thumbnail-wrapper{
     position: fixed;
     height: calc(100vh - 94px);
     text-align: center;
@@ -3424,8 +3424,9 @@ h1#logo a img {
     overflow: hidden;
     background: #323a45;
     max-width: 100vw;
+    z-index: -1;
 }
-.thumbnail-wrapper .thumbnail-Innerwrapper{
+.detail-list.artist .thumbnail-wrapper .thumbnail-Innerwrapper{
     position: absolute;
     z-index: 0;
     background: none;
@@ -3438,13 +3439,13 @@ h1#logo a img {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.thumbnail-wrapper .thumbnail{
+.detail-list.artist .thumbnail-wrapper .thumbnail{
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-.thumbnail-wrapper .thumbnail img{
+.detail-list.artist .thumbnail-wrapper .thumbnail img{
     position: absolute;
     margin: 0px;
     padding: 0px;
@@ -3459,6 +3460,7 @@ h1#logo a img {
 }
 .detail-list.artist .ArtistInnerWrapper {
     margin-top: calc(100vh - 121px);
+    background: #000;
 }
 .thumbnail-wrapper .thumbnail{
     -moz-backface-visibility: hidden;
@@ -3550,10 +3552,10 @@ body:not(.loading) .loaderAnimation {
 }
 body:not(.loading) .loaderAnimation-logo {
     transform: translate(-50% , -2%) scale(1.23);
+     -webkit-transform: translate(-50% , -2%) scale(1.23);
     position: absolute;
     /* opacity: 0; */
      transition: 1s ease ;
-     -webkit-transform: translate(-50% , -2%) scale(1.23);
     -webkit-transition: 1s ease ;
     /* position: fixed; */
     z-index: 999;
