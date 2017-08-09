@@ -54,7 +54,7 @@ body app-root {
     width: 100%;
     height: auto;
 }
-body app-root > div.loading:not(.backgroundLoader) {
+/*body app-root > div.loading:not(.backgroundLoader) {
     opacity: 0;
     width: 100%;
     height: auto;
@@ -89,7 +89,7 @@ body app-root > div.loading:not(.backgroundLoader) {
         opacity: 1;
         -webkit-transform: translateY(0) translate3d(0, 0, 0);
     }
-}
+}*/
 body.home #fixed-nav.sticky {
     position: inherit;
 }
@@ -175,8 +175,6 @@ body.home #fixed-nav {
     height: 100%;
     width: 100%;
     margin: 0;
-    /* max-width: 600px; */
-    
     min-width: calc(120vw * 1.5);
     min-height: calc(120vw * 1.5);
     min-width: -weblit-calc(120vw * 1.5);
@@ -200,14 +198,11 @@ body.home #fixed-nav {
 .css-gradients.amethysttoemerald {
     background-size: 100%;
     background: -moz-radial-gradient(center, ellipse cover, rgba(254, 206, 97, 1) 0%, rgba(155, 64, 97, 0.47) 100%);
-    /* FF3.6-15 */
-    
+
     background: -webkit-radial-gradient(center, ellipse cover, rgba(254, 206, 97, 1) 0%, rgba(155, 64, 97, 0.47) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    
+
     background: radial-gradient(ellipse at center, rgba(254, 206, 97, 1) 0%, rgba(155, 64, 97, 0.47) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    
+
     -webkit-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
     -moz-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
     -o-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
@@ -216,17 +211,13 @@ body.home #fixed-nav {
 .css-gradients.sapphiretoemerald {
     background-size: 100%;
     background: rgb(19, 21, 41);
-    /* Old browsers */
-    
+
     background: -moz-linear-gradient(top left, rgba(19, 21, 41, 1) 0%, rgba(155, 64, 97, 1) 50%, rgba(254, 206, 97, 1) 100%);
-    /* FF3.6-15 */
-    
+
     background: -webkit-linear-gradient(top left, rgba(19, 21, 41, 1) 0%, rgba(155, 64, 97, 1) 50%, rgba(254, 206, 97, 1) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    
+
     background: linear-gradient(to bottom right, rgba(19, 21, 41, 1) 0%, rgba(155, 64, 97, 1) 50%, rgba(254, 206, 97, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    
+
     -webkit-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
     -moz-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
     -o-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
@@ -1000,7 +991,6 @@ div.cta {
     left: 0;
     z-index: 1;
     background: #000;
-    z-index: 9;
     position: relative;
 }
 /*.side_drawer::-webkit-scrollbar {
@@ -1735,11 +1725,6 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
         width: 100%;
         height: auto;
    }
-  
-    .logo-block a {
-        display: block;
-        width: 80px;    
-    }
     .Image-Wrapper.Deskt {
         display: none;
     }
@@ -1754,7 +1739,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     }
 }
 @media only screen and (max-width: 1024px){
-    .home .heroBlock{
+    .home .homePanelCon.herovideoBlock{
         background: rgba(0,0,0,0.5);
     }
 }
@@ -1954,6 +1939,7 @@ ul.featuredArtist h2.block-title {
     position: fixed;
     left: initial;
 }
+
 @media only screen and (max-width: 768px) {
     .copyrightinfo {
         display: block;
@@ -2044,6 +2030,11 @@ ul.featuredArtist h2.block-title {
         max-width: 130px;
         vertical-align: middle;
     }
+    .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .nashvillelogo {
+         max-width: 45px;
+        padding-top: 10px;
+    }
+       
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .footer-block.mobile .copyrightinfo .copy {
         font-size: 10px;
         /*width: calc(100% - 130px);*/
@@ -2159,8 +2150,9 @@ ul.featuredArtist h2.block-title {
 }
 @media only screen and (max-width: 1024px) {
     .HerovideoblockOuterWrapper {
-        background: url(i/mobile-bac.jpg) no-repeat scroll center center;
+        background: url(i/Banner-Image-new.png) no-repeat scroll center center #000;
         background-size: cover;
+        background-position-x: calc(50% - 7px);
     }
      .homePanelCon.mailinglistPanel.show .g-layout {
         width: 90%;
@@ -2173,6 +2165,11 @@ ul.featuredArtist h2.block-title {
         font-size: 28px;
         line-height: 30px;
         letter-spacing: 2px;
+    }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape){
+    .HerovideoblockOuterWrapper {
+        background-position-x: initial;
     }
 }
 @media only screen and (min-width:768px ) and (max-width: 1024px){
@@ -2910,7 +2907,7 @@ ul.artists.artist-detail li.col.List{
 }
 .artistbioWrapper .TitleWrapper .TitleInnerWrapper .title-Wrapper-inner{
     display: inline-block;
-    padding: 28px 40px 0px;
+    padding: 0px 40px 0px;
     box-sizing: border-box;
     z-index: 2;
     position: relative;
@@ -2980,7 +2977,7 @@ ul.artists.artist-detail li.col.List{
     z-index: 2;
     width: 10px;
     position: absolute;
-    top: 49px;
+    top: 21px;
     right: 20px;
 } 
 .artistbioWrapper .TitleWrapper span.close {
@@ -3381,11 +3378,11 @@ div#tourdates {
         margin-bottom: 0;
     }
     .artistbioWrapper .TitleWrapper i.fa.fa-caret-down, .artistbioWrapper .TitleWrapper span.close{
-        top: 30px;
+        top: 21px;
         right: 12px;
     }
     .artistbioWrapper .TitleWrapper .TitleInnerWrapper .title-Wrapper-inner{
-        padding: 28px 30px 0px;
+        padding: 19px 30px 0px;
     }
 }
 
@@ -3398,4 +3395,367 @@ div#tourdates {
         font-size: 24px;
     }
 
+}
+
+
+h1#logo a img {
+    max-width: 185px;
+    vertical-align: middle;
+}
+@media only screen and (max-width:767px){
+    h1#logo a img {
+        max-width: 37vw;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    h1#logo a img {
+        max-width: 115px;
+    }
+}
+
+/* Artist detail page header Animation */
+
+
+.thumbnail-wrapper{
+    position: fixed;
+    height: calc(100vh - 94px);
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background: #323a45;
+    max-width: 100vw;
+}
+.thumbnail-wrapper .thumbnail-Innerwrapper{
+    position: absolute;
+    z-index: 0;
+    background: none;
+    height: calc(100vh - 94px);
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.thumbnail-wrapper .thumbnail{
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.thumbnail-wrapper .thumbnail img{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    width: 100%;
+    max-height: none;
+    max-width: none;
+    z-index: -999999;
+    left: 0;
+    display: inline-block;
+    top: 0px;
+}
+.detail-list.artist .ArtistInnerWrapper {
+    margin-top: calc(100vh - 121px);
+}
+.thumbnail-wrapper .thumbnail{
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Artist detail page header Animation */
+
+/*Loader Animation V2*/
+
+
+.loaderAnimation{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background: #777;
+    background: #359be9;
+    /*background: radial-gradient(#111, #000);*/
+    overflow: hidden;
+}
+/*.loaderAnimation-logo{
+    max-width: 425px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100% - 153px);
+    background: url(i/site-logo.png) no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}*/
+
+
+@-webkit-keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+}
+
+@keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+}
+
+
+
+@-webkit-keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); }
+}
+
+@keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
+}
+
+body:not(.loading) .loaderAnimation {
+    position: absolute;
+	/*-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;*/
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    animation-delay: 0.5s;
+}
+
+
+@-webkit-keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+@keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+.loaded .ip-loader {
+	-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+
+
+@-webkit-keyframes animInitialLogo {
+	from { opacity: 0; }
+}
+
+@keyframes animInitialLogo {
+	from { opacity: 0; }
+}
+body:not(.loading) .loaderAnimation-logo {
+    transform: translate(-50% , -2%) scale(1.23);
+    position: absolute;
+    /* opacity: 0; */
+     transition: 1s ease ;
+     -webkit-transform: translate(-50% , -2%) scale(1.23);
+    -webkit-transition: 1s ease ;
+    /* position: fixed; */
+    z-index: 999;
+
+}
+.loading .loaderAnimation-loader{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 999;
+}
+.loading .fixed-nav, .loading .scrolltoArtist{
+    opacity: 0;
+    z-index: 1;
+}
+ body:not(.loading) .fixed-nav,  body:not(.loading) .scrolltoArtist{
+    z-index: 999;
+}
+body:not(.loading) .loaderAnimation-loader{
+    transform: translate(-50% , -100%);
+    -webkit-transform: translate(-50% , -100%);
+     opacity: 0; 
+     visibility: hidden; 
+     -webkit-transition: 1s ease ;
+     z-index: 0;
+ }
+
+ 
+body:not(.loading):not(.home) .loaderAnimation-logo {
+    transform: translate(-50% , -100%);
+    -webkit-transform: translate(-50% , -100%);
+     opacity: 0; 
+     visibility: hidden; 
+}
+
+ .loaderAnimation-logo {
+    max-width: 350px;
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    left: 50%;
+    height: calc(100%);
+    top: 0;
+    background: url(i/site-logo.png) no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    opacity: 1;
+    transition-delay: unset;
+    -webkit-transition-delay: unset;
+    transform: translate(-50% , -20%);
+    -webkit-transform: translate(-50% , -20%);
+    visibility: visible;
+    z-index: 999;
+    /*-webkit-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;*/
+}
+
+/*.wf-loading .loaderAnimation-logo, .loading .ip-loader {
+    opacity: 1;
+}*/
+
+
+/* Content animations */
+
+
+@keyframes showContainer {
+    0% {
+        transform: translateY(100%) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translateY(0) translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes showContainer {
+    0% {
+        -webkit-transform: translateY(100%) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translateY(0) translate3d(0, 0, 0);
+    }
+}
+body:not(.loading) .container {
+    animation: showContainer 1s;
+	animation-delay: 0.0s;
+}
+
+/*.container {
+	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+
+}*/
+
+
+/*html:not(.wf-loading) .herovideoBlock span.sitelogo{
+    opacity: 1;
+    transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+}*/
+
+
+@keyframes animLoadedContent {
+
+    0% {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+        transform: scale3d(0.3,0.3,1);
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+/*@-webkit-keyframes animLoadedContent {
+	from { opacity: 0; -webkit-transform: scale3d(0.3,0.3,1); }
+}
+
+@keyframes animLoadedContent {
+	from { opacity: 0; -webkit-transform: scale3d(0.3,0.3,1); transform: scale3d(0.3,0.3,1); }
+}*/
+
+/*html:not(.wf-loading) .herovideoBlock span.sitelogo{
+    animation: sitelogoreveal 1.4s;
+    -webkit-animation: sitelogoreveal 1.4s;
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+}*/
+
+body:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
+    animation: animLoadedContent 3s;
+    -webkit-animation: animLoadedContent 3s;
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+}
+
+
+
+
+/*Loader Animation V2 ENDS*/
+
+
+
+.blob {
+    width: 2rem;
+    height: 2rem;
+    background: #1563a8;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - 1rem);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.25);
+}
+
+.blob-2 { animation: animate-to-2 1.5s infinite; }
+.blob-3 { animation: animate-to-3 1.5s infinite; }
+.blob-1 { animation: animate-to-1 1.5s infinite; }
+.blob-4 { animation: animate-to-4 1.5s infinite; }
+.blob-0 { animation: animate-to-0 1.5s infinite; }
+.blob-5 { animation: animate-to-5 1.5s infinite; }
+
+@keyframes animate-to-2 {
+    25%, 75% { transform: translateX(-1.5rem) scale(0.75); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-3 {
+    25%, 75% { transform: translateX(1.5rem) scale(0.75); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-1 {
+    25% { transform: translateX(-1.5rem) scale(0.75); }
+    50%, 75% { transform: translateX(-4.5rem) scale(0.6); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-4 {
+    25% { transform: translateX(1.5rem) scale(0.75); }
+    50%, 75% { transform: translateX(4.5rem) scale(0.6); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-0 {
+    25% { transform: translateX(-1.5rem) scale(0.75); }
+    50% { transform: translateX(-4.5rem) scale(0.6); }
+    75% { transform: translateX(-7.5rem) scale(0.5); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-5 {
+    25% { transform: translateX(1.5rem) scale(0.75); }
+    50% { transform: translateX(4.5rem) scale(0.6); }
+    75% { transform: translateX(7.5rem) scale(0.5); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+
+@media only screen and (max-width: 767px){
+    body:not(.loading) .loaderAnimation-logo{
+        max-width: 220px;
+        background-size: 100%;
+    }
 }
