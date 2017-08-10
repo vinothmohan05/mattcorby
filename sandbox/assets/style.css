@@ -500,20 +500,20 @@ nav.g-layout {
 }
 /*Container Styles*/
 /*
-$mq-mobile-narrower: "only screen and (max-width : 320px)";
-$mq-mobile-wider: "only screen and (min-width : 320px)";
+.buttonmq-mobile-narrower: " (max-width : 320px)";
+$mq-mobile-wider: " (min-width : 320px)";
 
-$mq-tablet-narrower: "only screen and (max-width : 767px)";
-$mq-tablet-wider: "only screen and (min-width : 768px)";
+$mq-tablet-narrower: " (max-width : 767px)";
+$mq-tablet-wider: " (min-width : 768px)";
 
-$mq-desktop-narrower: "only screen and (max-width : 1023px)";
-$mq-desktop-wider: "only screen and (min-width : 1024px)";
+$mq-desktop-narrower: " (max-width : 1023px)";
+$mq-desktop-wider: " (min-width : 1024px)";
 
-$mq-large-desktop-narrower: "only screen and (max-width : 1379px)";
-$mq-large-desktop-wider: "only screen and (min-width : 1380px)";
+$mq-large-desktop-narrower: " (max-width : 1379px)";
+$mq-large-desktop-wider: " (min-width : 1380px)";
 
-$mq-tablet: "only screen and (min-width : 768px) and (max-width : 1023px)";
-$mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
+$mq-tablet: " (min-width : 768px) and (max-width : 1023px)";
+$mq-mobile: " (min-width : 320px) and (max-width : 480px)";
 
 */
 
@@ -536,7 +536,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     font-weight:bold;    
 }
 
-@media (min-width: 768px) {
+@media (--mq-tablet-wider) {
   .g-layout {
     width: 767px;
     padding-top: 30px;
@@ -544,7 +544,7 @@ $mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
     margin: 0 auto;
   }	
 }
-@media (min-width: 1024px) {
+@media (--mq-desktop-wider) {
 	.g-layout {
     width: 968px;
     margin: 0 auto;
@@ -647,12 +647,15 @@ body.show-SideDrawer ,body.show-photo-lightbox {
 }
 
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-lightbox {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-lightbox,app-tags {display:block;}
 
+app-tags {
+  margin-top: 51px;
+}
 app-social-buttons{
   display: inline-block;
 }
-@media only screen and (min-width: 767px) {
+@media (min-width: 767px) {
   body:not(.user-logged-in) app-news-detail {
       width: 100%;
       padding-top: 50px;
@@ -682,7 +685,7 @@ app-social-buttons{
     width: 100%;
     height: auto;
   }
-@media only screen and (max-width: 767px) {
+@media (--mq-tablet-narrower) {
   .heroBlockCon {
     min-height: 350px;
   }/*
@@ -905,7 +908,7 @@ div.cta{
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media (--mq-tablet-narrower) {
   div.cta {
       text-align: center;
       margin-top: 20px;
@@ -919,7 +922,7 @@ div.cta{
   }
 }
 
-@media only screen and (max-width: 435px) {
+@media (max-width: 435px) {
 	.footer-block .footer-social .social-links{
 		display: block;
 		margin-bottom: 25px;
@@ -941,7 +944,7 @@ div.cta{
   display: none;
   font-size: 14px;
 }
-@media only screen and (min-width: 1024px) {
+@media (--mq-desktop-wider) {
   .login-menu {
     position: absolute;
     top: 18px;
