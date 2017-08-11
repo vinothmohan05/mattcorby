@@ -347,6 +347,7 @@ body {
           box-sizing: border-box;
   font-weight: 400;
   margin: 0;
+  padding-top: 51px;
 }
 
 a {
@@ -623,10 +624,6 @@ body.show-SideDrawer, body.show-photo-lightbox {
 }
 
 app-news-block, app-video-block, app-photo-block, app-music, app-track-block, app-news-detail, app-photos-detail, app-videos-detail, app-tour-block, app-block, app-lightbox, app-tags {display:block;}
-
-app-tags {
-  margin-top: 51px;
-}
 
 app-social-buttons{
   display: inline-block;
