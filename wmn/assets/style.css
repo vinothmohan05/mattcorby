@@ -3555,10 +3555,10 @@ body:not(.loading) .loaderAnimation {
 	from { opacity: 0; }
 }
 body:not(.loading) .loaderAnimation-logo {
-    transform: translate(-50% , -2%) scale(1.23);
-    -moz-transform: translate(-50% , -2%) scale(1.23);
-    -ms-transform: translate(-50% , -2%) scale(1.23);
-     -webkit-transform: translate(-50% , -2%) scale(1.23);
+    transform: translate(-50% , -2%) scale(1.83);
+    -moz-transform: translate(-50% , -2%) scale(1.83);
+    -ms-transform: translate(-50% , -2%) scale(1.83);
+     -webkit-transform: translate(-50% , -2%) scale(1.83);
     position: absolute;
     /* opacity: 0; */
      transition: 1s ease ;
@@ -3567,6 +3567,7 @@ body:not(.loading) .loaderAnimation-logo {
     -webkit-transition: 1s ease ;
     /* position: fixed; */
     z-index: 999;
+    
 
 }
 .loading .loaderAnimation-loader{
@@ -3607,7 +3608,7 @@ body:not(.loading):not(.home) .loaderAnimation-logo {
 }
 
  .loaderAnimation-logo {
-    max-width: 350px;
+    max-width: 40vh;
     display: block;
     position: absolute;
     margin: 0 auto;
@@ -3775,10 +3776,16 @@ body:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
     95% { transform: translateX(0rem) scale(1); }
 }
 
+@media only screen and (min-width:768px) and (max-width:1023px){
 
+    body:not(.loading) .loaderAnimation-logo{
+        max-width: 30vh;
+        background-size: 100%;
+    }
+}
 @media only screen and (max-width: 767px){
     body:not(.loading) .loaderAnimation-logo{
-        max-width: 220px;
+        max-width: 25vh;
         background-size: 100%;
     }
 }
