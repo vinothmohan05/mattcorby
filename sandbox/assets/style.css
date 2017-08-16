@@ -7,6 +7,7 @@ body app-root {
     display: block;
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 body app-root > div.loading:not(.backgroundLoader){
   opacity: 0;
@@ -31,7 +32,7 @@ body app-root > div.loading:not(.backgroundLoader){
 
 .home div#fixed-nav {
     position: absolute;
-    top: calc(100vh - 51px);
+    top: 100vh;
 }
 .home div#fixed-nav.sticky {
     position: fixed;
@@ -125,12 +126,7 @@ div#smartHeader {
 background: -moz-radial-gradient(center, ellipse cover,  rgba(254,206,97,1) 0%, rgba(155,64,97,0.47) 100%); /* FF3.6-15 */
 background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,206,97,1) 0%,rgba(155,64,97,0.47) 100%); /* Chrome10-25,Safari5.1-6 */
 background: radial-gradient(ellipse at center,  rgba(254,206,97,1) 0%,rgba(155,64,97,0.47) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-
-  -webkit-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
-  -moz-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
-  -o-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
-  animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
+ animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
 }
 .css-gradients.sapphiretoemerald {  
 	
@@ -141,55 +137,9 @@ background: -moz-linear-gradient(top left,  rgba(19,21,41,1) 0%, rgba(155,64,97,
 background: -webkit-linear-gradient(top left,  rgba(19,21,41,1) 0%,rgba(155,64,97,1) 50%,rgba(254,206,97,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97,1) 50%,rgba(254,206,97,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-
-  -webkit-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
-  -moz-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
-  -o-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
   animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
 }
 
-@-webkit-keyframes pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-}
-@-moz-keyframes pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-}
-@-o-keyframes pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-}
 @keyframes pulse-opacity {
   0% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -204,48 +154,7 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
     opacity: 0.5;
   }
 }
-@-webkit-keyframes reverse-pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-}
-@-moz-keyframes reverse-pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-}
-@-o-keyframes reverse-pulse-opacity {
-  0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-  }
-  100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-  }
-}
+
 @keyframes reverse-pulse-opacity {
   0% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
@@ -258,72 +167,6 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
   100% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: 0.9;
-  }
-}
-@-webkit-keyframes rotate-360 {
-  from {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes rotate-360 {
-  from {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes rotate-360 {
-  from {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center center 50%;
-    -ms-transform-origin: center center 50%;
-    -webkit-transform-origin: center center 50%;
-    transform-origin: center center 50%;
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 @keyframes rotate-360 {
@@ -348,72 +191,7 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes rotate-neg-360 {
-  from {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
-@-moz-keyframes rotate-neg-360 {
-  from {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
-@-o-keyframes rotate-neg-360 {
-  from {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -moz-transform-origin: center top 50%;
-    -ms-transform-origin: center top 50%;
-    -webkit-transform-origin: center top 50%;
-    transform-origin: center top 50%;
-    -moz-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
+
 @keyframes rotate-neg-360 {
   from {
     -moz-transform-origin: center top 50%;
@@ -490,6 +268,7 @@ nav.g-layout {
 }
 .detail-list .g-layout{
     position: relative;
+    padding-top: 0;
 }
 .buttonWrapper.interiorPages {
     text-align: center;
@@ -653,10 +432,13 @@ app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app
 app-social-buttons{
   display: inline-block;
 }
-@media (min-width: 767px) {
-  body:not(.user-logged-in) app-news-detail {
+@media (min-width: 768px) {
+  body:not(.user-logged-in){
+    & app-news-detail, & app-album-detail, & app-video-detail, & app-photo-detail, & app-track-detail {
       width: 100%;
       padding-top: 50px;
+      display: block;
+    }
   }
 }
 
@@ -720,9 +502,6 @@ app-social-buttons{
     font-weight: bold;
 }
 
-app-photo-detail {
-    background-color: #1d1e20;
-}
 
 app-home{
   color: #fff;

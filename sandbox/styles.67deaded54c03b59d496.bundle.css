@@ -54,6 +54,7 @@ body app-root {
     display: block;
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 body app-root > div.loading:not(.backgroundLoader){
@@ -81,7 +82,7 @@ body app-root > div.loading:not(.backgroundLoader){
 
 .home div#fixed-nav {
     position: absolute;
-    top: calc(100vh - 51px);
+    top: 100vh;
 }
 
 .home div#fixed-nav.sticky {
@@ -180,10 +181,8 @@ div#smartHeader {
 .css-gradients.amethysttoemerald {  
   background-size: 100%; /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
 background: radial-gradient(ellipse at center,  rgba(254, 206, 97, 1) 0%,rgba(155, 64, 97, .47) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-
-  -webkit-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
-  animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
+ -webkit-animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
+         animation: rotate-neg-360 3s linear infinite, reverse-pulse-opacity 3s linear infinite;
 }
 
 .css-gradients.sapphiretoemerald {  
@@ -194,9 +193,9 @@ background: rgb(19, 21, 41); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Sa
 background: -webkit-gradient(linear,  left top, right bottom,  from(rgba(19, 21, 41, 1)),color-stop(50%, rgba(155, 64, 97, 1)),to(rgba(254, 206, 97, 1)));
 background: linear-gradient(to bottom right,  rgba(19, 21, 41, 1) 0%,rgba(155, 64, 97, 1) 50%,rgba(254, 206, 97, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-
   -webkit-animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
-  animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
+
+          animation: rotate-360 3s linear infinite, pulse-opacity 3s linear infinite;
 }
 
 @-webkit-keyframes pulse-opacity {
@@ -389,6 +388,7 @@ nav.g-layout {
 
 .detail-list .g-layout{
     position: relative;
+    padding-top: 0;
 }
 
 .buttonWrapper.interiorPages {
@@ -629,10 +629,11 @@ app-social-buttons{
   display: inline-block;
 }
 
-@media (min-width: 767px) {
-  body:not(.user-logged-in) app-news-detail {
-      width: 100%;
-      padding-top: 50px;
+@media (min-width: 768px) {
+  body:not(.user-logged-in) app-news-detail, body:not(.user-logged-in) app-album-detail, body:not(.user-logged-in) app-video-detail, body:not(.user-logged-in) app-photo-detail, body:not(.user-logged-in) app-track-detail {
+    width: 100%;
+    padding-top: 50px;
+    display: block;
   }
 }
 
@@ -698,10 +699,6 @@ app-social-buttons{
 
 .heroBlock span {
     font-weight: bold;
-}
-
-app-photo-detail {
-    background-color: #1d1e20;
 }
 
 app-home{
@@ -802,63 +799,63 @@ span.social-links {
 **/
 
 .footer-social .fs-fb a {
-    background: transparent url(/assets/i/fb.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/fb.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-fb a:hover {
-    background: transparent url(/assets/i/fb-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/fb-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-ig a {
-    background: transparent url(/assets/i/in.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/in.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-ig a:hover {
-    background: transparent url(/assets/i/in-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/in-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-tw a {
-    background: transparent url(/assets/i/twitter.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/twitter.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-tw a:hover {
-    background: transparent url(/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-sp a {
-    background: transparent url(/assets/i/spotify.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/spotify.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-sp a:hover {
-    background: transparent url(/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-pin a {
-    background: transparent url(/assets/i/pinterest.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/pinterest.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-pin a:hover {
-    background: transparent url(/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-yt a {
-    background: transparent url(/assets/i/yt.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/yt.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-yt a:hover {
-    background: transparent url(/assets/i/yt-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/yt-hover.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-vi a {
-    background: transparent url(/assets/i/vimeo.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/vimeo.svg) no-repeat scroll 0 0;
 }
 
 .footer-social .fs-vi a:hover {
-    background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
 }
 
 /* .galleryPage ul.photos li {
-    background-image: url(/assets/i/gallery.svg?fi);
+    background-image: url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/gallery.svg?fi);
     background-repeat: repeat;
     background-size: 51% auto;
     background-position: 0 0;
@@ -1060,7 +1057,7 @@ body:not(.content-page) div.contextual{
 }
 
 article.embedded-entity > article {
-    background: transparent url(/assets/i/loader.gif) no-repeat scroll center center;
+    background: transparent url(/sites/g/files/g2000006551/themes/site/sandbox/assets/i/loader.gif) no-repeat scroll center center;
     background-size: 10%;
 }
 
