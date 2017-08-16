@@ -3527,6 +3527,7 @@ body:not(.loading) .loaderAnimation {
     -moz-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     animation-delay: 0.5s;
+
 }
 
 
@@ -3567,6 +3568,7 @@ body:not(.loading) .loaderAnimation-logo {
     -webkit-transition: 1s ease ;
     /* position: fixed; */
     z-index: 999;
+    max-width:38vh;
     
 
 }
