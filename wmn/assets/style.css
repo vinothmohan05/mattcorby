@@ -3555,10 +3555,10 @@ body:not(.loading) .loaderAnimation {
 	from { opacity: 0; }
 }
 body:not(.loading) .loaderAnimation-logo {
-    transform: translate(-50% , -2%) scale(1.83);
-    -moz-transform: translate(-50% , -2%) scale(1.83);
-    -ms-transform: translate(-50% , -2%) scale(1.83);
-     -webkit-transform: translate(-50% , -2%) scale(1.83);
+    transform: translate(-50% , -2%) scale(1.65);
+    -moz-transform: translate(-50% , -2%) scale(1.65);
+    -ms-transform: translate(-50% , -2%) scale(1.65);
+     -webkit-transform: translate(-50% , -2%) scale(1.65);
     position: absolute;
     /* opacity: 0; */
      transition: 1s ease ;
