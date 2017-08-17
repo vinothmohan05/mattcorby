@@ -630,7 +630,7 @@ app-social-buttons{
 }
 
 @media (min-width: 768px) {
-  body:not(.user-logged-in) app-news-detail, body:not(.user-logged-in) app-album-detail, body:not(.user-logged-in) app-video-detail, body:not(.user-logged-in) app-photo-detail, body:not(.user-logged-in) app-track-detail {
+  body:not(.user-logged-in) app-news-detail, body:not(.user-logged-in) app-album-detail, body:not(.user-logged-in) app-video-detail, body:not(.user-logged-in) app-photo-detail, body:not(.user-logged-in) app-track-detail, body:not(.user-logged-in) app-gallery-detail {
     width: 100%;
     padding-top: 50px;
     display: block;

@@ -434,7 +434,7 @@ app-social-buttons{
 }
 @media (min-width: 768px) {
   body:not(.user-logged-in){
-    & app-news-detail, & app-album-detail, & app-video-detail, & app-photo-detail, & app-track-detail {
+    & app-news-detail, & app-album-detail, & app-video-detail, & app-photo-detail, & app-track-detail, & app-gallery-detail {
       width: 100%;
       padding-top: 50px;
       display: block;
