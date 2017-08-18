@@ -685,7 +685,7 @@ div#fixed-nav nav.g-layout {
     padding: 0 0 20px;
     font-weight: bold;
 }
-.homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
+  /* .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
     -webkit-column-count: 5;
     column-count: 5;
     -moz-column-count: 5;
@@ -693,7 +693,7 @@ div#fixed-nav nav.g-layout {
     -webkit-column-gap: 16px;
      column-gap: 16px;
     margin: 0 70px 0 70px;
-}
+}  */
 .internal.mailinglistPanel h2 {
     display: block;
 }
@@ -1994,7 +1994,7 @@ ul.featuredArtist h2.block-title {
 
 @media only screen and (max-width: 1023px) {
 
-      .homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
+      /* .homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
             -webkit-column-count: 1;
             column-count: 1;
             -moz-column-count: 1;
@@ -2002,7 +2002,7 @@ ul.featuredArtist h2.block-title {
              column-gap: 10px;
             -webkit-column-gap: 10px;
             margin: 0px 10px 0 10px;
-        }
+        } */
    
     .footerWrapperBlock .footerinnerwrapper .MobileWrapper .mailing-list-outer-wrapper, .footerWrapperBlock .MobileWrapper .footer-block .footerNavSoical {
         width: 350px !important;
@@ -2211,7 +2211,7 @@ ul.featuredArtist h2.block-title {
         margin-top:-68px;
     }
 
-     .homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
+     /* .homePanelCon.mailinglistPanel .mailing-list-outer-wrapper.mailing-nav-block .thirdForm ul {
             -webkit-column-count: 3;
             column-count: 3;
             -moz-column-count: 3;
@@ -2219,7 +2219,7 @@ ul.featuredArtist h2.block-title {
              column-gap: 10px;
             -webkit-column-gap: 10px;
             margin: 0px 10px 0 10px;
-        }
+        } */
         span.social-links li{
             margin-right: 10px;
 
