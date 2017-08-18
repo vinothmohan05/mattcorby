@@ -32,7 +32,7 @@ body app-root > div.loading:not(.backgroundLoader){
 
 .home div#fixed-nav {
     position: absolute;
-    top: 100vh;
+    top: calc(100vh - 51px);
 }
 .home div#fixed-nav.sticky {
     position: fixed;
@@ -215,12 +215,12 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
   }
 }
 @media all and (orientation: portrait) {
-.backgroundLoader .container {    
-    min-width: calc( 220vw * 2);
-    min-height: calc( 220vw * 2);
-    min-width: -webkit-calc( 220vw * 2);
-    min-height: -webkit-calc( 220vw * 2);
-}
+  .backgroundLoader .container {    
+      min-width: calc( 220vw * 2);
+      min-height: calc( 220vw * 2);
+      min-width: -webkit-calc( 220vw * 2);
+      min-height: -webkit-calc( 220vw * 2);
+  }
 }
 /* Loader Style Ends */
 
@@ -237,7 +237,6 @@ body {
   box-sizing: border-box;
   font-weight: 400;
   margin: 0;
-  padding-top: 51px;
 }
 a {
   color: #359be9;
@@ -427,14 +426,15 @@ body.show-SideDrawer ,body.show-photo-lightbox {
 }
 
 app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
-app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-lightbox,app-tags {display:block;}
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,
+app-lightbox,app-tags,app-tag-landing,app-tag-detail {display:block;}
 
 app-social-buttons{
   display: inline-block;
 }
 @media (min-width: 768px) {
   body:not(.user-logged-in){
-    & app-news-detail, & app-album-detail, & app-video-detail, & app-photo-detail, & app-track-detail, & app-gallery-detail {
+    & app-news-detail, & app-album-detail, & app-video-detail, & app-photo-detail, & app-track-detail, & app-gallery-detail, & app-tag-landing, & app-tag-detail {
       width: 100%;
       padding-top: 50px;
       display: block;
@@ -717,11 +717,12 @@ div.cta{
     margin: 0 auto;
     margin-top: 10px;
 }
+
 .login-menu {
   display: none;
   font-size: 14px;
 }
-@media (--mq-desktop-wider) {
+@media (--mq-tablet-wider) {
   .login-menu {
     position: absolute;
     top: 18px;
