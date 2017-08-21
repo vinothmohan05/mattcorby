@@ -99,7 +99,7 @@ body.home #logo {
 body.home #fixed-nav.sticky #logo{
     opacity: 1;
     position: fixed;
-    z-index: 9;
+    z-index: 10;
 }
 
 #logo {
@@ -1139,10 +1139,13 @@ ul.breadcrumb.news-detail li {
     opacity: 0;
 }
 .homePanelCon.mailinglistPanel.show .g-layout{
+    padding: 30px 0 !important ;
+}
+.homePanelCon.mailinglistPanel.show .g-layout{
     position: relative;
     max-width: 1300px;
     background: #000;
-    padding: 61px 0 100px;
+    padding: 30px 0 ;
     width:100%;
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
@@ -3221,7 +3224,7 @@ div#tourdates {
     margin: 25px 0;
 }
 .ArtistInnerWrapper .ArtistOuterWrapper .follow-button-wrapper iframe{
-    height: 24px;
+    height: auto;
     width: 93px;
     vertical-align: bottom;
 }
