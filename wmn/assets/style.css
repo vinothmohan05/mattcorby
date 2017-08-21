@@ -559,13 +559,9 @@ body:not(.home) nav.g-layout {
     z-index: 9;
     background: rgba(0, 0, 0, 0.702);
 }
-body.home nav.g-layout.sticky {
-    position: fixed;
-    z-index: 9;
-    background: rgba(0, 0, 0, 0.702);
-        transform: translateY(0);
-    animation: slide-down 1s;
-   
+
+nav.g-layout.mobile-menu.sticky.show{
+    background: #000;
 }
 body:not(.home) .logo-block {
     position: fixed;
@@ -639,6 +635,14 @@ div#fixed-nav nav.g-layout {
         padding-top: 30px;
         padding-bottom: 30px;
         margin: 0 auto;
+    }
+    body.home nav.g-layout.sticky {
+        position: fixed;
+        z-index: 9;
+        background: rgba(0, 0, 0, 0.702);
+        transform: translateY(0);
+        animation: slide-down 1s;
+       
     }
 }
 @media (min-width: 1024px) {
@@ -1474,6 +1478,7 @@ app-artists-carousel {
     cursor:pointer;
     margin-top: 25px;
     display: block;
+    font-size: 14px;
 }
 .newsCategoryMenu .dropdrownWrapper {
     display: block;
@@ -3673,7 +3678,8 @@ body:not(.loading) .container {
 	animation-delay: 0.0s;
 	-webkit-animation-delay: 0.0s;
 	-ms-animation-delay: 0.0s;
-	-moz-animation-delay: 0.0s;
+    -moz-animation-delay: 0.0s;
+    font-size: 0;
 }
 
 
