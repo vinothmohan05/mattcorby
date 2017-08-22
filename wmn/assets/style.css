@@ -1124,10 +1124,11 @@ ul.breadcrumb.news-detail li {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%) ;
+    -moz-transform: translateX(-50%) translateY(-50%) ;
     -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%) ;
+ 
 }
 .homePanelCon.mailinglistPanel.show .mailinglistPanel-ImnnerWrapper{
     visibility: visible;
@@ -1755,6 +1756,23 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
 
 /*Tablet narrower*/
 @media only screen and (max-width: 1023px) {
+    .Image-Wrapper.Mob {
+        background: url(http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/abtwithoverlay.jpg) no-repeat center center;
+        position: relative;
+        height: 300px;
+        background-size: cover;
+    }
+    
+    .title {
+        font-size: 18px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+    }
     .news-detail .detail-list .news_header_block .titleWrap .social-block .share .fs-fb,.news-detail .detail-list .news_header_block .titleWrap .social-block .share .fs-tw{
         background: black !important;
         height: 40px !important;
@@ -1939,6 +1957,13 @@ ul.featuredArtist h2.block-title {
     }
     .block-title-wrapper .block-title{
         font-size: 13px;
+    }
+    .aboutWrapper .block-title-wrapper.newsBlock h2.block-title.newsBlock {
+        letter-spacing: 2px;
+        font-size: 18px;
+        line-height: 2.5;
+      
+    
     }
     .RecomededReads-InnerWrapper .block-title-wrapper.newsBlock.left{
         margin-bottom: 25px;
@@ -2191,6 +2216,9 @@ ul.featuredArtist h2.block-title {
     }
 }
 @media only screen and (max-width: 1024px) {
+    .homePanelCon.mailinglistPanel.show .g-layout a.close {
+            top: 0;
+    }
     .HerovideoblockOuterWrapper {
         background: url(i/Banner-Image-new.png) no-repeat scroll center center #000;
         background-size: cover;
@@ -2338,6 +2366,7 @@ background: #ebebeb;
         font-size: 12px;
         line-height: 2.5;
     }
+ 
     .newsCategory .newsCategoryMenu {
         background: #000;
         padding: 0;
@@ -2402,6 +2431,10 @@ body.path-node article{
 .block-title-wrapper.newsBlock.left h2.block-title.newsBlock{
     border-bottom: 1px solid #000000;
     padding-bottom: 10px;
+}
+.aboutWrapper .block-title-wrapper.newsBlock h2.block-title.newsBlock {
+    border-bottom: 1px solid #fff !important;
+
 }
 .detail-list .RecomededReads{
     background: #ebebeb;
@@ -2850,7 +2883,7 @@ i{
         opacity: 1;
     }
 @media only screen and (max-width: 1023px){
-
+    
     .artistLandingNav .tab.artist-options ul li{
         font-size: 12px;
     }
@@ -3231,6 +3264,7 @@ div#tourdates {
 }
 .ArtistInnerWrapper .ArtistOuterWrapper .follow-button-wrapper iframe{
     height: auto;
+    max-height: 40px;
     width: 93px;
     vertical-align: bottom;
 }
