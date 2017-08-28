@@ -243,8 +243,8 @@ a {
   text-decoration: none;
 }
 p {
-    margin: 0;
-    line-height: 1.2;
+    margin: 0 0 10px 0;
+    line-height: 1;
     letter-spacing: 1px;
 }
 img {
@@ -267,7 +267,6 @@ nav.g-layout {
 }
 .detail-list .g-layout{
     position: relative;
-    padding-top: 0;
 }
 .buttonWrapper.interiorPages {
     text-align: center;
@@ -352,7 +351,7 @@ $mq-mobile: " (min-width : 320px) and (max-width : 480px)";
   text-transform: uppercase;
  }
 
- .mailinglistPanel {
+ .homepage.mailinglist, .mailinglistPanel {
     display: inline-block;
     width: 100%;
     padding: 0;
@@ -360,7 +359,7 @@ $mq-mobile: " (min-width : 320px) and (max-width : 480px)";
     background-color: #0d0e1c;
 }
 /*
-.homePanelCon.mailinglistPanel h2 {
+.hompage.mailinglist h2 {
     letter-spacing: 9px;
     font-weight: 300;
     color: #f6f5fd;
@@ -369,7 +368,7 @@ $mq-mobile: " (min-width : 320px) and (max-width : 480px)";
     -webkit-font-smoothing: antialiased;
     line-height: 1;
 }*/
-.homePanelCon.mailinglistPanel h2, .internal.mailinglistPanel h2 {
+.hompage.mailinglist h2, .internal.mailinglistPanel h2 {
     color: #f6f5fd;
     text-align: center;
     letter-spacing: 6px;
@@ -469,13 +468,13 @@ app-social-buttons{
   .heroBlockCon {
     min-height: 350px;
   }/*
-  .mailinglistPanel h2 {
+  .mailinglist h2 {
     letter-spacing: 9px;
     line-height: 1.3;
     max-width: 236px;
     margin: 4% auto 7%;
   }*/
-  .mailinglistPanel h2 {
+  .mailinglist h2, .mailinglistPanel h2 {
     padding: 0px;
   }
   .content {
@@ -487,7 +486,7 @@ app-social-buttons{
   .internal.mailinglistPanel h2 {
     padding: 0px;
   }
-  .mailinglistPanel .g-layout {
+  .mailinglistPanel .g-layout, .mailinglist .g-layout {
     padding: 20px 20px 60px;
   }
 }
@@ -693,11 +692,13 @@ div.cta{
   }
   .fixed-nav.sticky ~ app-home #smartHeader {
     display: none;
-  }
+  }  
   .home div#fixed-nav {
-      top: calc(100vh - 50px);
+    top: calc(100vh - 50px);
   }
 }
+
+
 
 @media (max-width: 435px) {
 	.footer-block .footer-social .social-links{
