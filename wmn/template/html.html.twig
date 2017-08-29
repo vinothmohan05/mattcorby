@@ -61,9 +61,11 @@
    document.body.classList.add("loading");   
   }
 	</script>
+	{% if _context.node_type != "page" or context.node_type != "splash" %}
     <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.185bdb3a72ac8422e1e9.bundle.js?v4.2.4"></script>	
 	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.55cf5de4b69001c58b49.bundle.js?v4.2.4"></script>
     <script type="text/javascript" src="/{{ base_path ~ directory }}/main.9b9b74384990cac03723.bundle.js?v4.2.4"></script>
+	{% endif %}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
