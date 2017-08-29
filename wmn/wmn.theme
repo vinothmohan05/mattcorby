@@ -1,55 +1,13 @@
 <?php
 
-
-
 /**
  * @file
  * Functions to support theming in the Bartik theme.
  */
-/*
- function spartan_preprocess(&$variables, $hook) {
-	print "<br/>this is test block ".$variables['elements']['#id'];
-	if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] === "testblockfortoken") {
-		print " this is is_angular block";
-		$variables['is_angular'] = "true";
-	}
-}*/
 
-function spartan_preprocess_html(&$variables) {
-	if ($node = \Drupal::request()->attributes->get('node')) {
-		$variables['path_info']['args'] = $node->id();
-	}	
-	
-	$current_path = \Drupal::service('path.current')->getPath();
-	$result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-	
-	//echo "$result<br/>";
-	
-	$block = entity_load('block', "testblockfortoken");
-	$region = $block->getVisibility();
-	
-	//$pages = $region['request_path']['pages'].split(" ");
-	//print_r($pages);
-	
-	if(is_array($region['request_path']['pages'])){
-		if(in_array($result, $region['request_path']['pages'])){}
-		else{
-			$variables['is_angular'] = "true";
-		}
-	}else{
-		if(strpos($region['request_path']['pages'], $result) === false ){
-			$variables['is_angular'] = "true";
-		}else{
-		}
-	}
-	//print($region['entity_bundle:node']['bundles']['"$node_type"']);	
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+function mattcorby_preprocess_htm(&$variables, $hook){
+    $variables['base_path'] = base_path();
 }
-/*
-function spartan_preprocess_block(&$variables) {
-	if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] === "testblockfortoken") {
-		print " this is is_angular block ";
-		$variables['is_angular'] = "true";
-		//exit;		
-	}	
-	//exit;
-}*/
