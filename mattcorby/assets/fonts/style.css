@@ -64,8 +64,7 @@
 @font-face {
     font-family: 'ruby';
     src: url('./ruby/ruby-glow-webfont.eot');
-    src:  url('./ruby/ruby-glow-webfont.eot?kt1sjo5#iefix') format('embedded-opentype');
-}
+    }
 
 @font-face {
     font-family: 'ruby';
