@@ -28,8 +28,14 @@ function sandbox_preprocess_html(&$variables) {
 	
 	echo "Entering sandbox_preprocess_html<br/>";
 	
-	$block = entity_load('block', "sandbox-angularapp");
+	$block = entity_load('block', "angularapp");
+	
+	echo "Entering angularapp<br/>";
+	
 	print_r($block);
+	
+	echo "--------------------------<br/>";
+	
 	if(isset($block)){
 		$region = $block->getVisibility();
 	
