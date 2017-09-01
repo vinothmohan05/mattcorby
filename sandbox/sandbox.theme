@@ -29,7 +29,7 @@ function sandbox_preprocess_html(&$variables) {
 	//echo "$result<br/>";
 	
 	$block = entity_load('block', "angularapp");
-	
+	print_r($block);
 	if(isset($block)){
 		$region = $block->getVisibility();
 	
