@@ -32,11 +32,10 @@ function sandbox_preprocess_html(&$variables) {
 	$contextRepository = \Drupal::service('context.repository');
 
 	// Get blocks definition
-	$definitions = $blockManager->getDefinitionsForContexts($contextRepository->getAvailableContexts());
-
-	print_r($definitions['angularapp']);
 	
-	$block = entity_load('block', "angularapp");
+	$ids = \Drupal::entityQuery('block')->execute();
+	
+	print_r($ids);
 	
 	echo "Entering angularapp<br/>";
 	
