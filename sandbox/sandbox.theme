@@ -28,24 +28,26 @@ function sandbox_preprocess_html(&$variables) {
 	
 	//echo "$result<br/>";
 	
-	$block = entity_load('block', "testblockfortoken");
-	$region = $block->getVisibility();
+	$block = entity_load('block', "angularapp");
 	
-	//$pages = $region['request_path']['pages'].split(" ");
-	//print_r($pages);
+	if(isset($block)){
+		$region = $block->getVisibility();
 	
-	if(is_array($region['request_path']['pages'])){
-		if(in_array($result, $region['request_path']['pages'])){}
-		else{
-			$variables['is_angular'] = "true";
-		}
-	}else{
-		if(strpos($region['request_path']['pages'], $result) === false ){
-			$variables['is_angular'] = "true";
+		//$pages = $region['request_path']['pages'].split(" ");
+		//print_r($pages);
+	
+		if(is_array($region['request_path']['pages'])){
+			if(in_array($result, $region['request_path']['pages'])){}
+			else{
+				$variables['is_angular'] = "true";
+			}
 		}else{
+			if(strpos($region['request_path']['pages'], $result) === false ){
+				$variables['is_angular'] = "true";
+			}else{	
+			}
 		}
 	}
-	
 }
 
 function sandbox_variable_info($options) {
