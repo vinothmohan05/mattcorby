@@ -28,7 +28,7 @@ function sandbox_preprocess_html(&$variables) {
 	
 	echo "Entering sandbox_preprocess_html<br/>";
 	
-	$block = entity_load('block', "angularapp");
+	$block = entity_load('block', "sandbox-angularapp");
 	print_r($block);
 	if(isset($block)){
 		$region = $block->getVisibility();
