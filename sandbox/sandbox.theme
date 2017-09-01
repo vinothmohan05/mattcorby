@@ -28,6 +28,14 @@ function sandbox_preprocess_html(&$variables) {
 	
 	echo "Entering sandbox_preprocess_html<br/>";
 	
+	$blockManager = \Drupal::service('plugin.manager.block');
+	$contextRepository = \Drupal::service('context.repository');
+
+	// Get blocks definition
+	$definitions = $blockManager->getDefinitionsForContexts($contextRepository->getAvailableContexts());
+
+	print_r($definitions['angularapp']);
+	
 	$block = entity_load('block', "angularapp");
 	
 	echo "Entering angularapp<br/>";
