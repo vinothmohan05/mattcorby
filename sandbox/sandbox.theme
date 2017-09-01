@@ -27,30 +27,12 @@ function sandbox_preprocess_html(&$variables) {
 	$current_path = \Drupal::service('path.current')->getPath();
 	$result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
 	
-	echo "Entering sandbox_preprocess_html<br/>";
+	//echo "Entering sandbox_preprocess_html<br/>";
 	
 	$block = Block::load('sandbox_angularapp');
-	print_r($block);
 	
-	echo "--------------------------<br/>";
-	
-	$ids = \Drupal::entityQuery('block')->execute();
-	
-	print_r($ids);
-	
-	$ids = \Drupal::entityQuery('block')->condition('plugin', 'angularapp')->execute();
-	
-	echo "--------------------------<br/>";
-
-	print_r($ids);
-	
-	echo "--------------------------<br/>";
-	
-	echo "Entering angularapp<br/>";
-	
-	print_r($block);
-	
-	echo "--------------------------<br/>";
+	//print_r($block);	
+	//$ids = \Drupal::entityQuery('block')->execute();
 	
 	if(isset($block)){
 		$region = $block->getVisibility();

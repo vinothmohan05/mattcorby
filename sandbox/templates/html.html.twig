@@ -36,8 +36,8 @@
   ]
 %}  
 <!DOCTYPE html>
-<html{{ html_attributes }}>
 {% spaceless %}
+<html{{ html_attributes }}>
   <head>
     <base href="/">
     <head-placeholder token="{{ placeholder_token|raw }}">
@@ -102,6 +102,6 @@
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.1f6938712fad32fe99eb.bundle.js?cache=v7.0"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.a0c36ee945c391b73ca2.bundle.js?cache=v7.0"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.a4fc45b5c647befc8d8e.bundle.js?cache=v7.0"></script>
-	{% endif %}
-	{% endspaceless %}
+	{% endif %}	
 </html>
+{% endspaceless %}
