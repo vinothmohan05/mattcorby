@@ -26,7 +26,7 @@ function sandbox_preprocess_html(&$variables) {
 	$current_path = \Drupal::service('path.current')->getPath();
 	$result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
 	
-	//echo "$result<br/>";
+	echo "Entering sandbox_preprocess_html<br/>";
 	
 	$block = entity_load('block', "angularapp");
 	print_r($block);
