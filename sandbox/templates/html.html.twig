@@ -51,7 +51,7 @@
 	<script>digitalData={}</script>	
 	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
 	
-	{% if _context.is_angular }
+	{% if _context.is_angular %}
 		<!-- Hammer JS -->
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js?"></script>	
 		
@@ -97,7 +97,7 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-	{% if _context.is_angular }
+	{% if _context.is_angular %}
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.2addba29f5795ac5491d.bundle.js?cache=v7.11"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.1f6938712fad32fe99eb.bundle.js?cache=v7.0"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.a0c36ee945c391b73ca2.bundle.js?cache=v7.0"></script>
