@@ -37,6 +37,12 @@ function sandbox_preprocess_html(&$variables) {
 	
 	print_r($ids);
 	
+	$ids = \Drupal::entityQuery('block')->condition('plugin', 'angularapp')->execute();
+	
+	echo "--------------------------<br/>";
+
+	print_r($ids);
+	
 	echo "Entering angularapp<br/>";
 	
 	print_r($block);
