@@ -2601,25 +2601,30 @@ app-artists{
 
 .grid.view ul.artists li .titleWrapper .titleInnerWraper:after{
     content: '';
-    width: 100%;
+    width: 0%;
     height: 1px;
     display: block;
     margin-top: 0px;
     right: 0;
     background: #e9e8d4;
-    transform: translateX(125%);
-    -webkit-transform: translateX(125%);
+    /*transform: translateX(125%);
+    -webkit-transform: translateX(125%);*/
     /*transition: width .4s ease;
     -webkit-transition: width .4s ease;*/
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
+    /*transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;*/
     position: absolute;
 }
 .grid.view ul.artists li:hover .titleWrapper .titleInnerWraper:after{
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
+    width: 100%;
+    /*transform: translateX(0%);
+    -webkit-transform: translateX(0%);*/
     transition-delay: 0.2s;
     -webkit-transition-delay: 0.2s;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
 
 }
 
@@ -2862,10 +2867,10 @@ i{
         
     }
     .grid.view ul.artists li .titleWrapper .titleInnerWraper{
-        transform: translateX(-100%);
+        /*transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
-        -moz-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);*/
         transition: all 0.5s ease;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease ;
@@ -2873,10 +2878,10 @@ i{
         
     }
     .grid.view ul.artists li:hover .titleWrapper .titleInnerWraper{
-        transform: translateX(0%);
+        /*transform: translateX(0%);
         -webkit-transform: translateX(0%);
         -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
+        -ms-transform: translateX(0%);*/
     }
     .grid.view ul.artists li:hover .titleWrapper{
         visibility: visible;
@@ -4048,4 +4053,10 @@ body.show-photo-lightbox .footerWrapperBlock,body.show-photo-lightbox div#fixed-
 }
 .TermsofUse table{
       border-width:  0 0 2px 0 ;
+}
+body.secondform-lb-open div#fixed-nav, body.secondform-lb-open .homePanelCon.mailinglistPanel, body.secondform-lb-open .content , 
+body.secondform-lb-open .footerWrapperBlock .footer-block {
+    -webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+    filter: blur(3px);
 }
