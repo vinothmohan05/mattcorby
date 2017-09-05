@@ -1379,11 +1379,29 @@ body.home .BackToTop {
 .List.view {
     position: relative;
 }
+
 .List.view .imagewrapper {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 0;
-    max-width: 50%;
+    max-width: 50%;*/
+    position: fixed;
+    max-width: 48vw;
+    top: 12vh;
+    left: 2vw;
+}
+
+.category.landing.Artists.active .List.view .imagewrapper {
+    left: calc(0% + 2vw);
+}
+.category.landing.Comedians.active .List.view .imagewrapper {
+    left: calc(25% + 2vw);
+}
+.category.landing.Others.active .List.view .imagewrapper {
+    left: calc(50% + 2vw);
+}
+.category.landing.All.active .List.view .imagewrapper {
+    left: calc(75% + 2vw);
 }
 .List.view .item-wrapper h3 {
     text-align: center;
@@ -1407,12 +1425,14 @@ body.home .BackToTop {
 li.col.List {
     display: inline-block;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 li.col.List:first-child{
     margin-top: 40px;
 }
 .List.view .item-wrapper h3 {
-    color: #fff;
+    color: #fff;    
     width: 44%;
     text-align: left;
     float: right;
@@ -1423,6 +1443,11 @@ li.col.List:first-child{
     cursor: pointer;
     letter-spacing: 1.5px;
     margin: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    box-sizing: border-box;
+    padding: 20px 0 20px 0.5vw;
 }
 app-artists-carousel {
     display: block;
@@ -1499,7 +1524,7 @@ app-artists-carousel {
 }
 .newsCategoryMenu ul {
     margin: 0;
-    position: absolute;
+    position: absolute !important;
     color:#000;
     z-index: 99;
     max-width: 220px;
@@ -2643,15 +2668,32 @@ app-artists{
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out
 }
-.item-wrapper:hover .imagewrapper {
+.category.landing.active .item-wrapper:hover .imagewrapper {
+    visibility: visible;
+    opacity: 1;
+}
+.category.landing.active li.col.List:first-child .item-wrapper .imagewrapper {
+    visibility: visible;
+    opacity: 1;
+}
+.category.landing.active ul.artists:hover li.col.List:first-child .item-wrapper .imagewrapper{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.category.landing.active ul.artists li.col.List:first-child .item-wrapper:hover .imagewrapper {
+    visibility: visible;
+    opacity: 1;
+}
+.category.landing.active ul.artists li.col.List .item-wrapper:hover .imagewrapper {
     visibility: visible;
     opacity: 1;
 }
 .List.view .item-wrapper h3:hover {
     margin-right: 20px;
+     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
-    transition: all 0.1s;
     color: #1564a8;
 }
 .artistLandingNav .tab.artist-options{
@@ -2765,13 +2807,20 @@ i{
     width: 6px;
 }
 .ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{
-    left: 50%;
+    left: calc(50% + 2vw);
     transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     background-color: #1564a8 !important;
 }
 .ps-container.ps-active-x>.ps-scrollbar-x-rail, .ps-container.ps-active-y>.ps-scrollbar-y-rail{
     background: transparent !important;
     left: 50% !important;
+}
+ul.artists.artist-detail .ps-container.ps-active-x>.ps-scrollbar-x-rail{
+    
+    left: initial !important;
 }
 /*Scroll bar */
 /* Artist landing page Styles ENDs */
@@ -2962,7 +3011,7 @@ ul.artists.artist-detail li.col.List{
     -moz-transition: all 0s ease 0s;
     -o-transition: all 0s ease 0s;
     -ms-transition: all 0s ease 0s;
-    transition-delay: 0.4sec;
+    transition-delay: 0.4s;
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
     -o-transition-delay: 0.4s;
@@ -2990,7 +3039,7 @@ ul.artists.artist-detail li.col.List{
     -moz-transform:  translate(-50% , -100%);
     -ms-transform:  translate(-50% , -100%);
     -webkit-transform:  translate(-50% , -100%);
-    transition-delay: 0.2sec;
+    transition-delay: 0.2s;
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     -o-transition-delay: 0.2s;
