@@ -1391,16 +1391,17 @@ body.home .BackToTop {
     left: 2vw;
 }
 
-.category.landing.Artists.active .List.view .imagewrapper {
+.category.landing.Artists .List.view .imagewrapper {
     left: calc(0% + 2vw);
+    /*transition: all 0.4s;*/
 }
-.category.landing.Comedians.active .List.view .imagewrapper {
+.category.landing.Comedians .List.view .imagewrapper {
     left: calc(25% + 2vw);
 }
-.category.landing.Others.active .List.view .imagewrapper {
+.category.landing.Others .List.view .imagewrapper {
     left: calc(50% + 2vw);
 }
-.category.landing.All.active .List.view .imagewrapper {
+.category.landing.All .List.view .imagewrapper {
     left: calc(75% + 2vw);
 }
 .List.view .item-wrapper h3 {
@@ -2971,7 +2972,18 @@ ul.artists.artist-detail .ps-container.ps-active-x>.ps-scrollbar-x-rail{
     max-height: none;
 }
 ul.artists.artist-detail li.col.List{
-    margin: 0;
+    margin: 10px;
+}
+ul.artists.artist-detail.ps-container.ps-active-y>.ps-scrollbar-y-rail, .dropdrownWrapper ul.artists.ps-container.ps-active-y>.ps-scrollbar-y-rail{
+    right: 0 !important;
+    left: auto !important;
+}
+ul.artists.artist-detail.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y,.dropdrownWrapper ul.artists.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{
+    transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    left: 9px;
 }
 .artistNews .news_block ul.news li.col{
     margin:0;
@@ -4109,3 +4121,18 @@ body.secondform-lb-open .footerWrapperBlock .footer-block {
 	-moz-filter: blur(3px);
     filter: blur(3px);
 }
+/*contact form*/
+form#contact-message-sitewide-form .js-form-item {
+    padding-bottom: 10px;
+}
+form#contact-message-sitewide-form .js-form-item label {
+     display:block;
+     width:100%;
+     padding-bottom:5px;
+ }
+
+ form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
+    width: 300px;
+    margin: 0 auto;
+}
+
