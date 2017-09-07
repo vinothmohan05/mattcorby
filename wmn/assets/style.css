@@ -738,19 +738,22 @@ div#fixed-nav nav.g-layout {
 .button {
     background-color: transparent;
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 0;
     text-transform: uppercase;
     padding: 13px 57px;
-    border: 2px solid #1b214e;
+    border: 1px solid #fff;
     line-height: 1;
     font-size: 19px;
-    color: #1b214e;
+    color: #fff;
     cursor: pointer;
     transition: all 1s ease 0s;
+    outline: none;
+    -webkit-appearance: none;
+    
 }
 .button:hover {
-    color: #1b214e;
-    background-color: #fff;
+    background: #fff;
+    color: #1564a8;
 }
 .reverse-button {
     color: #fff;
@@ -1279,7 +1282,7 @@ ul.breadcrumb.news-detail li {
     display: inline-block;
     max-width:380px;
 }
-.footerWrapperBlock app-block {
+.footerWrapperBlock app-footer{
     display: inline-block;
     width: 62%;
     vertical-align: top;
@@ -1702,6 +1705,9 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
   .livefyreBlockWrapper .livefyreBlockInnerWrapper {
     max-width: 90%;
   }
+  app-mailing-list-block{
+      display:block;
+  }
 }
 @media only screen and (min-width:1023px) and (max-width: 1024px){
   .livefyreBlockWrapper .livefyreBlockInnerWrapper {
@@ -2045,7 +2051,7 @@ ul.featuredArtist h2.block-title {
         text-align: center;
     }
 
-    .footerWrapperBlock app-block {
+    .footerWrapperBlock app-footer {
         width: 100%;
         display: block;
     }
@@ -3900,6 +3906,11 @@ body:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
         max-width: 25vh;
         background-size: 100%;
     }
+    form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
+        width: 300px;
+        margin: 0 auto;
+       
+    }
 }
 
 /*Loader Animation V2 ENDS*/
@@ -4132,7 +4143,8 @@ form#contact-message-sitewide-form .js-form-item label {
  }
 
  form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
-    width: 300px;
-    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
 }
 
