@@ -812,7 +812,7 @@ app-lightbox {
      body:not(.home) nav.g-layout {
         background:#000;
     }
-    h3.featuredArtistname a {
+    h3.featuredArtistname  {
         font-size: 30px;
     }
     body.home app-block.logo-block {
@@ -1271,6 +1271,7 @@ ul.breadcrumb.news-detail li {
     display: block;
     width: 100%;
     background: #000;
+    position: relative;
 }
 .footerWrapperBlock .footer-block {
     background: #000;
@@ -1874,7 +1875,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     clear: both;
     display: block;
 }
-h3.featuredArtistname a {
+h3.featuredArtistname  {
     font-size: 44px;
     color: #fff;
     line-height: 44px;
@@ -2288,7 +2289,7 @@ ul.featuredArtist h2.block-title {
     .homePanelCon.mailinglistPanel.show{
         overflow-y: scroll;
     }
-     h3.featuredArtistname a {
+     h3.featuredArtistname  {
         font-size: 28px;
         line-height: 30px;
         letter-spacing: 2px;
@@ -3709,7 +3710,7 @@ body:not(.loading) .loaderAnimation-logo {
      -moz-transition: 1s ease ;
     -webkit-transition: 1s ease ;
     /* position: fixed; */
-    z-index: 999;
+    z-index:1;
     max-width:38vh;
     
 
