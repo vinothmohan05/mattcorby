@@ -1435,8 +1435,8 @@ li.col.List {
 li.col.List:first-child{
     margin-top: 40px;
 }
-.List.view .item-wrapper h3 {
-    color: #fff;    
+.List.view .item-wrapper .namewrapper {
+    color: #fff;
     width: 44%;
     text-align: left;
     float: right;
@@ -1444,9 +1444,28 @@ li.col.List:first-child{
     font-weight: normal;
     font-size: 20px;
     line-height: 1;
+    /* cursor: pointer; */
+    letter-spacing: 1.5px;
+    margin: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    box-sizing: border-box;
+}
+.List.view .item-wrapper h3 {
+    color: #fff;
+    width: auto;
+    text-align: left;
+    margin: 20px;
+    float: left;
+    font-family: gothambook;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1;
     cursor: pointer;
     letter-spacing: 1.5px;
     margin: 0;
+    margin-left: 20px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -1594,6 +1613,12 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     color: #004680;
 }
 @media only screen and (min-width: 768px) {
+    body.secondform-lb-open div#fixed-nav, body.secondform-lb-open .homePanelCon.mailinglistPanel, body.secondform-lb-open .content , 
+    body.secondform-lb-open .footerWrapperBlock .footer-block {
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        filter: blur(3px);
+    }
     .livefyreBlockWrapper .livefyreBlockInnerWrapper .aboutLivefyreBlock div.LivefyreBlockContents {
         -webkit-column-count: 2;
         column-count: 2;
@@ -2420,6 +2445,8 @@ background: #ebebeb;
     .newsCategoryMenu ul{
         left: 50%;
         transform: translateX(-50%);
+        max-width: 220px;
+        width: 100%;
     }
 }
 /*News Page Styles ENDs*/
@@ -2697,8 +2724,8 @@ app-artists{
     opacity: 1;
 }
 .List.view .item-wrapper h3:hover {
-    margin-right: 20px;
-     transition: all 0.5s;
+    margin: 0;
+    transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     color: #1564a8;
@@ -4126,12 +4153,7 @@ body.show-photo-lightbox .footerWrapperBlock,body.show-photo-lightbox div#fixed-
 .TermsofUse table{
       border-width:  0 0 2px 0 ;
 }
-body.secondform-lb-open div#fixed-nav, body.secondform-lb-open .homePanelCon.mailinglistPanel, body.secondform-lb-open .content , 
-body.secondform-lb-open .footerWrapperBlock .footer-block {
-    -webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-    filter: blur(3px);
-}
+
 /*contact form*/
 form#contact-message-sitewide-form .js-form-item {
     padding-bottom: 10px;
@@ -4146,5 +4168,8 @@ form#contact-message-sitewide-form .js-form-item label {
     box-sizing: border-box;
     width: 100%;
     max-width: 500px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    
 }
 
