@@ -884,7 +884,9 @@ a.site-logo {
 
 @media only screen and (max-width: 1023px) {
   body{
-    background-size: auto 100%;
+    background-size: cover;
+    background-image: url(images/bg_mobile.jpg);
+    background-repeat: no-repeat;
   }
   a.site-logo {
     height: 48px;
@@ -893,8 +895,8 @@ a.site-logo {
     width: 100px;
   }
   #fixed-nav {
-    background: url(images/Music-Bkg.jpg) no-repeat;
-    background-size: auto 100vh;
+    background: url(images/bg_mobile.jpg) no-repeat;
+    background-size: cover;
     height: 50px;
   }
   .videoPanel .carousel-prev {
