@@ -408,7 +408,13 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
 /* Loader Style Ends */
 
 /*Common Styles*/
-html { width: 100vw;max-width: 100%; }
+html {
+  width: 100vw;
+  max-width: 100%;    
+  overflow: hidden;
+  height: 100%; 
+}
+
 body > img {
     display: none;
 }
@@ -420,9 +426,11 @@ body {
   box-sizing: border-box;
   padding: 50px 0 0;
   margin: 0;
-  background: url(images/Music-Bkg.jpg) no-repeat;
+  background: url(images/Music-Bkg.jpg) no-repeat fixed;
   background-size: 100% auto;
   background-attachment: fixed;
+  height: 100%;
+  overflow: auto;
 }
 a {
   color: #ffffff;
@@ -884,9 +892,11 @@ a.site-logo {
 
 @media only screen and (max-width: 1023px) {
   body{
-    background-size: cover;
-    background-image: url(images/bg_mobile.jpg);
+    background-size: 100% auto;
     background-repeat: no-repeat;
+    background-position: top center !important;
+    background-attachment: fixed !important;
+    background-image: url(images/bg_mobile.jpg);
   }
   a.site-logo {
     height: 48px;
@@ -895,9 +905,9 @@ a.site-logo {
     width: 100px;
   }
   #fixed-nav {
-    background: url(images/bg_mobile.jpg) no-repeat;
-    background-size: cover;
+    background-size: 100% 100vh;
     height: 50px;
+    background-image: url(images/bg_mobile.jpg);
   }
   .videoPanel .carousel-prev {
     border-right: 2px solid #ffffff;
