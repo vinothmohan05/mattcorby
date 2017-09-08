@@ -2853,6 +2853,11 @@ i{
     background: transparent !important;
     left: 50% !important;
 }
+ul.artists.ps-container .ps-container.ps-active-x>.ps-scrollbar-x-rail, .ps-container.ps-active-y>.ps-scrollbar-y-rail{
+background: transparent !important;
+right: 9% !important;
+left: initial !important;
+}
 ul.artists.artist-detail .ps-container.ps-active-x>.ps-scrollbar-x-rail{
     
     left: initial !important;
@@ -3851,7 +3856,7 @@ body.home:not(.loading) .container {
     }
 }
 
-body:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
+body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
     animation: animLoadedContent 3s;
     -moz-animation: animLoadedContent 3s;
     -webkit-animation: animLoadedContent 3s;
