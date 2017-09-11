@@ -108,7 +108,9 @@ a:active,
 a:hover {
   outline-width: 0;
 }
-
+select::-ms-expand {
+  display: none;
+}
 /* Text-level semantics
    ========================================================================== */
 
