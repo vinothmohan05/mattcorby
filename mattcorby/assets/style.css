@@ -892,11 +892,21 @@ a.site-logo {
 
 @media only screen and (max-width: 1023px) {
   body{
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top center !important;
-    background-attachment: fixed !important;
-    background-image: url(images/bg_mobile.jpg);
+    background-attachment: initial;
+    background: none;
+  }
+
+  body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(images/bg_mobile.jpg) no-repeat center center;
+    background-size: cover;
   }
   a.site-logo {
     height: 48px;
