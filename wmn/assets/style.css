@@ -1894,6 +1894,7 @@ h3.featuredArtistname  {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
+    cursor: pointer;
 }
 .featuredArtistpath a:hover {
     color: #1564a8;
