@@ -410,9 +410,7 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
 /*Common Styles*/
 html {
   width: 100vw;
-  max-width: 100%;    
-  overflow: hidden;
-  height: 100%; 
+  max-width: 100%;
 }
 
 body > img {
@@ -428,8 +426,7 @@ body {
   margin: 0;
   background: url(images/Music-Bkg.jpg) no-repeat fixed;
   background-size: 100% auto;
-  height: 100%;
-  overflow: auto;
+  height: 101%;
 }
 a {
   color: #ffffff;
