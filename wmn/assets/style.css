@@ -1595,6 +1595,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     color: #ffffff;
     font-weight: normal;
     letter-spacing: 0.5px;
+    line-height: 25px;
 }
 .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .news-artist {
     font-size: 14px;
@@ -3958,6 +3959,14 @@ body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
         margin: 0 auto;
        
     }
+    .bit-widget .bit-no-dates-container {
+        
+        padding: 0 0 0 0  !important;
+      
+    }
+    .breadcrumb-wrapper.news-detail .detail-list .news_header_block {
+         opacity: 1;
+    }
 }
 
 /*Loader Animation V2 ENDS*/
@@ -4197,3 +4206,39 @@ form#contact-message-sitewide-form .js-form-item label {
 div#head  .artistContent p {
       margin-top: 10px;
       }
+.bit-widget .bit-no-dates-container {
+        border-top: 0 !important;
+       
+        padding: 0 0 60px 0  !important;
+        margin: 0px !important;
+}
+div#artistinnerwrapper .thirdForm {
+    max-width:100%;
+}
+
+ div#video .videoplay {
+    background-image: url(http://www.warnermusicnashville.com//sites/g/files/g2000006676/files/styles/thumbnail/public/play.png?itok=tP8JQl6J);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 10; opacity: 1;
+     -webkit-transition: opacity .25s linear;
+    -moz-transition: opacity .25s linear;
+    -ms-transition: opacity .25s linear;
+    -o-transition: opacity .25s linear;
+    transition: opacity .25s linear;
+} 
+
+ div#video .thumbnail {
+    position: relative;
+} 
+div#photo .videoplay{
+    display: none;
+}
