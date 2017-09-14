@@ -411,6 +411,7 @@ background: linear-gradient(to bottom right,  rgba(19,21,41,1) 0%,rgba(155,64,97
 html {
   width: 100vw;
   max-width: 100%;
+  background: rgb(0, 0, 0);
 }
 
 body > img {
@@ -426,6 +427,9 @@ body {
   margin: 0;
   background: url(images/Music-Bkg.jpg) no-repeat fixed;
   background-size: 100% auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: -1;
 }
 a {
   color: #ffffff;
@@ -884,6 +888,15 @@ a.site-logo {
     background: url(images/matt-corby-logo.svg) no-repeat;
     background-position: 50%;
 }
+@media only screen and (max-device-width: 1365px) and (min-device-width: 768px) and (orientation: landscape){
+  a.site-logo {
+      background: url(images/matt-corby-logo.svg) no-repeat;
+      height: 57px;
+      background-position: 50%;
+      left: 30px;
+      width: 100px;
+  }
+}
 
 @media only screen and (max-width: 1023px) {
   body{
@@ -898,11 +911,12 @@ a.site-logo {
     left: 0;
     top: 0;
     width: 100%;
-    height: 101%;
     z-index: -10;
     background: url(images/bg_mobile.jpg) no-repeat center center;
     background-size: cover;
     will-change: transform;
+    bottom: -80px;
+    transform: translate3d(0,0,0);
   }
   a.site-logo {
     height: 48px;
