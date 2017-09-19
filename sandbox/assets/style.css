@@ -590,49 +590,49 @@ span.social-links {
 }
 **/
 .footer-social .fs-fb a {
-    background: transparent url(/assets/i/fb.svg) no-repeat scroll 0 0;
+    background: transparent resolve(fb.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-fb a:hover {
-    background: transparent url(/assets/i/fb-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(fb-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a {
-    background: transparent url(/assets/i/in.svg) no-repeat scroll 0 0;
+    background: transparent resolve(in.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-ig a:hover {
-    background: transparent url(/assets/i/in-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(in-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a {
-    background: transparent url(/assets/i/twitter.svg) no-repeat scroll 0 0;
+    background: transparent resolve(twitter.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-tw a:hover {
-    background: transparent url(/assets/i/twitter-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(twitter-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a {
-    background: transparent url(/assets/i/spotify.svg) no-repeat scroll 0 0;
+    background: transparent resolve(spotify.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-sp a:hover {
-    background: transparent url(/assets/i/spotify-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(spotify-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a {
-    background: transparent url(/assets/i/pinterest.svg) no-repeat scroll 0 0;
+    background: transparent resolve(pinterest.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-pin a:hover {
-    background: transparent url(/assets/i/pinterest-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(pinterest-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a {
-    background: transparent url(/assets/i/yt.svg) no-repeat scroll 0 0;
+    background: transparent resolve(yt.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-yt a:hover {
-    background: transparent url(/assets/i/yt-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(yt-hover.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a {
-    background: transparent url(/assets/i/vimeo.svg) no-repeat scroll 0 0;
+    background: transparent resolve(vimeo.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-vi a:hover {
-    background: transparent url(/assets/i/vimeo-hover.svg) no-repeat scroll 0 0;
+    background: transparent resolve(vimeo-hover.svg) no-repeat scroll 0 0;
 }
 /* .galleryPage ul.photos li {
-    background-image: url(/assets/i/gallery.svg?fi);
+    background-image: resolve(gallery.svg?fi);
     background-repeat: repeat;
     background-size: 51% auto;
     background-position: 0 0;
@@ -817,7 +817,7 @@ body:not(.content-page) div.contextual{
 }
 
 article.embedded-entity > article {
-    background: transparent url(/assets/i/loader.gif) no-repeat scroll center center;
+    background: transparent resolve(loader.gif) no-repeat scroll center center;
     background-size: 10%;
 }
 .home .merchPanel {
