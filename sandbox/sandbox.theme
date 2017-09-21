@@ -8,6 +8,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\block\Entity\Block;
+use Drupal\user\Entity\Role;
 
 function sandbox_theme(&$existing, $type, $theme, $path) {
   $hooks = array();  
@@ -51,7 +52,57 @@ function sandbox_preprocess_html(&$variables) {
 			}else{	
 			}
 		}
+		
+		if(isStaginguser()){
+			$variables['is_staging'] = "true";
+		}
 	}
+	
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
+  
+  //$settings = theme_get_setting('sandbox');
+  
+  $settings = \Drupal::config('sandbox.settings');
+  
+  $role_objects = Role::loadMultiple();
+  $system_roles = array_combine(array_keys($role_objects), array_map(function($a){ return $a->label();}, $role_objects));
+  
+  $form['theme'] = array(
+    '#type' => 'container',
+    '#tree' => TRUE,
+  );
+ 
+  $form['theme']['secondary_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Stage Theme Settings'),
+  );
+  
+	$form['theme']['secondary_menu']['themeRoles'] = [
+      '#type' => 'select',
+      '#title' => t('Select Staging User Role'),
+      '#options' => $system_roles,
+      '#default_value' => theme_get_setting('themeRoles') ? theme_get_setting('themeRoles') : "",
+    ];
+  
+	// Add your submission handler to the form.
+	//$form['#submit'][] = 'sandbox_form_system_theme_settings_submit';
+	//return $form;
+
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ * Demo functionality gives non-admins no permission to update their username/password
+ * by unsetting it when they view their profile edit screen.
+ */
+function isStaginguser() {
+  $user = \Drupal::currentUser()->getRoles();
+  return in_array("staging_user", $user);
 }
 
 function sandbox_variable_info($options) {

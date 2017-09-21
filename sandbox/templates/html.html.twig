@@ -60,7 +60,16 @@
 		
 		<link href="/{{ base_path ~ directory }}/assets/normalize.min.css" rel="stylesheet" />
 		<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
+		
+		{% if _context.is_staging %}
+		
+		<link href="/{{ base_path ~ directory }}/staging/styles.1a54fb744ecfd45e717f.bundle.css" rel="stylesheet" />
+		
+		{% else %}
+		
 		<link href="/{{ base_path ~ directory }}/styles.e797fd5e2cd7003815ca.bundle.css" rel="stylesheet" />
+		
+		{% endif %}
 		
     {% endif %}
 	
@@ -100,11 +109,23 @@
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 	{% if _context.is_angular %}
+		
+		
+		{% if _context.is_staging %}
 
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/inline.1a0fa799196116696eac.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/polyfills.e30917b9c12fcb500c0d.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/vendor.a0c36ee945c391b73ca2.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/main.4f170441e9ae680a42fe.bundle.js"></script>
+		
+		{% else %}
+		
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.84f19756aba73eb525ae.bundle.js"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.e30917b9c12fcb500c0d.bundle.js"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.a0c36ee945c391b73ca2.bundle.js"></script>
 		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.b3af335032e3bd918186.bundle.js"></script>
+		
+		{% endif %}	
 
 	{% endif %}	
 </html>
