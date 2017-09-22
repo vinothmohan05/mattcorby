@@ -4242,3 +4242,9 @@ div#artistinnerwrapper .thirdForm {
 div#photo .videoplay{
     display: none;
 }
+.news-body p {
+    padding-top: 15px;
+}
+.bit-widget .bit-upcoming-events-show-all-button, .bit-past-events-show-all-button {
+    margin-bottom: 30px !important;
+}
