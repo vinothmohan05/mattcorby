@@ -630,6 +630,7 @@ div#fixed-nav nav.g-layout {
     font-weight: bold;
 }
 @media (min-width: 768px) {
+  
     .g-layout {
         width: 767px;
         padding-top: 30px;
@@ -1782,6 +1783,62 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     line-height: 1.5;
 }
 @media only screen and (min-width: 1024px) {
+      /* Artist detail page header Animation */
+
+
+.detail-list.artist .thumbnail-wrapper{
+    position: fixed;
+    height: calc(100vh - 94px);
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background: #323a45;
+    max-width: 100vw;
+    z-index: -1;
+}
+.detail-list.artist .thumbnail-wrapper .thumbnail-Innerwrapper{
+    position: absolute;
+    z-index: 0;
+    background: none;
+    height: calc(100vh - 94px);
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.detail-list.artist .thumbnail-wrapper .thumbnail{
+     transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);  
+}
+.detail-list.artist .thumbnail-wrapper .thumbnail img{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    width: 100%;
+    max-height: none;
+    max-width: none;
+    z-index: -999999;
+    left: 0;
+    display: inline-block;
+    top: 0px;
+}
+.detail-list.artist .ArtistInnerWrapper {
+    margin-top: calc(100vh - 121px);
+    background: #000;
+}
+.thumbnail-wrapper .thumbnail{
+     backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Artist detail page header Animation */
     
     .aboutHeaderBlock {
         position: relative;
@@ -3585,62 +3642,7 @@ h1#logo a img {
     }
 }
 
-/* Artist detail page header Animation */
 
-
-.detail-list.artist .thumbnail-wrapper{
-    position: fixed;
-    height: calc(100vh - 94px);
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    background: #323a45;
-    max-width: 100vw;
-    z-index: -1;
-}
-.detail-list.artist .thumbnail-wrapper .thumbnail-Innerwrapper{
-    position: absolute;
-    z-index: 0;
-    background: none;
-    height: calc(100vh - 94px);
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-.detail-list.artist .thumbnail-wrapper .thumbnail{
-     transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);  
-}
-.detail-list.artist .thumbnail-wrapper .thumbnail img{
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    width: 100%;
-    max-height: none;
-    max-width: none;
-    z-index: -999999;
-    left: 0;
-    display: inline-block;
-    top: 0px;
-}
-.detail-list.artist .ArtistInnerWrapper {
-    margin-top: calc(100vh - 121px);
-    background: #000;
-}
-.thumbnail-wrapper .thumbnail{
-     backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Artist detail page header Animation */
 
 /*Loader Animation V2*/
 
