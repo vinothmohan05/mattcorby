@@ -57,9 +57,9 @@
 		
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/gridlex/2.0.9/gridlex.min.css">
 		
-		<link href="/{{ base_path ~ directory }}/assets/normalize.min.css?cache=1" rel="stylesheet" />
+		<link href="/{{ base_path ~ directory }}/assets/normalize.min.css?v=4.1.1" rel="stylesheet" />
 		<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
-		<link href="/{{ base_path ~ directory }}/styles.6af16c6ed7dddef36d40.bundle.css?cache=1" rel="stylesheet" />
+		<link href="/{{ base_path ~ directory }}/styles.6af16c6ed7dddef36d40.bundle.css?v=4.1.1" rel="stylesheet" />
     {% endif %}
 	
   </head>
@@ -98,10 +98,10 @@
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 	{% if _context.is_angular %}
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.86d7a5faa940df23fb98.bundle.js?cache=1"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.c238a393527759cfaec6.bundle.js?cache=1"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.b9685c869c8bbbd3065f.bundle.js?cache=1"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.4f3ea1cfb118a07c0463.bundle.js?cache=1"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.86d7a5faa940df23fb98.bundle.js?v=4.1.1"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.c238a393527759cfaec6.bundle.js?v=4.1.1"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.b9685c869c8bbbd3065f.bundle.js?v=4.1.1"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.4f3ea1cfb118a07c0463.bundle.js?v=4.1.1"></script>
 	{% endif %}	
 </html>
 {% endspaceless %}
