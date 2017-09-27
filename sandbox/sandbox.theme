@@ -67,7 +67,7 @@ function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
   
   //$settings = theme_get_setting('sandbox');
   
-  $settings = \Drupal::config('sandbox.settings');
+  //$settings = \Drupal::config('sandbox.settings');
   
   $role_objects = Role::loadMultiple();
   $system_roles = array_combine(array_keys($role_objects), array_map(function($a){ return $a->label();}, $role_objects));
@@ -82,17 +82,40 @@ function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Stage Theme Settings'),
   );
   
-	$form['theme']['secondary_menu']['themeRoles'] = [
-      '#type' => 'select',
-      '#title' => t('Select Staging User Role'),
-      '#options' => $system_roles,
-      '#default_value' => theme_get_setting('themeRoles') ? theme_get_setting('themeRoles') : "",
-    ];
+  $form['theme']['secondary_menu']['enableStaging'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Staging'),
+    '#default_value' => theme_get_setting('enableStaging'),
+    '#description' => t('Enable staging theme for progressive development.'),
+  );
+  
+$form['theme']['secondary_menu']['themeRoles'] = [
+  '#type' => 'select',
+  '#multiple' => TRUE,
+  '#size' => 15,
+  '#title' => t('Select Staging User Role'),
+  '#options' => $system_roles,
+  '#default_value' => theme_get_setting('themeRoles'),
+];
   
 	// Add your submission handler to the form.
-	//$form['#submit'][] = 'sandbox_form_system_theme_settings_submit';
-	//return $form;
+	$form['#submit'][] = 'sandbox_form_system_theme_settings_alter_submit';
 
+}
+
+function sandbox_form_system_theme_settings_alter_submit($form, FormStateInterface $form_state) {  
+  
+  $config = \Drupal::configFactory()->getEditable('sandbox.theme.' . $theme);
+  
+  $themeRoles = $form_state->getValue("theme")['secondary_menu']['themeRoles'];
+  $form_state->setValue('themeRoles', $themeRoles);
+  
+  $enableStaging = $form_state->getValue("theme")['secondary_menu']['enableStaging'];
+  $form_state->setValue('enableStaging', $enableStaging);
+  
+  $values = $form_state->getValues();
+  //print_r($values);
+  //exit;
 }
 
 /**
@@ -101,8 +124,15 @@ function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
  * by unsetting it when they view their profile edit screen.
  */
 function isStaginguser() {
-  $user = \Drupal::currentUser()->getRoles();
-  return in_array("staging_user", $user);
+
+	$enableStaging = theme_get_setting('enableStaging');
+	$themeRoles = theme_get_setting('themeRoles');
+	$themeRoles = array_keys($themeRoles);
+	$user = \Drupal::currentUser()->getRoles();
+	
+	//print_r($themeRoles);
+	
+	return ($enableStaging == 1 ) && ( array_intersect($themeRoles, $user) );
 }
 
 function sandbox_variable_info($options) {

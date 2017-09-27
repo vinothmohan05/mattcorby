@@ -52,22 +52,16 @@
 	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
 	
 	{% if _context.is_angular %}
-	
-		<!-- Hammer JS -->
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js?"></script>	
 		
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/gridlex/2.0.9/gridlex.min.css">
-		
-		<link href="/{{ base_path ~ directory }}/assets/normalize.min.css" rel="stylesheet" />
-		<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
+		{% include "@sandbox/css-library.twig" %}
 		
 		{% if _context.is_staging %}
 		
-		<link href="/{{ base_path ~ directory }}/staging/styles.e797fd5e2cd7003815ca.bundle.css" rel="stylesheet" />
+		{% include "@sandbox/staging-code.twig" with {'code': 'css'} %}
 		
 		{% else %}
 		
-		<link href="/{{ base_path ~ directory }}/styles.e797fd5e2cd7003815ca.bundle.css" rel="stylesheet" />
+		{% include "@sandbox/production-code.twig" with {'code': 'css'} %}
 		
 		{% endif %}
 		
@@ -75,26 +69,8 @@
 	
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-	  <script>
-		// START twttr initialization
-		window.twttr = (function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0],
-		  t = window.twttr || {};
-		  if (d.getElementById(id)) return t;
-		  js = d.createElement(s);
-		  js.id = id;
-		  js.src = "https://platform.twitter.com/widgets.js";
-		  fjs.parentNode.insertBefore(js, fjs);
-		
-		  t._e = [];
-		  t.ready = function(f) {
-			t._e.push(f);
-		  };
-		
-		  return t;
-		}(document, "script", "twitter-wjs"));
-		// END twttr initialization
-	  </script>
+	
+	{% include "@sandbox/inline-javascript.twig" %}
 	<!--
 	  <ol>
 	  {% for key, value in _context  %}
@@ -108,22 +84,15 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-	{% if _context.is_angular %}
-		
+	{% if _context.is_angular %}		
 		
 		{% if _context.is_staging %}
-
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/inline.1a0fa799196116696ead.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/polyfills.e30917b9c12fcb500c0d.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/vendor.a0c36ee945c391b73ca2.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/staging/main.4f170441e9ae680a42fe.bundle.js"></script>
+		
+		{% include "@sandbox/staging-code.twig" with {'code': 'js'} %}
 		
 		{% else %}
 		
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.a669c1f13a965d73b921.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.e30917b9c12fcb500c0d.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.a0c36ee945c391b73ca2.bundle.js"></script>
-		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.7940c2454b07fcde425a.bundle.js"></script>
+		{% include "@sandbox/production-code.twig" with {'code': 'js'} %}
 		
 		{% endif %}	
 
