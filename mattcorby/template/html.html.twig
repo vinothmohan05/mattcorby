@@ -28,74 +28,35 @@
     logged_in ? 'user-logged-in',
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
     node_type ? 'page-node-type-' ~ node_type|clean_class,
-	node_type|clean_class == "page" ? 'landing-page',
-	node_type|clean_class != "page" ? 'detail-page',
-	path_info.args ? 'page-node-' ~ path_info.args,
-	path_info.args ? 'page-node-id-' ~ path_info.args,
     db_offline ? 'db-offline',
   ]
-%}  
+%}
 <!DOCTYPE html>
-{% spaceless %}
 <html{{ html_attributes }}>
   <head>
     <base href="/">
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
-    <js-placeholder token="{{ placeholder_token|raw }}">	
+    <js-placeholder token="{{ placeholder_token|raw }}">
 	
-	<script src="https://use.typekit.net/ajy3tuh.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<!-- Hammer JS -->
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js"></script>	
 	
-	<script>digitalData={}</script>	
-	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
-	
-	{% if _context.is_angular %}
-		
-		{% include "@mattcorby/css-library.twig" %}
-		
-		{% if _context.is_staging %}
-		
-		{% include "@mattcorby/staging-code.twig" with {'code': 'css'} %}
-		
-		{% else %}
-		
-		{% include "@mattcorby/production-code.twig" with {'code': 'css'} %}
-		
-		{% endif %}
-		
-    {% endif %}
-	
+	<link href="/{{ base_path ~ directory }}/assets/normalize.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
+	<link href="/{{ base_path ~ directory }}/styles.71d560efd3eecd1bfc9b.bundle" rel="stylesheet" />
+	 <script>digitalData={}</script>
+  <script src="http://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
   </head>
-  <body{{ attributes.addClass(body_classes) }}>
-	
-	{% include "@mattcorby/inline-javascript.twig" %}
-	<!--
-	  <ol>
-	  {% for key, value in _context  %}
-		<li>{{ key }}</li>
-	  {% endfor %}
-	</ol>
-	-->
+  <body{{ attributes.addClass(body_classes) }}>   
     {{ page_top }}
     {{ page }}
-    {{ page_bottom }}	
-	
+    {{ page_bottom }}
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.900bf8c21dfc5cac2e92.bundle.js"></script>	
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.d5c37e51cd0e0f5f5ce8.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/main.e3292dea63729a179b6d.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.d0457dd48b0a3cb12909.bundle.js"></script>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-	{% if _context.is_angular %}		
-		
-		{% if _context.is_staging %}
-		
-		{% include "@mattcorby/staging-code.twig" with {'code': 'js'} %}
-		
-		{% else %}
-		
-		{% include "@mattcorby/production-code.twig" with {'code': 'js'} %}
-		
-		{% endif %}	
-
-	{% endif %}	
 </html>
-{% endspaceless %}
