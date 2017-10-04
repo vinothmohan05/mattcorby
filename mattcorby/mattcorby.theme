@@ -110,7 +110,7 @@ $form['theme']['secondary_menu']['themeRoles'] = [
 
 function mattcorby_form_system_theme_settings_alter_submit($form, FormStateInterface $form_state) {  
   
-  $config = \Drupal::configFactory()->getEditable('sandbox.theme.' . $theme);
+  $config = \Drupal::configFactory()->getEditable('mattcorby.theme.' . $theme);
   
   $themeRoles = $form_state->getValue("theme")['secondary_menu']['themeRoles'];
   $form_state->setValue('themeRoles', $themeRoles);
