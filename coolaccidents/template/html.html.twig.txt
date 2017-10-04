@@ -36,6 +36,7 @@
   ]
 %}  
 <!DOCTYPE html>
+{% spaceless %}
 <html{{ html_attributes }}>
   <head>
     <base href="/">
@@ -44,20 +45,23 @@
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">	
 	
-	<!--script src="https://use.typekit.net/ajy3tuh.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script-->
-	<!-- Hammer JS -->
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js?"></script>
+	<script src="https://use.typekit.net/ajy3tuh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
 	<script>digitalData={}</script>	
 	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
 	
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/gridlex/2.0.9/gridlex.min.css">
+	{% if _context.is_angular %}
+		<!-- Hammer JS -->
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/lib/hammer.js?"></script>	
+		
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/gridlex/2.0.9/gridlex.min.css">
+		
+		<link href="/{{ base_path ~ directory }}/assets/normalize.min.css" rel="stylesheet" />
+		<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
+		<link href="/{{ base_path ~ directory }}/styles.b1827dba57fcff9d6f2d.bundle.css" rel="stylesheet" />
+    {% endif %}
 	
-	<link href="/{{ base_path ~ directory }}/assets/normalize.css" rel="stylesheet" />
-	<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
-	
-	<link href="/{{ base_path ~ directory }}/styles.f2828ffa071a749ce90c.bundle.css" rel="stylesheet" />
-    
   </head>
   <body{{ attributes.addClass(body_classes) }}>
 	  <script>
@@ -93,8 +97,11 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.178d6e9529d1b155d538.bundle.js"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.c238a393527759cfaec6.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.b9685c869c8bbbd3065f.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.e29b10aabb97874792bb.bundle.js"></script>
+	{% if _context.is_angular %}
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.6c5d0907537019af225f.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.c238a393527759cfaec6.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.b9685c869c8bbbd3065f.bundle.js"></script>
+		<script type="text/javascript" src="/{{ base_path ~ directory }}/main.7cf52adb5e1d220e41fe.bundle.js"></script>
+	{% endif %}	
 </html>
+{% endspaceless %}
