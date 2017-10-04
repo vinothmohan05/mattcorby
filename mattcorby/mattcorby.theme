@@ -14,7 +14,7 @@ function mattcorby_preprocess_htm(&$variables, $hook){
     $variables['base_path'] = base_path();
 }
 
-
+/*
 function mattcorby_theme(&$existing, $type, $theme, $path) {
   $hooks = array();  
   $hooks['user_login_form'] = array(
@@ -22,7 +22,7 @@ function mattcorby_theme(&$existing, $type, $theme, $path) {
       'template' => 'login/user-login-form'
   );  
   return $hooks;
-}
+}*/
 
 function mattcorby_preprocess_html(&$variables) {
 
