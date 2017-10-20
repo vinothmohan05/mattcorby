@@ -3041,7 +3041,35 @@ ul.artists.artist-detail .ps-container.ps-active-x>.ps-scrollbar-x-rail{
         opacity: 1;
     }
 @media only screen and (max-width: 1023px){
-    
+    .path-node.page-node-type-artist .detail-list.artist .thumbnail-wrapper .thumbnail img, .path-node.page-node-type-artist .detail-list.artist .thumbnail-wrapper .thumbnail, .path-node.page-node-type-artist .detail-list.artist .thumbnail-wrapper .thumbnail-Innerwrapper, .path-node.page-node-type-artist .detail-list.artist .thumbnail-wrapper {
+		position: relative !important;
+		height: auto !important;
+    }
+    .artistLandingNav .tab.tab1.artist-options ul {
+		display: none;
+	}
+	.path-node.page-node-type-artist .detail-list.artist .thumbnail-wrapper .thumbnail-Innerwrapper {
+		top: auto !important;
+		left: auto !important;
+		transform: translate(0%, 0%);
+		-moz-transform: translate(0%, 0%);
+		-ms-transform: translate(0%, 0%);
+		-webkit-transform: translate(0%, 0%);
+	}
+	.detail-list.artist .thumbnail-wrapper .thumbnail {
+		transform: unset !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+	.path-node.page-node-type-artist .detail-list.artist .ArtistInnerWrapper {
+		margin-top: 0;
+	}
+    .loaderAnimation-logo {
+		max-width: 400px;
+        background: url(/sites/g/files/g2000006676/themes/site/wmn/assets/i/site-logo.png) no-repeat;
+        background-size: 50% auto;
+        background-position: center center;
+	}
     .artistLandingNav .tab.artist-options ul li{
         font-size: 12px;
     }
@@ -3495,7 +3523,7 @@ div#tourdates {
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
     .ArtistOuterWrapper {
-        max-width: calc(93% + 40px);
+        max-width: 93% !important;
     }
     .ArtistOuterWrapper .spotifyWrapper {
         width: 30%;
@@ -3616,13 +3644,14 @@ h1#logo a img {
        
     }
     h1#logo a img {
-        /*max-width: 37vw;*/
+        max-width: 37vw;
         max-width: 135px;
     }
     body:not(.home) .logo-block {
         position: fixed;
         z-index: 10;
         width: 100%;
+
         background: rgba(0, 0, 0, 0.5);
     }
     .PageNotFoundOuterWrapper {
@@ -3953,8 +3982,14 @@ body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
 }
 @media only screen and (max-width: 767px){
     body:not(.loading) .loaderAnimation-logo{
-        max-width: 25vh;
-        background-size: 100%;
+        max-width: 100% !important;
+        background-size: 50%;
+        top: 50%;
+		transform: translate(-50% , -50%) scale(1.65);
+		-moz-transform: translate(-50% , -50%) scale(1.65);
+		-ms-transform: translate(-50% , -50%) scale(1.65);
+		-webkit-transform: translate(-50% , -50%) scale(1.65);
+		max-height: calc(100vh / 1.65);
     }
     form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
         width: 300px;
@@ -4249,4 +4284,38 @@ div#photo .videoplay{
 }
 .bit-widget .bit-upcoming-events-show-all-button, .bit-past-events-show-all-button {
     margin-bottom: 30px !important;
+}
+.spotifyWrapper , .artistLandingNav .tab.tab1.artist-options ul.item-list a, form#contact-message-studio-contact-form-form{
+    display:none !important;
+}
+.ArtistOuterWrapper .music-tour-wrapper {
+    display: block !important;
+    width: 100%;
+}
+.Artistcouraosel {
+    background: #000;
+}
+.container {
+    font-size: 0;
+}
+.layout-container {
+  font-size: 0;
+}
+.homePanelCon.mailinglistPanel.show .g-layout{
+    padding: 30px 0 !important ;
+}
+.homePanelCon.mailinglistPanel.show  .firstForm {
+    padding: 30px 0 70px;
+}
+
+.layout-content article {
+    display: none;
+}
+body.path-node article{
+    display: none;
+}
+
+div#block-spartav1-content,.path-frontpage .views-element-container.contextual-region,button.trigger.visually-hidden.focusable,div#drupal-live-announce,
+article.contextual-region{
+    display: none;
 }
