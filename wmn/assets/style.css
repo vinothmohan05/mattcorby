@@ -3064,12 +3064,7 @@ ul.artists.artist-detail .ps-container.ps-active-x>.ps-scrollbar-x-rail{
 	.path-node.page-node-type-artist .detail-list.artist .ArtistInnerWrapper {
 		margin-top: 0;
 	}
-    .loaderAnimation-logo {
-		max-width: 400px;
-        background: url(/sites/g/files/g2000006676/themes/site/wmn/assets/i/site-logo.png) no-repeat;
-        background-size: 50% auto;
-        background-position: center center;
-	}
+   
     .artistLandingNav .tab.artist-options ul li{
         font-size: 12px;
     }
@@ -3973,24 +3968,9 @@ body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
     95% { transform: translateX(0rem) scale(1); }
 }
 
-@media only screen and (min-width:768px) and (max-width:1023px){
 
-    body:not(.loading) .loaderAnimation-logo{
-        max-width: 30vh;
-        background-size: 100%;
-    }
-}
 @media only screen and (max-width: 767px){
-    body:not(.loading) .loaderAnimation-logo{
-        max-width: 100% !important;
-        background-size: 50%;
-        top: 50%;
-		transform: translate(-50% , -50%) scale(1.65);
-		-moz-transform: translate(-50% , -50%) scale(1.65);
-		-ms-transform: translate(-50% , -50%) scale(1.65);
-		-webkit-transform: translate(-50% , -50%) scale(1.65);
-		max-height: calc(100vh / 1.65);
-    }
+    
     form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
         width: 300px;
         margin: 0 auto;
@@ -4318,4 +4298,26 @@ body.path-node article{
 div#block-spartav1-content,.path-frontpage .views-element-container.contextual-region,button.trigger.visually-hidden.focusable,div#drupal-live-announce,
 article.contextual-region{
     display: none;
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+    .loaderAnimation-logo {
+        max-width: 400px;
+        background: url(i/site-logo.png) no-repeat;
+        background-size: 50% auto;
+        background-position: center center;
+    }
+    body:not(.loading) .loaderAnimation-logo{
+        max-width: 100% !important;
+        background-size: 80%;
+        top: 50%;
+        transform: translate(-50% , -50%) scale(1);
+        -moz-transform: translate(-50% , -50%) scale(1);
+        -ms-transform: translate(-50% , -50%) scale(1);
+        -webkit-transform: translate(-50% , -50%) scale(1);
+        max-height: calc(100vh / 1);
+        
+    }
 }
