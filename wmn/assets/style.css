@@ -3744,23 +3744,7 @@ body:not(.loading) .loaderAnimation {
 @keyframes animInitialLogo {
 	from { opacity: 0; }
 }
-body:not(.loading) .loaderAnimation-logo {
-    transform: translate(-50% , -2%) scale(1.65);
-    -moz-transform: translate(-50% , -2%) scale(1.65);
-    -ms-transform: translate(-50% , -2%) scale(1.65);
-     -webkit-transform: translate(-50% , -2%) scale(1.65);
-    position: absolute;
-    /* opacity: 0; */
-     transition: 1s ease ;
-     -ms-transition: 1s ease ;
-     -moz-transition: 1s ease ;
-    -webkit-transition: 1s ease ;
-    /* position: fixed; */
-    z-index:1;
-    max-width:38vh;
-    
 
-}
 .loading .loaderAnimation-loader{
     position: absolute;
     top: 70%;
@@ -3797,7 +3781,7 @@ body:not(.loading):not(.home) .loaderAnimation-logo {
      opacity: 0; 
      visibility: hidden; 
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
     .loaderAnimation-logo {
         max-width: 40vh;
         display: block;
@@ -3823,6 +3807,23 @@ body:not(.loading):not(.home) .loaderAnimation-logo {
         z-index: 999;
         /*-webkit-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
         animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;*/
+    }
+    body:not(.loading) .loaderAnimation-logo {
+        transform: translate(-50% , -2%) scale(1.65);
+        -moz-transform: translate(-50% , -2%) scale(1.65);
+        -ms-transform: translate(-50% , -2%) scale(1.65);
+         -webkit-transform: translate(-50% , -2%) scale(1.65);
+        position: absolute;
+        /* opacity: 0; */
+         transition: 1s ease ;
+         -ms-transition: 1s ease ;
+         -moz-transition: 1s ease ;
+        -webkit-transition: 1s ease ;
+        /* position: fixed; */
+        z-index:1;
+        max-width:38vh;
+        
+    
     }
 }
 
@@ -3968,24 +3969,15 @@ body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
     95% { transform: translateX(0rem) scale(1); }
 }
 
-@media only screen and (min-width:768px) and (max-width:1023px){
+/* @media only screen and (min-width:768px) and (max-width:1023px){
 
     body:not(.loading) .loaderAnimation-logo{
         max-width: 30vh;
         background-size: 100%;
     }
-}
+} */
 @media only screen and (max-width: 767px){
-    body:not(.loading) .loaderAnimation-logo{
-        max-width: 100% !important;
-        background-size: 50%;
-        top: 50%;
-		transform: translate(-50% , -50%) scale(1);
-		-moz-transform: translate(-50% , -50%) scale(1);
-		-ms-transform: translate(-50% , -50%) scale(1);
-		-webkit-transform: translate(-50% , -50%) scale(1);
-		
-    }
+   
     form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
         width: 300px;
         margin: 0 auto;
@@ -4314,7 +4306,7 @@ div#block-spartav1-content,.path-frontpage .views-element-container.contextual-r
 article.contextual-region{
     display: none;
 }
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:1023px) {
     .loaderAnimation-logo {
         max-width: 400px;
        
@@ -4345,5 +4337,14 @@ article.contextual-region{
         /*-webkit-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
         animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;*/
     }
-    
+    body:not(.loading) .loaderAnimation-logo{
+        max-width: 100% !important;
+        background-size: 50%;
+        top: 50%;
+		transform: translate(-50% , -50%) scale(1);
+		-moz-transform: translate(-50% , -50%) scale(1);
+		-ms-transform: translate(-50% , -50%) scale(1);
+		-webkit-transform: translate(-50% , -50%) scale(1);
+		
+    }
 }
