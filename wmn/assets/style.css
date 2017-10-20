@@ -3983,13 +3983,14 @@ body.home:not(.loading) div#fixed-nav, body:not(.loading) .heroBlock{
 @media only screen and (max-width: 767px){
     body:not(.loading) .loaderAnimation-logo{
         max-width: 100% !important;
-        background-size: 80%;
+        margin:0 auto;
+        background-size: 50%;
         top: 50%;
 		transform: translate(-50% , -50%) scale(1);
 		-moz-transform: translate(-50% , -50%) scale(1);
 		-ms-transform: translate(-50% , -50%) scale(1);
 		-webkit-transform: translate(-50% , -50%) scale(1);
-		max-height: calc(100vh / 1);
+		max-height: calc(100vh / 1.6);
     }
     form#contact-message-sitewide-form .js-form-item input, form#contact-message-sitewide-form .js-form-item textarea {
         width: 300px;
