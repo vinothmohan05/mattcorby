@@ -3414,45 +3414,15 @@ div#tourdates {
     margin-bottom: 35px;
     letter-spacing: 1px;
 }
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail:before{
-    background: rgba(0,0,0,0.42);
-}
+
 .spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel ul.item-list li .thumbnail img{
     outline:none;
     font-size: 0;
     border: none;
 }
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyDetailsWrapper {
-    font-size: 14px;
-    text-align: center;
-    /*color: rgba(255, 255, 255, 0.78);*/
-    color: rgba(242, 242, 242, 0.5);
-    font-family: gothambook;
-}
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyTitle {
-    text-transform: uppercase;
-    margin-top: 40px;
-}
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyAlbum {
-    font-style: italic;
-    margin: 10px 0 20px;
-}
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyUrl a {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 12px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    border: 1px solid #1564a8;
-    display: block;
-    width: 85%;
-    margin: 0 auto;
-    height: 25px;
-    line-height: 25px;
-}
-.spotifyWrapper .spotifyOuterWrapper .Spotifycouraosel .SpotifyUrl a:hover{
-    background: #1564a8;
-}
+
+
+
 .ArtistInnerWrapper .ArtistOuterWrapper .follow-button-wrapper{
     text-align: center;
     margin: 25px 0;
@@ -3601,9 +3571,9 @@ div#tourdates {
     .ArtistOuterWrapper .ArtistInnerWrapper .block-title-wrapper h2.block-title.spotify{
         margin: 25px 0 10px;
     }
-    .ArtistOuterWrapper .block-title-wrapper.left, .ArtistOuterWrapper .SpotiftSubTitle, .ArtistOuterWrapper .block-title-wrapper h2.block-title{
+    /* .ArtistOuterWrapper .block-title-wrapper.left, .ArtistOuterWrapper .SpotiftSubTitle, .ArtistOuterWrapper .block-title-wrapper h2.block-title{
         margin: 10px 0 25px;
-    }
+    } */
     .ArtistOuterWrapper .SpotiftSubTitle {
         padding-bottom: 30px;
         margin-bottom: 0;
@@ -4272,13 +4242,10 @@ div#photo .videoplay{
 .bit-widget .bit-upcoming-events-show-all-button, .bit-past-events-show-all-button {
     margin-bottom: 30px !important;
 }
-.spotifyWrapper , .artistLandingNav .tab.tab1.artist-options ul.item-list a, form#contact-message-studio-contact-form-form{
+ .artistLandingNav .tab.tab1.artist-options ul.item-list a, form#contact-message-studio-contact-form-form{
     display:none !important;
 }
-.ArtistOuterWrapper .music-tour-wrapper {
-    display: block !important;
-    width: 100%;
-}
+
 .Artistcouraosel {
     background: #000;
 }
