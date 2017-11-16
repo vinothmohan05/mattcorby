@@ -3453,7 +3453,8 @@ div#tourdates {
     background-size: 60px;
 }
 .pause a {
-    background: url("/sites/g/files/g2000006676/files/2017-11/pause-circle.svg") no-repeat center center transparent;
+	
+    background: url("/sites/g/files/g2000006676/files/2017-11/pause-circle_0.svg") no-repeat center center transparent;
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -3462,7 +3463,7 @@ div#tourdates {
     left: 0;
     cursor: pointer;
     text-indent: -9999px;
-    background-size: 50px;
+    background-size: 60px;
 }
 .artistPage-NewsWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
     line-height: 2;
