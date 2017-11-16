@@ -3441,7 +3441,7 @@ div#tourdates {
 }
 .play a {
     background: url(/sites/g/files/g2000006676/files/2017-11/play-circle.svg) no-repeat center center transparent;
-    width: 100%;
+    width: 60px!important;
     height: 100%;
     display: inline-block;
     position: absolute;
@@ -3450,20 +3450,21 @@ div#tourdates {
     cursor: pointer;
     text-indent: -9999px;
     transform: translate(-50%, -50%);
-    background-size: 60px;
+    background-size: 100% auto;
 }
 .pause a {
 	
     background: url("/sites/g/files/g2000006676/files/2017-11/pause-circle_0.svg") no-repeat center center transparent;
-    width: 100%;
+      width: 60px !important;
     height: 100%;
     display: inline-block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     cursor: pointer;
     text-indent: -9999px;
-    background-size: 60px;
+    transform: translate(-50%, -50%);
+    background-size: 100% auto;
 }
 .artistPage-NewsWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
     line-height: 2;
