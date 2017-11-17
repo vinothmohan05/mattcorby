@@ -3,7 +3,11 @@ type: theme
 base theme: classy
 description: 'Coolaccidents WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
+<<<<<<< HEAD
 version: '11.3'
+=======
+version: '14.1'
+>>>>>>> f8922f261ee295ba6c75002a38231d0b57a41ec0
 core: 8.x
 project: 'drupal'
 libraries:
