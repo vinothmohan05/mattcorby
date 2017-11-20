@@ -47,6 +47,12 @@
 	
 	<script src="https://use.typekit.net/ajy3tuh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script>
+  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+    var body = document.getElementsByTagName('html');
+    body[0].classList.add("firefox");
+  }  
+  </script> 
 	
 	<script>digitalData={}</script>	
 	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
