@@ -794,7 +794,7 @@ ul.breadcrumb.news-detail li a{
     letter-spacing: 1px;
     font-size: 13px;
     text-decoration: underline;
-    font-family: "proxima-nova-condensed";
+    font-family: "proxima-nova";
 }
 ul.breadcrumb.news-detail li span{
   font-size: 13px;
