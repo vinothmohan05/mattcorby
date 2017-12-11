@@ -3,11 +3,11 @@ type: theme
 base theme: classy
 description: 'Ngd8app WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
-version: '1.1'
+version: '1.2'
 core: 8.x
 project: 'drupal'
 libraries:
-  - ngd8app/extend-settings
+  - sandbox/extend-settings
 regions:
   header: Header
   primary_menu: 'Primary menu'
