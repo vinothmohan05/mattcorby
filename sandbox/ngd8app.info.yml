@@ -1,13 +1,13 @@
-name: Sandbox
+name: ngd8app
 type: theme
 base theme: classy
-description: 'Sandbox WMG, This is the Angular Based theme in Drupal Lightning.'
+description: 'Ngd8app WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
-version: '7.92'
+version: '1.0'
 core: 8.x
 project: 'drupal'
 libraries:
-  - sandbox/extend-settings
+  - ngd8app/extend-settings
 regions:
   header: Header
   primary_menu: 'Primary menu'
