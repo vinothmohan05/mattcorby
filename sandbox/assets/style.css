@@ -697,6 +697,10 @@ div.cta{
   .home div#fixed-nav {
     top: calc(100vh - 50px);
   }
+  .footer-social li a{
+    width: 6vw;
+    height: 6vw;
+  }
 }
 
 
