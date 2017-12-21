@@ -17,7 +17,7 @@ function addEditLink(linkid) {
 		console.info("section not found");
 	}
 }
-(function ($) {
+(function ($, Drupal) {
 
 	function getCurrentNodeId() {
 		var $body = jQuery('body.detail-page');
@@ -43,4 +43,4 @@ function addEditLink(linkid) {
 		},
 		detach: function (context) {}
 	};
-}(jQuery));
+}(jQuery, Drupal));
