@@ -4468,3 +4468,14 @@ div#tourdates .year.plain_text {
     display: block;
 }
 }
+
+.block.news.viewport .Defaultview .thumbnail {
+    overflow: visible !important;
+}
+
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .home app-block.logo-block{
+       display: none;
+    }
+}
