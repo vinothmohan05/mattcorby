@@ -4479,3 +4479,8 @@ div#tourdates .year.plain_text {
        display: none;
     }
 }
+@media only screen and  (max-width:767px){
+    .block.news.viewport .Defaultview .thumbnail {
+        overflow: hidden !important;
+    }
+ }
