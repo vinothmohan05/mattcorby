@@ -1,9 +1,9 @@
-name: Sandbox
+name: TheStakes
 type: theme
 base theme: classy
-description: 'Sandbox WMG, This is the Angular Based theme in Drupal Lightning.'
+description: 'TheStakes WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
-version: '8.12'
+version: '1.0'
 core: 8.x
 project: 'drupal'
 libraries:
