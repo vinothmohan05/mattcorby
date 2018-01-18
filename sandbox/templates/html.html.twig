@@ -85,12 +85,6 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 	
-	query  parse_url(_SERVER.REQUEST_URI,PHP_URL_QUERY()
-	{% ifquery  is  'frontpage=true'  or  query  is  null()
-		header('location:/splash')
-	{% endif %}
-	%}
-	
   </body>
 	{% if _context.is_angular %}		
 		
