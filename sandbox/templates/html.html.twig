@@ -83,6 +83,15 @@
     {{ page }}
     {{ page_bottom }}	
 	
+	  <script>
+    	window.digitalData = {
+        settings: { reportSuites: "wmggardensdevdtm" }
+      };
+      if(window._satellite){
+	      window._satellite.pageBottom();
+      }
+  </script>
+	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 	
   </body>
