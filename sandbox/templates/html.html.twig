@@ -85,8 +85,24 @@
 	
 	  <script>
     	window.digitalData = {
-        settings: { reportSuites: "wmggardensdevdtm" }
-      };
+        settings: { reportSuites: "wmggardensdevdtm" },
+			  page: {
+				pageInfo: {
+				  pageName: "",
+				  server: "",
+				  platform: ""
+				},
+				category: {
+				  primaryCategory: "",
+				  pageType: ""
+				}
+			  },
+			  content: {
+				artist: "",
+				label: "",
+				sublabel: ""
+			  }
+		  };
       if(window._satellite){
 	      window._satellite.pageBottom();
       }
