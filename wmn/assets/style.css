@@ -1875,7 +1875,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
 /*Tablet narrower*/
 @media only screen and (max-width: 1023px) {
     .Image-Wrapper.Mob {
-        background: url(http://warnermusicnashvillev2.wmg-gardens.com/sites/g/files/g2000006676/files/abtwithoverlay.jpg) no-repeat center center;
+        background: url(/sites/g/files/g2000006676/files/abtwithoverlay.jpg) no-repeat center center;
         position: relative;
         height: 300px;
         background-size: cover;
@@ -1924,6 +1924,7 @@ i.fa.fa-caret-down, i.fa.fa-caret-up {
     .home .homePanelCon.herovideoBlock{
         background: rgba(0,0,0,0.5);
     }
+   
 }
 .livefyreBlockWrapper span.lightbox-title {
     pointer-events: none;
@@ -3262,12 +3263,122 @@ body.home .category.landing .grid.view ul.artists li.col.grid.view-more {
     display: block !important;
 }
 @media only screen and (min-width:1024px){
+ 
     .category.landing .List.view {
         max-width: 1366px;
         margin: 0 auto;
         min-height: 380px;
     }
 }
+/* new tour styles*/
+div#tourdates .event_links a.ticket_link , div#tourdates .VipLink a{
+    background: none;
+    border: 1px solid #1564a8;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    margin: 0;
+    font-family: gothammedium;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+div#tourdates .event_links a.ticket_link {
+    background: #2F95DE ;
+}
+
+
+div#tourdates .widget_row {
+    width: 100%;
+    padding: 0;
+    white-space: normal;
+    border: none;
+    display: block;
+    text-align: left;
+    font-size: 0;
+    margin-bottom: 40px;
+}
+
+div#tourdates .event_date {
+   display: inline-block;
+    vertical-align: top;
+    width: 10%;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+div#tourdates .month.plain_text ,div#tourdates .date.plain_text, div#tourdates .year.plain_text{
+    display: block;
+    line-height: 23px;
+}
+
+div#tourdates .event_location {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 50%;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 16px;
+    line-height: 23px;
+    vertical-align: top;
+}
+div#tourdates a.view_more.link_text.link_background {
+    display: block;
+    width: 190px ;
+    margin: 0 auto ;
+    border: 1px solid #1564a8 ;
+    color: #fff;
+    font-family: gothammedium;
+    font-weight: normal ;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px ;
+    padding: 0 ;
+    letter-spacing: 1px ;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 30px ;
+}
+div#tourdates .location.plain_text {
+    font-family: gothammedium;
+}
+div#tourdates .date.plain_text {
+    font-size: 22px;
+    font-family:'gothamBold'
+}
+div#tourdates a.view_more.link_text.link_background:hover ,div#tourdates .event_links a.ticket_link:hover, div#tourdates .VipLink a:hover{
+    color:#fff;
+    background: rgb(6,60,105) ;
+    border: 1px solid rgb(21,100,168);
+}
+div#tourdates .event_links {
+    display:inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+div#tourdates .VipLink ,div#tourdates .ticketLink {
+    width:49%;
+    display:inline-block
+}
+div#tourdates .VipLink{
+    margin-right:2%
+}
+
+div#tourdates .featuring-artists.plain_text {
+    display: inline-block;
+  
+}
+/* new tour styles ends*/
 
 /*tour default style*/
 div#tourdates {
@@ -3440,8 +3551,8 @@ div#tourdates {
     line-height: 1.5;
 }
 .play a {
-    background: url(/sites/g/files/g2000006676/files/2017-11/play-circle.svg) no-repeat center center transparent;
-    width: 60px!important;
+    background: url(/sites/g/files/g2000007136/files/2017-11/play-circle.svg) no-repeat center center transparent;
+    width: 100%;
     height: 100%;
     display: inline-block;
     position: absolute;
@@ -3450,21 +3561,19 @@ div#tourdates {
     cursor: pointer;
     text-indent: -9999px;
     transform: translate(-50%, -50%);
-    background-size: 100% auto;
+    background-size: 50px;
 }
 .pause a {
-	
-    background: url("/sites/g/files/g2000006676/files/2017-11/pause-circle_0.svg") no-repeat center center transparent;
-      width: 60px !important;
+    background: url("/sites/g/files/g2000007136/files/2017-11/pause-circle_0.svg") no-repeat center center transparent;
+    width: 100%;
     height: 100%;
     display: inline-block;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     cursor: pointer;
     text-indent: -9999px;
-    transform: translate(-50%, -50%);
-    background-size: 100% auto;
+    background-size: 50px;
 }
 .artistPage-NewsWrapper .news_block ul.news li.col  .item-wrapper.col .ArtistNDateWrapper .created{
     line-height: 2;
@@ -3513,6 +3622,7 @@ div#tourdates {
     .artistPage-NewsWrapper .artistNews{
         max-width: 93%;
     }
+   
 }
 
 @media only screen and (max-width:767px){
@@ -3607,6 +3717,42 @@ h1#logo a img {
     vertical-align: middle;
 }
 @media only screen and (max-width:767px){
+    div#tourdates .event_date{
+        width:20%;
+    }
+    div#tourdates .VipLink, div#tourdates .ticketLink{
+        display:block;
+        width:100%;
+    }
+    div#tourdates .VipLink{
+        margin-bottom:10px;
+    }
+ div#tourdates .VipLink a, div#tourdates .event_date, div#tourdates .event_location, div#tourdates .event_links a.ticket_link {
+        font-size: 12px;
+        line-height: 25px;
+       
+       
+    }
+    div#tourdates .VipLink a,div#tourdates .event_links a.ticket_link{
+        height :25px;
+    }
+    div#tourdates .event_location{
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    
+    div#tourdates .event_links {
+        width: 30%;
+    }
+    
+    div#tourdates .featuring-artists.plain_text {
+       
+    }
+    
+    .widget_row {
+        max-width: 360px;
+        margin: 0 auto 40px;
+    }
     app-artists {
         padding-top: 50px;
        
@@ -3631,7 +3777,16 @@ h1#logo a img {
     h1#logo a img {
         max-width: 115px;
     }
+  
 }
+
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    div#tourdates .event_links a.ticket_link, div#tourdates .VipLink a{
+        font-size:11px;
+        
+    }
+}
+
 @media only screen and (min-width:1024px){
     h1#logo a img {
         width: 1185px;
@@ -4214,7 +4369,7 @@ div#artistinnerwrapper .thirdForm {
 }
 
  div#video .videoplay {
-    background-image: url(http://www.warnermusicnashville.com//sites/g/files/g2000006676/files/styles/thumbnail/public/play.png?itok=tP8JQl6J);
+    background-image: url(/sites/g/files/g2000006676/files/styles/thumbnail/public/play.png?itok=tP8JQl6J);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4325,3 +4480,24 @@ article.contextual-region{
         font-size: 9px;
     }
 }
+@media only screen and  (max-width:1024px){
+div#tourdates .year.plain_text {
+    display: block;
+}
+}
+
+.block.news.viewport .Defaultview .thumbnail {
+    overflow: visible !important;
+}
+
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .home app-block.logo-block{
+       display: none;
+    }
+}
+@media only screen and  (max-width:767px){
+    .block.news.viewport .Defaultview .thumbnail {
+        overflow: hidden !important;
+    }
+ }
