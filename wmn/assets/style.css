@@ -3551,7 +3551,7 @@ div#tourdates {
     line-height: 1.5;
 }
 .play a {
-    background: url(i/play-circle.png) no-repeat center center transparent;
+    background: url(/sites/g/files/g2000007136/files/2017-11/play-circle.svg) no-repeat center center transparent;
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -3561,10 +3561,10 @@ div#tourdates {
     cursor: pointer;
     text-indent: -9999px;
     transform: translate(-50%, -50%);
-    background-size: 60px;
+    background-size: 50px;
 }
 .pause a {
-    background: url("i/pause-circle.png") no-repeat center center transparent;
+    background: url("/sites/g/files/g2000007136/files/2017-11/pause-circle_0.svg") no-repeat center center transparent;
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -4352,7 +4352,7 @@ div#artistinnerwrapper .thirdForm {
 }
 
  div#video .videoplay {
-    background-image: url(http://www.warnermusicnashville.com//sites/g/files/g2000006676/files/styles/thumbnail/public/play.png?itok=tP8JQl6J);
+    background-image: url(/sites/g/files/g2000006676/files/styles/thumbnail/public/play.png?itok=tP8JQl6J);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
