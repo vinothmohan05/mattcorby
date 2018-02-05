@@ -4500,4 +4500,19 @@ div#tourdates .year.plain_text {
     .block.news.viewport .Defaultview .thumbnail {
         overflow: hidden !important;
     }
- }
+ } 
+ #tourdates .ticketLink.soldout a.ticket_link.link_text.link_background {
+    
+    color: #fff;
+    background: rgb(6,60,105);
+    border: 1px solid rgb(21,100,168);
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    div#tourdates .VipLink{
+        margin-right: 6%;
+    }
+    div#tourdates .VipLink ,div#tourdates .ticketLink {
+        width: 47%;
+        display:inline-block;
+    }
+}
