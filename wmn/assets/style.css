@@ -4484,3 +4484,6 @@ div#tourdates .year.plain_text {
         overflow: hidden !important;
     }
  }
+  body.mlistPage .footerinnerwrapper app-mailing-list-block{
+    display:none;
+  }
