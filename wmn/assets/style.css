@@ -3376,7 +3376,7 @@ div#tourdates .VipLink{
 
 div#tourdates .featuring-artists.plain_text {
     display: inline-block;
-    width: 0%;
+   
 }
 /* new tour styles ends*/
 
@@ -3727,20 +3727,25 @@ h1#logo a img {
     div#tourdates .VipLink{
         margin-bottom:10px;
     }
- div#tourdates .VipLink a, div#tourdates .event_date, div#tourdates .event_location, div#tourdates .event_links a.ticket_link {
+    div#tourdates .VipLink a, div#tourdates .event_date, div#tourdates .event_location, div#tourdates .event_links a.ticket_link {
         font-size: 12px;
-        line-height: 25px;
+        line-height: 24px;
+       
+       
+    }
+    div#tourdates .VipLink a,div#tourdates .event_links a.ticket_link{
         height :25px;
+    }
+    div#tourdates .event_location{
+        padding-right: 10px;
+        box-sizing: border-box;
     }
     
     div#tourdates .event_links {
         width: 30%;
     }
     
-    div#tourdates .featuring-artists.plain_text {
-        width: 0%;
-    }
-    
+   
     .widget_row {
         max-width: 360px;
         margin: 0 auto 40px;
@@ -4484,6 +4489,30 @@ div#tourdates .year.plain_text {
         overflow: hidden !important;
     }
  }
-  body.mlistPage .footerinnerwrapper app-mailing-list-block{
-    display:none;
-  }
+ #tourdates .ticketLink.soldout a.ticket_link.link_text.link_background {
+    
+    color: #fff;
+    background: rgb(6,60,105);
+    border: 1px solid rgb(21,100,168);
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    div#tourdates .VipLink{
+        margin-right: 6%;
+    }
+    div#tourdates .VipLink ,div#tourdates .ticketLink {
+        width: 47%;
+        display:inline-block;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+
+    div#tourdates .event_links a.ticket_link, div#tourdates .VipLink a {
+        font-size: 11px;
+    }
+}
+body.mlistPage  .footerinnerwrapper app-mailing-list-block{
+    display: none;
+}
+/* body.mlistPage .menu li:last-child {
+    display: none;
+} */
