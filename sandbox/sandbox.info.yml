@@ -1,9 +1,9 @@
-name: Sandbox
+name: Startersite
 type: theme
 base theme: classy
-description: 'Sandbox WMG, This is the Angular Based theme in Drupal Lightning.'
+description: 'Startersite WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
-version: '7.97'
+version: '8.191'
 core: 8.x
 project: 'drupal'
 libraries:
