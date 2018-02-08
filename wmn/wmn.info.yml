@@ -1,7 +1,7 @@
 name: WMN
 type: theme
-description: This is the Angular Based theme in Drupal Lightning
+description: Site updated to WSK widget
 package: Custom
-version: '2.2.5'
+version: '2.3'
 core: '8.x'
 project: 'drupal'
