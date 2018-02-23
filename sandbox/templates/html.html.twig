@@ -79,33 +79,13 @@
 	</ol>
 	-->
     {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}	
 	
-	  <script>
-    	window.digitalData = {
-        settings: { reportSuites: "wmggardensdevdtm" },
-			  page: {
-				pageInfo: {
-				  pageName: "",
-				  server: "",
-				  platform: ""
-				},
-				category: {
-				  primaryCategory: "",
-				  pageType: ""
-				}
-			  },
-			  content: {
-				artist: "",
-				label: "",
-				sublabel: ""
-			  }
-		  };
-      if(window._satellite){
-	      window._satellite.pageBottom();
-      }
-  </script>
+	{% if _context.is_angular %}
+		{% include "@sandbox/app-root.twig" %}
+	{% endif %}
+	
+    {{ page }}
+    {{ page_bottom }}
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 	

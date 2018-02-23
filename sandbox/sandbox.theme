@@ -9,6 +9,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\block\Entity\Block;
 use Drupal\user\Entity\Role;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Unicode;
 
 function sandbox_theme(&$existing, $type, $theme, $path) {
   $hooks = array();  
@@ -23,36 +25,10 @@ function sandbox_preprocess_html(&$variables) {
 
 	if ($node = \Drupal::request()->attributes->get('node')) {
 		$variables['path_info']['args'] = $node->id();
-	}	
+	}
 	
-	$current_path = \Drupal::service('path.current')->getPath();
-	$result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-	
-	//echo "Entering sandbox_preprocess_html<br/>";
-	
-	$block = Block::load('sandbox_angularapp');
-	
-	//print_r($block);	
-	//$ids = \Drupal::entityQuery('block')->execute();
-	
-	if(isset($block)){
-		$region = $block->getVisibility();
-	
-		//$pages = $region['request_path']['pages'].split(" ");
-		//print_r($pages);
-	
-		if(is_array($region['request_path']['pages'])){
-			if(in_array($result, $region['request_path']['pages'])){}
-			else{
-				$variables['is_angular'] = "true";
-			}
-		}else{
-			if(strpos($region['request_path']['pages'], $result) === false ){
-				$variables['is_angular'] = "true";
-			}else{	
-			}
-		}
-		
+	if(isThemeRestricted()){
+		$variables['is_angular'] = "true";
 		if(isStaginguser()){
 			$variables['is_staging'] = "true";
 		}
@@ -65,16 +41,24 @@ function sandbox_preprocess_html(&$variables) {
  */
 function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
   
-  //$settings = theme_get_setting('sandbox');
-  
-  //$settings = \Drupal::config('sandbox.settings');
-  
   $role_objects = Role::loadMultiple();
   $system_roles = array_combine(array_keys($role_objects), array_map(function($a){ return $a->label();}, $role_objects));
   
   $form['theme'] = array(
     '#type' => 'container',
     '#tree' => TRUE,
+  );
+  
+  $form['theme']['pages_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Page Restriction Settings'),
+  );
+  
+  $form['theme']['pages_settings']['hidePages'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Pages'),
+    '#default_value' => theme_get_setting('hidePages'),
+    '#description' => t('Specify pages by using their paths. Enter one path per line. The "*" character is a wildcard. An example path is /user/* for every user page. <front> is the front page. Theme has not <b>visible</b> for these pages'),
   );
  
   $form['theme']['secondary_menu'] = array(
@@ -89,14 +73,14 @@ function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description' => t('Enable staging theme for progressive development.'),
   );
   
-$form['theme']['secondary_menu']['themeRoles'] = [
-  '#type' => 'select',
-  '#multiple' => TRUE,
-  '#size' => 15,
-  '#title' => t('Select Staging User Role'),
-  '#options' => $system_roles,
-  '#default_value' => theme_get_setting('themeRoles'),
-];
+	$form['theme']['secondary_menu']['themeRoles'] = [
+	  '#type' => 'select',
+	  '#multiple' => TRUE,
+	  '#size' => 8,
+	  '#title' => t('Select Staging User Role'),
+	  '#options' => $system_roles,
+	  '#default_value' => theme_get_setting('themeRoles'),
+	];
   
 	// Add your submission handler to the form.
 	$form['#submit'][] = 'sandbox_form_system_theme_settings_alter_submit';
@@ -107,6 +91,9 @@ function sandbox_form_system_theme_settings_alter_submit($form, FormStateInterfa
   
   $config = \Drupal::configFactory()->getEditable('sandbox.theme.' . $theme);
   
+  $hidePages = $form_state->getValue("theme")['pages_settings']['hidePages'];
+  $form_state->setValue('hidePages', $hidePages);
+  
   $themeRoles = $form_state->getValue("theme")['secondary_menu']['themeRoles'];
   $form_state->setValue('themeRoles', $themeRoles);
   
@@ -114,23 +101,38 @@ function sandbox_form_system_theme_settings_alter_submit($form, FormStateInterfa
   $form_state->setValue('enableStaging', $enableStaging);
   
   $values = $form_state->getValues();
-  //print_r($values);
-  //exit;
 }
 
-/**
- * Implements hook_form_BASE_FORM_ID_alter().
- * Demo functionality gives non-admins no permission to update their username/password
- * by unsetting it when they view their profile edit screen.
- */
-function isStaginguser() {
+function isThemeRestricted () {
+
+	$page_match = TRUE;
+
+	$hidePages = theme_get_setting('hidePages');
+	
+	$pages = Unicode::strtolower($hidePages);
+	
+	// Array ( [0] => /user/* [1] => /admin/* [2] => /rest/* )
+	/*
+	$paths = preg_split("(\r\n?|\n)", $hidePages);
+	foreach ($paths as $key => $path) {
+	  $paths[$key] = $path === '<front>' ? $path : '/' . ltrim($path, '/');
+	}*/	
+	
+	$current_path = HTML::escape(\Drupal::service('path.current')->getPath());
+    $path_alias = Unicode::strtolower(\Drupal::service('path.alias_manager')->getAliasByPath($current_path));
+	
+	$path_matches = \Drupal::service('path.matcher');
+    $page_match = $path_matches->matchPath($path_alias, $pages) || (($current_path != $path_alias) && $path_matches->matchPath($current_path, $pages));
+	
+	return !$page_match;
+}
+
+function isStaginguser () {
 
 	$enableStaging = theme_get_setting('enableStaging');
 	$themeRoles = theme_get_setting('themeRoles');
 	$themeRoles = array_keys($themeRoles);
 	$user = \Drupal::currentUser()->getRoles();
-	
-	//print_r($themeRoles);
 	
 	return ($enableStaging == 1 ) && ( array_intersect($themeRoles, $user) );
 }
