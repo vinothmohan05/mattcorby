@@ -35,8 +35,6 @@ function addEditLink(linkid) {
 	}
 	Drupal.behaviors.AJAX = {
 		attach: function (context, settings) {
-			//console.info(context);
-			//console.info(settings);
 			if($("body").hasClass("detail-page") && $("ul.contextual-links:not(.custom-link-added)")){
 				addEditLink(getCurrentNodeId());
 			}

@@ -4,3 +4,4 @@ extend-settings:
     lib/extend.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
