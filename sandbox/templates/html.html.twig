@@ -50,7 +50,6 @@
 	
 	<script>digitalData={}</script>	
 	<script src="//cdn.livefyre.com/Livefyre.js"></script>
-	<script src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
 	
 	{% if _context.is_angular %}
 		
@@ -80,10 +79,16 @@
 	</ol>
 	-->
     {{ page_top }}
+	
+	{% if _context.is_angular %}
+		{% include "@sandbox/app-root.twig" %}
+	{% endif %}
+	
     {{ page }}
-    {{ page_bottom }}	
+    {{ page_bottom }}
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+	
   </body>
 	{% if _context.is_angular %}		
 		

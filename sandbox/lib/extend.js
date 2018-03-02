@@ -17,7 +17,7 @@ function addEditLink(linkid) {
 		console.info("section not found");
 	}
 }
-(function ($) {
+(function ($, Drupal) {
 
 	function getCurrentNodeId() {
 		var $body = jQuery('body.detail-page');
@@ -35,12 +35,10 @@ function addEditLink(linkid) {
 	}
 	Drupal.behaviors.AJAX = {
 		attach: function (context, settings) {
-			//console.info(context);
-			//console.info(settings);
 			if($("body").hasClass("detail-page") && $("ul.contextual-links:not(.custom-link-added)")){
 				addEditLink(getCurrentNodeId());
 			}
 		},
 		detach: function (context) {}
 	};
-}(jQuery));
+}(jQuery, Drupal));
