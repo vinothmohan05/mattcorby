@@ -1,0 +1,7 @@
+extend-settings:
+  version: 1.x
+  js:
+    lib/extend.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

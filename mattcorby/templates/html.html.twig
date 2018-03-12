@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+	node_type|clean_class == "page" ? 'landing-page',
+	node_type|clean_class != "page" ? 'detail-page',
+	path_info.args ? 'page-node-' ~ path_info.args,
+	path_info.args ? 'page-node-id-' ~ path_info.args,
+    db_offline ? 'db-offline',
+  ]
+%}  
+<!DOCTYPE html>
+{% spaceless %}
+<html{{ html_attributes }}>
+  <head>
+    <base href="/">
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">	
+	
+	<script src="https://use.typekit.net/ajy3tuh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	<script>digitalData={}</script>	
+	<script src="//cdn.livefyre.com/Livefyre.js"></script>
+	
+	{% if _context.is_angular %}
+		
+		{% include "@sandbox/css-library.twig" %}
+		
+		{% if _context.is_staging %}
+		
+		{% include "@sandbox/staging-code.twig" with {'code': 'css'} %}
+		
+		{% else %}
+		
+		{% include "@sandbox/production-code.twig" with {'code': 'css'} %}
+		
+		{% endif %}
+		
+    {% endif %}
+	
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+	
+	{% include "@sandbox/inline-javascript.twig" %}
+	<!--
+	  <ol>
+	  {% for key, value in _context  %}
+		<li>{{ key }}</li>
+	  {% endfor %}
+	</ol>
+	-->
+    {{ page_top }}
+	
+	{% if _context.is_angular %}
+		{% include "@sandbox/app-root.twig" %}
+	{% endif %}
+	
+    {{ page }}
+    {{ page_bottom }}
+	
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+	
+  </body>
+	{% if _context.is_angular %}		
+		
+		{% if _context.is_staging %}
+		
+		{% include "@sandbox/staging-code.twig" with {'code': 'js'} %}
+		
+		{% else %}
+		
+		{% include "@sandbox/production-code.twig" with {'code': 'js'} %}
+		
+		{% endif %}	
+
+	{% endif %}	
+</html>
+{% endspaceless %}
