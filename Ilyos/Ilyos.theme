@@ -70,9 +70,9 @@ function mattcorby_preprocess_html(&$variables) {
  */
 function mattcorby_form_system_theme_settings_alter(&$form, &$form_state) {
   
-  //$settings = theme_get_setting('sandbox');
+  //$settings = theme_get_setting('Ilyos');
   
-  //$settings = \Drupal::config('sandbox.settings');
+  //$settings = \Drupal::config('Ilyos.settings');
   
   $role_objects = Role::loadMultiple();
   $system_roles = array_combine(array_keys($role_objects), array_map(function($a){ return $a->label();}, $role_objects));
