@@ -1,7 +1,7 @@
 name: WMN
 type: theme
-description: Site updated to WSK widget
+description: WMN lable Site
 package: Custom
-version: '2.3.1'
+version: '2.3.2'
 core: '8.x'
 project: 'drupal'
