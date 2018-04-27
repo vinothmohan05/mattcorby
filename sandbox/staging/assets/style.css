@@ -318,8 +318,8 @@ $mq-mobile: " (min-width : 320px) and (max-width : 480px)";
 @media (--mq-tablet-wider) {
   .g-layout {
     width: 767px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
     margin: 0 auto;
   }	
 }
@@ -414,11 +414,14 @@ $mq-mobile: " (min-width : 320px) and (max-width : 480px)";
 
 .button {
 	&:not(.reverse-button) {
-		@apply --dark-button;
+    @apply  --homePageMoreButtons;
 	}
 	&.reverse-button {
-		@apply --bright-button;
-	}
+	 @apply  --homePageMoreButtons;
+  }
+  span{
+    padding-left:13px
+}
 }
 
 body.show-SideDrawer ,body.show-photo-lightbox {
