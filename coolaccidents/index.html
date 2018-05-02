@@ -20,19 +20,56 @@
 
   <!-- FIRST AD -->
   <script>
-    googletag.cmd.push(function () {
-      googletag.defineSlot('/21664395848/coolaccidents_ROS/coolaccidents_TEST', [300, 250], 'div-gpt-ad-1512352393612-0').addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
-  </script>
-  <!-- SECOND AD -->
-  <script>
-    googletag.cmd.push(function () {
-      googletag.defineSlot('/21664395848/coolaccidents_ROS/coolaccidents_TESTPOS2', [300, 250], 'div-gpt-ad-1512352479775-0').addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
+    // Extract article title from url
+    pageURL = window.location.pathname;
+    pageURLArray = pageURL.split('/');
+    articleURL = '';
+    while (pageURLArray.length > 0 && articleURL == '') {
+        articleURL = pageURLArray.pop();
+    }
+    googletag.cmd.push(function() {
+        if ( window.location.pathname == '/' ){
+            // Define ad slots and slot-level targeting 
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', 'fluid', 'dfp-ad-slot-1')
+                .addService(googletag.pubads()).setTargeting("pos", "1")
+            var slot2 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', [300, 250], 'dfp-ad-slot-2')
+                .addService(googletag.pubads()).setTargeting("pos", "2")
+            // Set page-level key-values
+            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["home"]);
+        }
+        else if ( window.location.pathname.indexOf('/tags/') != -1 ){
+          console.log("check");
+            // Define ad slots and slot-level targeting 
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/tags/'+window.location.pathname.split('/')[2], 'fluid', 'dfp-ad-slot-3')
+                .addService(googletag.pubads()).setTargeting("pos", "1")
+                console.log("fine");
+            // var slot2 = googletag.defineSlot('/21664395848/coolaccidents_ROS/reviews', [300, 250], 'dfp-ad-slot-2')
+            //     .addService(googletag.pubads()).setTargeting("pos", "2")
+            // Set page-level key-values
+            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
+        }
+        
+        else{
+            // Define responsive ad size mapping 
+			var mapslot1 = googletag.sizeMapping()
+				.addSize([0, 0], [300, 250])
+				.addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build();	
+            // Define ad slots and slot-level targeting 
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/review', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1)
+                .addService(googletag.pubads()).setTargeting("pos", "1")
+			// Set page-level key-values
+            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
+
+        }
+			
+			
+            googletag.pubads().enableAsyncRendering();
+            googletag.pubads().collapseEmptyDivs(true);
+            googletag.pubads().setCentering(true);
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+
   </script>
 
   <!-- Shopify JS -->
@@ -55,7 +92,7 @@
   <script type="text/javascript">digitalData = {};</script>
   <!-- <script async src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script> -->
 
-<link href="/sites/g/files/g2000006916/themes/site/coolaccidents/styles.3c98b0af2fd34d91f229.bundle.css" rel="stylesheet"/></head>
+<link href="/sites/g/files/g2000006916/themes/site/coolaccidents/styles.2ffa35fe89751ea27ff4.bundle.css" rel="stylesheet"/></head>
 
 <body>
   <script>
@@ -90,6 +127,6 @@
     </div>
   </app-root>
 
-<script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/inline.904c48b78b778501bba3.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/polyfills.46031826b38f8db5aca5.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/vendor.51cffea6df9f5a428caa.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/main.1e845aaeb16c53dc5e73.bundle.js"></script></body>
+<script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/inline.5d20fa03ee044ae52dc6.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/polyfills.8b64120454e561e983fe.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/vendor.35aff779f3f1f3f6176f.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/main.ee639b1f8845f2da3f48.bundle.js"></script></body>
 
 </html>
