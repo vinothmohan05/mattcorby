@@ -19,7 +19,7 @@
   </script>
 
   <!-- FIRST AD -->
-  <script>
+   <script>
     // Extract article title from url
     pageURL = window.location.pathname;
     pageURLArray = pageURL.split('/');
@@ -37,29 +37,29 @@
             // Set page-level key-values
             googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["home"]);
         }
-        else if ( window.location.pathname.indexOf('/tags/') != -1 ){
-          console.log("check");
-            // Define ad slots and slot-level targeting 
-            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/tags/'+window.location.pathname.split('/')[2], 'fluid', 'dfp-ad-slot-3')
-                .addService(googletag.pubads()).setTargeting("pos", "1")
-                console.log("fine");
-            // var slot2 = googletag.defineSlot('/21664395848/coolaccidents_ROS/reviews', [300, 250], 'dfp-ad-slot-2')
-            //     .addService(googletag.pubads()).setTargeting("pos", "2")
-            // Set page-level key-values
-            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
-        }
-        
-        else{
+        else if(window.location.pathname.indexOf('blog/') != -1){
             // Define responsive ad size mapping 
 			var mapslot1 = googletag.sizeMapping()
 				.addSize([0, 0], [300, 250])
 				.addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build();	
             // Define ad slots and slot-level targeting 
-            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/review', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1)
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/latestnews', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1)
                 .addService(googletag.pubads()).setTargeting("pos", "1")
 			// Set page-level key-values
             googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
 
+        }
+        else if(window.location.pathname.indexOf('tags/') != -1){
+            var tagpages = ["new music", "reviews", "interviews", "tours", "win"];
+           if(tagpages.includes(articleURL)){
+               // Define ad slots and slot-level targeting 
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/' + articleURL, [[300, 250],['fluid']], 'dfp-ad-slot-1')
+                .addService(googletag.pubads()).setTargeting("pos", "1")
+			// Set page-level key-values
+            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["index"]);
+
+           }
+            
         }
 			
 			
