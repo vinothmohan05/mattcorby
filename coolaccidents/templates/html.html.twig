@@ -106,6 +106,18 @@
            }
             
         }
+		else if(window.location.pathname.indexOf('/blog') != -1){
+            var tagpages = ["blog"];
+           if(tagpages.includes(articleURL)){
+               // Define ad slots and slot-level targeting 
+            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/latestnews', [[300, 250],['fluid']], 'dfp-ad-slot-1')
+                .addService(googletag.pubads()).setTargeting("pos", "1")
+			// Set page-level key-values
+            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["index"]);
+
+           }
+            
+        }
 			
 			
             googletag.pubads().enableAsyncRendering();
@@ -161,8 +173,8 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.d0189b35d006075d3d8a.bundle.js"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.db3e495d88696af1beec.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.8b4ad350bc1eee3e9a23.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.e22ee4079f697c0a136d.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.0d22bcd21f683752cfa8.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.8b64120454e561e983fe.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.35aff779f3f1f3f6176f.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.ee639b1f8845f2da3f48.bundle.js"></script>
 </html>
