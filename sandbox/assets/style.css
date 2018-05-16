@@ -30,15 +30,8 @@ body app-root > div.loading:not(.backgroundLoader){
     100% {opacity: 1; -webkit-transform: translateY(0) translate3d(0,0,0);}
 }
 
-.home div#fixed-nav {
-    position: absolute;
-    top: calc(100vh - 51px);
-}
-.home div#fixed-nav.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 3;
-}
+
+
 div#smartHeader {
   display: none;
 }
@@ -263,7 +256,7 @@ ul[class*=grid] {
     margin: 0 -1rem;
 }
 nav.g-layout {
-  padding: 17px 0;
+  padding: 28px 0;
   text-align: center;
 }
 .detail-list .g-layout{
@@ -533,7 +526,7 @@ app-home{
 	background: #b8b7bf;
 	font-size:14px;	
 	text-align: center;
-  padding: 43px 10px;
+  padding:10px;
 }
 .footer-social li a{
   /**background: transparent url("i/footer-social.png") no-repeat scroll 0 0;**/
@@ -545,6 +538,13 @@ app-home{
   display: block;
   margin: 0;
   text-indent: -9999px;
+  font-size: 11px;
+}
+.socials-header {
+  background-color: #1e1f19;
+}
+ul.footer-social.header-social {
+  text-align: center;
 }
 span.social-links {
     display: inline-block;
@@ -555,13 +555,13 @@ span.social-links {
 }
 
 .footer-block .copyright-bar{
-	margin-top: 35px;
+	margin-top: 0;
 	color: #1b214e;
 	letter-spacing: 3px;
   font-weight: 300;
 }
 .footer-block .copy{
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 .footer-block .footer-links a{
 	color: #1b214e;
@@ -590,7 +590,7 @@ span.social-links {
     background-position: -381px 0px;
 }
 **/
-.footer-social .fs-fb a {
+/* .footer-social .fs-fb a {
     background: transparent resolve(fb.svg) no-repeat scroll 0 0;
 }
 .footer-social .fs-fb a:hover {
@@ -631,7 +631,7 @@ span.social-links {
 }
 .footer-social .fs-vi a:hover {
     background: transparent resolve(vimeo-hover.svg) no-repeat scroll 0 0;
-}
+} */
 /* .galleryPage ul.photos li {
     background-image: resolve(gallery.svg?fi);
     background-repeat: repeat;
@@ -715,7 +715,7 @@ div.cta{
 .logo-block a {
     display: block;
     width: 30px;
-    height: 30px;
+    height: 30px; 
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -736,10 +736,9 @@ div.cta{
 .fixed-nav {
     position: fixed;
     width: 100%;
-    top: 0;
+    top:30px;
     left: 0;
     z-index: 1;
-    background: #f6f5fd;
     z-index: 9;
 }
 /*.side_drawer::-webkit-scrollbar {
