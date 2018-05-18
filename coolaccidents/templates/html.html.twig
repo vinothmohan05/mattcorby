@@ -83,7 +83,7 @@
             // Set page-level key-values
             googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["home"]);
         }
-        else if(window.location.pathname.indexOf('blog/') != -1){
+        else if(window.location.pathname.indexOf('news/') != -1){
             // Define responsive ad size mapping 
 			var mapslot1 = googletag.sizeMapping()
 				.addSize([0, 0], [300, 250])
@@ -111,7 +111,7 @@
            }
             
         }
-		else if(window.location.pathname.indexOf('/blog') != -1){
+		else if(window.location.pathname.indexOf('/news') != -1){
             var tagpages = ["blog"];
            if(tagpages.includes(articleURL)){
                // Define ad slots and slot-level targeting 
@@ -178,8 +178,8 @@
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.36b42ddd3d4df38bbcde.bundle.js"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.46031826b38f8db5aca5.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.634006d642f9eca406ec.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.2d585aa96a3b149fa853.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.1196dbb2407632f78cf1.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.d86e76d1d0cef0af7620.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.e75dee2076cc4c0c2ce8.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.c8a83d00b9c8f3132c35.bundle.js"></script>
 </html>
