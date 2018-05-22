@@ -19,58 +19,56 @@
   </script>
 
   <!-- FIRST AD -->
-   <script>
-    // Extract article title from url
-    pageURL = window.location.pathname;
-    pageURLArray = pageURL.split('/');
-    articleURL = '';
-    while (pageURLArray.length > 0 && articleURL == '') {
-        articleURL = pageURLArray.pop();
-    }
-    googletag.cmd.push(function() {
-        if ( window.location.pathname == '/' ){
-            // Define ad slots and slot-level targeting 
-            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', 'fluid', 'dfp-ad-slot-1')
-                .addService(googletag.pubads()).setTargeting("pos", "1")
-            var slot2 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', [300, 250], 'dfp-ad-slot-2')
-                .addService(googletag.pubads()).setTargeting("pos", "2")
-            // Set page-level key-values
-            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["home"]);
-        }
-        else if(window.location.pathname.indexOf('blog/') != -1){
-            // Define responsive ad size mapping 
-			var mapslot1 = googletag.sizeMapping()
-				.addSize([0, 0], [300, 250])
-				.addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build();	
-            // Define ad slots and slot-level targeting 
-            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/latestnews', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1)
-                .addService(googletag.pubads()).setTargeting("pos", "1")
-			// Set page-level key-values
-            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
-
-        }
-        else if(window.location.pathname.indexOf('tags/') != -1){
-            var tagpages = ["new music", "reviews", "interviews", "tours", "win"];
-           if(tagpages.includes(articleURL)){
-               // Define ad slots and slot-level targeting 
-            var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/' + articleURL, [[300, 250],['fluid']], 'dfp-ad-slot-1')
-                .addService(googletag.pubads()).setTargeting("pos", "1")
-			// Set page-level key-values
-            googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["index"]);
-
-           }
-            
-        }
-			
-			
-            googletag.pubads().enableAsyncRendering();
-            googletag.pubads().collapseEmptyDivs(true);
-            googletag.pubads().setCentering(true);
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-
-  </script>
+  <script>
+ // Extract article title from url
+ /*pageURL = window.location.pathname;
+ pageURLArray = pageURL.split('/');
+ articleURL = '';
+ while (pageURLArray.length > 0 && articleURL == '') {
+ articleURL = pageURLArray.pop();
+ }
+ googletag.cmd.push(function() {
+ if ( window.location.pathname == '/' ){
+ // Define ad slots and slot-level targeting 
+ var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', 'fluid', 'dfp-ad-slot-1')
+ .addService(googletag.pubads()).setTargeting("pos", "1")
+ var slot2 = googletag.defineSlot('/21664395848/coolaccidents_ROS/home', [300, 250], 'dfp-ad-slot-2')
+ .addService(googletag.pubads()).setTargeting("pos", "2")
+ // Set page-level key-values
+ googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["home"]);
+ }
+ else if(window.location.pathname.indexOf('blog/') != -1){
+ // Define responsive ad size mapping 
+ var mapslot1 = googletag.sizeMapping()
+ .addSize([0, 0], [300, 250])
+ .addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build(); 
+ // Define ad slots and slot-level targeting 
+ var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/latestnews', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1)
+ .addService(googletag.pubads()).setTargeting("pos", "1")
+ // Set page-level key-values
+ googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["article"]);
+ }
+ /*else if(window.location.pathname.indexOf('tags/') != -1){
+ var tagpages = ["new music", "reviews", "interviews", "tours", "win"];
+ if(tagpages.indexOf(articleURL)){
+ // Define ad slots and slot-level targeting 
+ console.log('inside tags');
+ var slot1 = googletag.defineSlot('/21664395848/coolaccidents_ROS/' + articleURL, [[300, 250],['fluid']], 'dfp-ad-slot-1')
+ .addService(googletag.pubads()).setTargeting("pos", "1")
+ // Set page-level key-values
+ googletag.pubads().setTargeting("pageURL", [articleURL]).setTargeting("pagetype", ["index"]);
+ }
+ 
+ }
+ 
+ 
+ googletag.pubads().enableAsyncRendering();
+ googletag.pubads().collapseEmptyDivs(true);
+ googletag.pubads().setCentering(true);
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+ });*/
+ </script>
 
   <!-- Shopify JS -->
   <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
@@ -91,8 +89,9 @@
 
   <script type="text/javascript">digitalData = {};</script>
   <!-- <script async src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script> -->
-
-<link href="/sites/g/files/g2000006916/themes/site/coolaccidents/styles.2ffa35fe89751ea27ff4.bundle.css" rel="stylesheet"/></head>
+  <script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox-us-wbr.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
+<link href="/sites/g/files/g2000006916/themes/site/coolaccidents/styles.7030d5a629adf31549a5.bundle.css" rel="stylesheet"/></head>
 
 <body>
   <script>
@@ -127,10 +126,6 @@
     </div>
   </app-root>
 
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.b1c4e66837ff84970d1f.bundle.js"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.d86e76d1d0cef0af7620.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.e75dee2076cc4c0c2ce8.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/main.446c9e646c44a97acbe9.bundle.js"></script>
-</body>
+<script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/inline.1a4e448041fccf2219fd.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/polyfills.46031826b38f8db5aca5.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/vendor.634006d642f9eca406ec.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000006916/themes/site/coolaccidents/main.aa0332f80ec78d3ce55e.bundle.js"></script></body>
 
 </html>
