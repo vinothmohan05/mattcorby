@@ -94,7 +94,1164 @@
 		{% include "@sandbox/app-root.twig" %}
 	{% endif %}
 	
+      
     {{ page }}
+      
+      <script>
+var showLightBox = false;
+
+function showbox(){
+ if(showLightBox){
+    document.body.classList.add("lightboxshow");
+ }  
+}
+
+function lightboxTrack(){
+    console.info('lightboxTrack');  
+    //s_dtm.clearVars();                                                                                    
+    digitalData.page.pageInfo.pageName = "Houndmouth:This Party Single:Lightbox",
+    digitalData.page.pageInfo.server = "Houndmouth:Site",
+    digitalData.page.pageInfo.platform = "Drupal 8",
+    digitalData.page.category.primaryCategory = "Houndmouth:Lightbox",
+    digitalData.page.category.pageType = "Lightbox:Single Release",
+    _satellite.track("page view");
+}
+
+function hideLB(){
+ 
+    showLightBox = false;
+    document.getElementsByClassName('lightbox-wrapper')[0].style.display = 'none';
+    document.getElementsByClassName("lightbox-overlay")[0].style.display = 'none';
+    document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
+    document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
+    document.body.classList.remove("lightboxshow");
+    CallOmniture("Houndmouth:This Party Single:Lightbox:Close Lightbox Click");
+    console.log("lightbox block");
+   if(ytplayer != undefined){
+     ytplayer.playVideo();
+   }
+   jQuery(".lightbox-video-content").html('');
+    
+    if (document.body.classList.contains('splash-page')) {
+        digitalData.page.pageInfo.pageName = "Houndmouth:Splash",
+        digitalData.page.pageInfo.server = "Houndmouth:Site",
+        digitalData.page.pageInfo.platform = "Drupal 8",
+        digitalData.page.category.primaryCategory = "Houndmouth:Splash",
+        digitalData.page.category.pageType = "Splash";
+        _satellite.track("page view");
+    }
+    else if(!document.body.classList.contains('splash-page')) {
+        digitalData.page.pageInfo.pageName = "Houndmouth:Homepage",
+        digitalData.page.pageInfo.server = "Houndmouth:Site",
+        digitalData.page.pageInfo.platform = "Drupal 8",
+        digitalData.page.category.primaryCategory = "Houndmouth:Home",
+        digitalData.page.category.pageType = "homepage",
+        _satellite.track("page view");
+    }
+
+    
+    
+}
+
+function CallOmniture(text) {
+        var s = s_gi('wmg,wmgwbrglobal,wmghoundmouth.com');
+        s.linkTrackVars = 'prop1,eVar4';
+        s.prop1 = 'Houndmouth';
+        s.eVar4 = 'Houndmouth';
+        s.tl(this, 'o', text);
+}
+
+function coverimageomniture(){
+    CallOmniture("Houndmouth:This Party Single:Lightbox:Cover Image Linkfire Click");
+}
+
+function listennowomniture(){
+    CallOmniture("Houndmouth:This Party Single:Lightbox:Listen Now Linkfire Click");
+}
+
+function lyricvideoomniture(){
+    CallOmniture("Houndmouth:This Party Single:Lightbox:Watch Video Click");
+}
+
+
+window.onload = function() {
+if (document.body.classList.contains('home')) {
+  showLightBox = true;
+  showbox();
+}
+
+if (document.body.classList.contains('lightboxshow')) {
+  setTimeout(lightboxTrack(),10);
+}
+}
+
+
+
+var modal = document.getElementById("lightbox-overlay");
+var modal = document.getElementById("lightbox-overlay1");
+var modal2 = document.getElementsByClassName("lightbox-wrapper");
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        hideLB();
+    }
+}
+
+</script>
+
+<style>
+div#lightbox-overlay {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+body .lightbox-wrapper, div#lightbox-overlay {
+    display: none;
+}
+body.home .lightbox-wrapper, body.home div#lightbox-overlay {
+    display: block;
+}
+
+.closewrapper {
+    position: absolute;
+    top: 3px;
+    right: 12px;
+}
+.insidecontent {
+    position: relative;
+}
+.closewrapper a {
+    color: #3c3c3c;
+    font-size: 26px;
+    font-style: italic;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.closewrapper a:hover{
+    color: #fff;
+}
+.lightbox-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    width: 750px;
+    height: 430px;
+    z-index:9999;
+    background: rgba(226,192,1,0.9);
+}
+.rightWrapper {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    margin-left: 40px;
+    padding-top: 60px;
+}
+.rightWrapper h2 {
+    color: #3c3c3c;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+.rightWrapper > span {
+    background: url(/sites/g/files/g2000007451/files/VideoDivider.png) #000;
+    display: block;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 288px;
+    background-size: cover;
+    height: 2px;
+    opacity: 0.5;
+    border-radius: 3px;
+    margin: 10px 0px;
+}
+.leftWrapper {
+    width: 320px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 55px;
+    padding-left: 55px;
+}
+.listen:before, .watch:before {
+    content: "";
+    font-size: 0;
+    background: url(/sites/g/files/g2000007451/files/listenNowplay.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.listen, .watch {
+    text-align: left;
+    display: block;
+    margin-top: 60px;
+    margin-left: 66px;
+    color: #3c3c3c;
+}
+a.listen:hover, a.watch:hover {
+    color: #fff;
+}
+a.listen:hover:before, a.watch:hover:before{
+    background: url(/sites/g/files/g2000007451/files/ListenPlayHover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.watch {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.listen p {
+    font-size: 24px;
+    display: inline-block;
+    font-style: italic;
+    text-transform: lowercase;
+    vertical-align: middle;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.watch span.fa {
+    font-size: 0;
+    background: url(/sites/g/files/g2000007451/files/playNew.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.watch p {
+    font-size: 24px;
+    display: inline-block;
+    font-style: italic;
+    text-transform: lowercase;
+    vertical-align: middle;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .lightbox-wrapper {
+        width: 505px;
+        height: 297px;
+    }
+    .leftWrapper {
+        width: 235px;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    .rightWrapper {
+        margin-left: 30px;
+        padding-top: 40px;
+        width: 35%;
+    }
+    .rightWrapper h2 {
+        font-size: 28px;
+    }
+    .rightWrapper > span {
+        width: 180px;
+        margin: 7px 0px;
+    }
+    .listen p, .watch p {
+        font-size: 16px;
+    }
+    .listen:before, .watch:before {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+    }
+    .listen, .watch {
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+    a.listen:hover:before, a.watch:hover:before {
+        background: url(/sites/g/files/g2000007451/files/ListenPlayHover.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 14px;
+    }
+    a.watch {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .lightbox-wrapper {
+        width: 290px;
+        height: auto;
+        top: 48%;
+    }
+    .leftWrapper {
+        width: 192px;
+        padding-top: 25px;
+        padding-left: 0;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .rightWrapper {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding-top: 8px;
+    }
+    .rightWrapper h2 {
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .rightWrapper > span {
+        display: inline-block;
+        transform: rotate(90deg);
+        vertical-align: middle;
+        width: 25px;
+    }
+    a.listen:before, a.watch:before {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+    }
+    a.listen:hover:before, a.watch:hover:before{
+        background: url(/sites/g/files/g2000007451/files/ListenPlayHover.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 14px;
+    }
+    .listen, .watch {
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+    .watch {
+        padding-top: 0px;
+        padding-bottom: 18px;
+        margin-top: 0px;
+    }
+        
+    .listen p {
+        font-size: 17px;
+    }
+    .watch span.fa {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+    }
+    
+    .watch p {
+        font-size: 17px;
+    }
+    .closewrapper a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    .lightbox-wrapper {
+        width: 180px;
+    }
+    .leftWrapper {
+        width: 95px;
+        padding-top: 12px;
+    }
+    .rightWrapper {
+        padding-top: 5px;
+    }
+    .rightWrapper h2 {
+        font-size: 12px;
+    }
+    .rightWrapper > span {
+        width: 12px;
+    }
+    .listen, .watch {
+        margin-left: 50px;
+        margin-top: 5px;
+        padding-bottom: 2px;
+    }
+    .watch{
+        margin-top: 0px;
+    }
+    a.listen:before, a.watch:before {
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+    }
+    a.listen:hover:before, a.watch:hover:before{
+        background: url(/sites/g/files/g2000007451/files/ListenPlayHover.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 8px;
+        height: 8px;
+    }
+    .listen p, .watch p {
+        font-size: 10px;
+    }
+    .watch {
+        padding-top: 0px;
+        padding-bottom: 8px;
+    }
+}
+
+
+
+
+
+</style>
+
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="hideLB()">
+</div>
+<!--<div class="lightbox-wrapper" >
+    <div class="artist-name">Houndmouth</div>
+    <div class="insidecontent">
+        <div class="closewrapper"><a class="" onclick="hideLB()">X</a></div>
+        <div class="leftWrapper">
+            <a href="https://wbr.ec/thisparty" target="_blank" onclick="coverimageomniture()"><img src="/sites/g/files/g2000007451/files/LightboxImage-min.jpg" alt=""></a>
+        </div>
+        <div class="rightWrapper">
+            <h2>New Single</h2>
+            <span></span>
+            <h2>Out Now.</h2>
+            <a class="listen" href="https://wbr.ec/thisparty" target="_blank" onclick="listennowomniture()">
+                <!--<span class="fa">&#xf04b;</span>
+                <p>Listen now</p>
+            </a>
+            <a class="watch" href="https://wbr.ec/thisparty-mv" target="_blank" onclick="lyricvideoomniture()">
+                <p>Watch Music Video</p>
+            </a>
+        </div>
+    </div>
+</div>-->
+
+<div id="lightbox-overlay1" class="lightbox-overlay" onclick="hideLB()"></div>
+      
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+<script>
+	jQuery(window).load(function() {
+		setTimeout(function() {
+			jQuery('body .lightbox-wrapper.admin').insertAfter(jQuery('#block-lightbox .lightbox-wrapper'));
+		}, 100);
+	});
+
+	var showLightBoxAdmin = false;
+
+	function showboxAdmin() {
+		if (showLightBoxAdmin) {
+			document.body.classList.add("lightboxshowAdmin");
+		}
+	}
+
+	function lightboxTrackNew() {
+		console.info('lightbox Admin Track');
+		s_dtm.clearVars();
+		digitalData.page.pageInfo.pageName = "Houndmouth:Golden Age Pre-order:Lightbox", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Lightbox", digitalData.page.category.pageType = "Lightbox:Pre-order", _satellite.track("page view");
+	}
+
+	function hideLB() {
+
+		showLightBox = false;
+		document.getElementsByClassName('lightbox-wrapper')[0].style.display = 'none';
+		document.getElementsByClassName("lightbox-overlay")[0].style.display = 'none';
+		document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
+		document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
+		document.body.classList.remove("lightboxshow");
+		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Close Lightbox Click");
+		console.log("lightbox block close");
+		if (ytplayer != undefined) {
+			ytplayer.playVideo();
+		}
+		jQuery(".lightbox-video-content").html('');
+
+		if (document.body.classList.contains('splash-page')) {
+			digitalData.page.pageInfo.pageName = "Houndmouth:Splash", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Splash", digitalData.page.category.pageType = "Splash";
+			_satellite.track("page view");
+		} else if (!document.body.classList.contains('splash-page')) {
+			digitalData.page.pageInfo.pageName = "Houndmouth:Homepage", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Home", digitalData.page.category.pageType = "homepage", _satellite.track("page view");
+		}
+
+	}
+
+	function CallOmniture(text) {
+		var s = s_gi('wmg,wmgwbrglobal,wmghoundmouth.com');
+		s.linkTrackVars = 'prop1,eVar4';
+		s.prop1 = 'Houndmouth';
+		s.eVar4 = 'Houndmouth';
+		s.tl(this, 'o', text);
+	}
+
+	function albumimageomniture() {
+		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Album Image Click");
+	}
+
+	function listenomniture() {
+		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Listen Text Click");
+	}
+
+	function preorderomniture() {
+		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Pre-order Text Click");
+	}
+
+	function watchvideoomniture() {
+		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Watch Video Click");
+	}
+
+
+	window.onload = function() {
+		if (document.body.classList.contains('home')) {
+			showLightBoxAdmin = true;
+			showboxAdmin();
+		}
+		if (document.body.classList.contains('lightboxshowAdmin')) {
+			setTimeout(lightboxTrackNew(), 500);
+		}
+	}
+	var modal = document.getElementById("lightbox-overlay");
+	var modal = document.getElementById("lightbox-overlay1");
+	var modal2 = document.getElementsByClassName("lightbox-wrapper");
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+			hideLB();
+		}
+	}
+</script>
+<div class="lightbox-wrapper admin" >
+	<div class="artist-name">
+		Houndmouth
+	</div>
+	<div class="insidecontent">
+		<div class="closewrapper">
+			<a class="" onclick="hideLB()">X</a>
+		</div>
+		<div class="temp" style="display:none;">
+			<h2><a href="https://wbr.ec/golden-age" target="_blank"> Pre-order</a> the New Album
+			<br>
+			Golden Age.</h2>
+		</div>
+		<div class="leftWrapper">
+			<a href="https://wbr.ec/golden-age" target="_blank" onclick="albumimageomniture()"> <img class="desk" src="/sites/g/files/g2000007451/files/artimage.png" alt=""> <img class="mob" src="/sites/g/files/g2000007451/files/artimagemob.png" alt="" style="display:none;"> </a>
+		</div>
+		<div class="rightWrapper">
+			<h2 class="hide"><a href="https://wbr.ec/golden-age" target="_blank" onclick="preorderomniture()"> Pre-order</a> the New Album
+			<br>
+			Golden Age.</h2>
+			<span class="desk"></span>
+			<h2>Listen to <a href="https://wbr.ec/thisparty" target="_blank" onclick="listenomniture()">"This Party"</a>
+			<br>
+                and <a href="https://wbr.lnk.to/HMModernLove" target="_blank" onclick="listenomniture()">"Modern Love"</a> Now.</h2>
+			<span class="mob" style="display:none;"></span>
+			<a class="watch" href="https://wbr.ec/thisparty-mv" target="_blank" onclick="watchvideoomniture()">
+			<p>
+				watch <span class="party">"This Party"</span> music video
+			</p></a>
+		</div>
+	</div>
+</div>
+
+<style>
+
+	.lightbox-wrapper.admin .rightWrapper h2 {
+		text-transform: none;
+	}
+	.lightbox-wrapper.admin {
+		background: rgba(180, 58, 62 ,0.9);
+	}
+
+	.lightbox-wrapper.admin .rightWrapper h2 {
+		color: #fff;
+		line-height: 1.3;
+	}
+
+	.lightbox-wrapper.admin .watch p {
+		color: #fff;
+		text-transform: initial;
+	}
+
+	.lightbox-wrapper.admin .watch p:hover, .lightbox-wrapper.admin a:hover p {
+		text-decoration: none;
+        border-bottom: 1px solid #fff;
+	}
+
+	.lightbox-wrapper.admin span.party {
+		color: #f9c2a2;
+	}
+
+	.lightbox-wrapper.admin .closewrapper a {
+		color: #f9c2a2;
+	}
+	body.user-logged-in .contextual-region {
+		position: static;
+	}
+	.lightbox-wrapper.admin .listen:before, .lightbox-wrapper.admin .watch:before {
+		background: url(/sites/g/files/g2000007451/files/playicon1.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-right: 5px;
+	}
+
+	.lightbox-wrapper.admin a.listen:hover:before, .lightbox-wrapper.admin  a.watch:hover:before {
+		background: url(/sites/g/files/g2000007451/files/playicon1hover.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.lightbox-wrapper.admin .rightWrapper h2 a {
+		color: #fff;
+		position: relative;
+	}
+
+	.lightbox-wrapper.admin .rightWrapper h2 a:hover:after {
+		content: "";
+		position: absolute;
+		border-bottom: 1px solid #fff;
+		top: auto;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		bottom: 8px;
+	}
+
+	.lightbox-wrapper.admin .rightWrapper h2 a:after {
+		content: "";
+		position: absolute;
+		border-bottom: none;
+		top: auto;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		bottom: 8px;
+	}
+	.lightbox-wrapper.admin .rightWrapper > span {
+		background: url(/sites/g/files/g2000007451/files/VideoDivider.png) #fff;
+	}
+	body {
+		position: relative;
+		padding: 0 !important;
+	}
+	.lightbox-wrapper.admin .rightWrapper h2 {
+		font-size: 20px;
+	}
+	.lightbox-wrapper.admin .watch {
+		margin: 0;
+		text-align: left;
+	}
+	.lightbox-wrapper.admin .watch p {
+		margin: 0;
+		font-size: 20px;
+		letter-spacing: normal;
+	}
+	@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+		.lightbox-wrapper.admin {
+			width: 675px;
+			height: 297px;
+		}
+		.lightbox-wrapper.admin .rightWrapper {
+			margin-left: 30px;
+			padding-top: 40px;
+			width: 50%;
+		}
+		.lightbox-wrapper.admin .rightWrapper > span {
+			width: 350px;
+		}
+
+	}
+	@media all and (min-width: 768px) and (max-width: 1023px) {
+		body {
+			padding: 0 !important;
+		}
+
+		.lightbox-wrapper.admin .leftWrapper {
+			width: 255px;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper h2 {
+			font-size: 33px;
+		}
+
+		.lightbox-wrapper.admin a.watch {
+			margin-left: 5px;
+		}
+
+		.lightbox-wrapper.admin .insidecontent {
+			margin: 4% 0;
+		}
+		.lightbox-wrapper.admin .rightWrapper > span {
+			width: 379px;
+		}
+		.lightbox-wrapper.admin .rightWrapper {
+			width: 48%;
+		}
+		.lightbox-wrapper.admin .listen:before, .lightbox-wrapper.admin .watch:before {
+			margin-right: 6px;
+		}
+	}
+	@media all and (max-width: 767px) {
+		.lightbox-wrapper.admin .temp h2 {
+			font-size: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: initial;
+			font-weight: 400;
+			padding: 0;
+			margin: 0;
+			color: #fff;
+		}
+		.lightbox-wrapper.admin .insidecontent {
+			text-align: center;
+		}
+		.lightbox-wrapper.admin .temp {
+			display: block !important;
+			padding-top: 14px;
+		}
+		.lightbox-wrapper.admin .leftWrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+		.lightbox-wrapper.admin .rightWrapper h2.hide {
+			display: none;
+		}
+		.lightbox-wrapper.admin .rightWrapper h2.hide {
+			display: none;
+		}
+
+		.lightbox-wrapper.admin .leftWrapper img.desk {
+			display: none;
+		}
+
+		.lightbox-wrapper.admin .leftWrapper img.mob {
+			display: block !important;
+		}
+
+		.lightbox-wrapper.admin .leftWrapper {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		.lightbox-wrapper.admin .rightWrapper > span {
+			transform: none;
+			width: 261px;
+			margin: 20px auto;
+		}
+		.lightbox-wrapper.admin .rightWrapper > span {
+			background: url(/sites/g/files/g2000007451/files/linemob.png) #fff;
+		}
+		.lightbox-wrapper.admin .rightWrapper span.desk {
+			display: none;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper span.mob {
+			display: block !important;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper a.watch {
+			margin: 0px auto;
+			margin-left: 10px;
+			text-align: center;
+		}
+		.lightbox-wrapper.admin h2 {
+			line-height: 1.3;
+		}
+		.lightbox-wrapper.admin .temp a {
+			color: #fff;
+		}
+		.lightbox-wrapper.admin .temp a:hover {
+			border-bottom: 1px solid #fff;
+		}
+		.lightbox-wrapper.admin .watch p:hover, .lightbox-wrapper.admin a:hover p {
+			border-bottom: none;
+		}
+
+	}
+	@media all and (max-width: 320px) {
+		.lightbox-wrapper.admin {
+			top: 57%;
+		}
+	}
+
+	@media all and (max-width: 767px) and (orientation: landscape) {
+		.lightbox-wrapper.admin {
+			top: 75%;
+		}
+		.lightbox-wrapper.admin {
+			width: auto;
+		}
+		.lightbox-wrapper.admin .temp h2 {
+			font-size: 20px;
+		}
+	}
+	@media all and (min-width: 640px) and (max-width: 767px) and (orientation: landscape) {
+		.lightbox-wrapper.admin {
+			top: 85%;
+		}
+	}
+	@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+		.lightbox-wrapper.admin .rightWrapper h2 {
+			font-size: 37px;
+			line-height: 1;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper {
+			width: 57%;
+		}
+
+		.lightbox-wrapper.admin {
+			width: 712px;
+			height: 310px;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper > span {
+			background: url(/sites/g/files/g2000007451/files/VideoDivider.png) #fff;
+			background-repeat-x: repeat;
+			width: 100%;
+		}
+
+		.lightbox-wrapper.admin .watch p {
+			font-size: 24px;
+		}
+
+		.lightbox-wrapper.admin .watch {
+			margin-top: 0px;
+		}
+		.lightbox-wrapper.admin .leftWrapper {
+			width: 235px;
+			padding-top: 28px;
+			padding-left: 30px;
+		}
+		.lightbox-wrapper.admin .insidecontent {
+			padding-top: 12px;
+		}
+
+	}
+
+	@media only screen and (min-width: 1441px) {
+		.lightbox-wrapper.admin {
+			/*width: 712px;
+			 height: 310px;*/
+			width: 840px;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper h2 {
+			font-size: 37px;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper {
+			width: 45%;
+		}
+
+		.lightbox-wrapper.admin {
+			width: 840px;
+		}
+
+		.lightbox-wrapper.admin .rightWrapper > span {
+			background: url(/sites/g/files/g2000007451/files/VideoDivider.png) #fff;
+			background-repeat-x: repeat;
+			width: 100%;
+		}
+
+		.lightbox-wrapper.admin .watch p {
+			font-size: 24px;
+		}
+
+		.lightbox-wrapper.admin .watch {
+			margin-top: 28px;
+		}
+	}
+	.sound-logo.admin {
+		display: block;
+	}
+</style>
+      
+      <script>
+	//document.addEventListener("DOMContentLoaded", function(event) {
+var ytplayer;
+if (navigator.userAgent.match(/iPad|iPhone|Android|BlackBerry|Windows Phone/i)) {
+          document.getElementsByTagName('body')[0].classList.add('touchdevice');
+}
+else{
+	document.getElementsByTagName('body')[0].classList.add('notouchdevice');
+}
+
+function toggleMute() {
+	if (!jQuery('.sound-logo').hasClass('muted')) {
+		ytplayer.unMute();
+	} else {
+		ytplayer.mute();
+	}
+}
+
+function LoadVideo(){
+	var mute = 1;
+
+			//if (Modernizr.mq('only screen and (max-width: 767px)')) {
+
+				//mute = 0;
+
+			//}
+
+			// alert(' for desktop');
+
+			//var player;
+
+
+
+			function onYouTubeIframeAPIReady() {
+
+				ytplayer = new YT.Player('youtube-video', {
+
+					height : '390',
+
+					width : '640',
+
+					videoId : 'MyULDoZxAE4',
+
+					playerVars : {
+
+						'controls' : 0,
+
+						'rel' : 0,
+
+						'showinfo' : 0,
+
+						'loop' : 1,
+
+						'playlist' : 'MyULDoZxAE4',
+
+						'mute' : mute,
+
+						"autoplay" : 1,
+
+						'iv_load_policy' : 3,
+
+						'wmode' : 'transparent',
+
+						'html5' : 1,
+
+						'playsinline' : 1
+
+					},
+
+					events : {
+
+						'onReady' : onPlayerReady
+
+					}
+
+				});
+
+
+
+			}
+
+
+
+			/*function customMacPlay() {
+
+				if (Modernizr.mq('only screen and (min-width: 768px)')) {
+
+					console.log('1400px resolution');
+
+					if (player != undefined) {
+
+						console.log(player);
+
+						console.log('not undefined');
+
+						player.playVideo();
+
+						clearInterval(refreshIntervalId);
+
+					} else {
+
+						console.log('player undefined');
+
+					}
+
+				}
+
+			}*/
+
+
+
+			function onPlayerReady() {
+
+				console.log("player ready1"+ytplayer);
+				ytplayer.mute();
+				setTimeout(function(){ 
+				  if(jQuery('div#youtube-video').length != 0){
+					   console.log('youtube iframe not yet loaded, triggering function manually');
+					   onYouTubeIframeAPIReady(); 
+				  }
+				  else{
+				   console.log('youtube div player is not available, iframe should be created at this time');
+				  }
+				 }, 2000);
+				//var videoembed = document.querySelectorAll(".iframewrapper")[0].innerHTML;
+				//document.querySelectorAll(".videoHeader")[0].innerHTML  = videoembed;
+				//document.querySelectorAll(".iframewrapper")[0].innerHTML = "";
+
+     			// var refreshIntervalId = setInterval(customMacPlay, 2000);
+     			
+     			
+
+			}
+
+			document.querySelectorAll("body.notouchdevice .videoHeader")[0].innerHTML  = '<div id="youtube-video"></div></div>';
+			jQuery('<div class="sound-logo"><img class="mute" src="/sites/g/files/g2000007451/files/sound-logo.png"><img class="sound" src="/sites/g/files/g2000007451/files/muted-logo.png"></div>').insertBefore(jQuery('.herovideoBlock'));
+			//jQuery('body.notouchdevice .videoHeader').append('<div id="mute" class="unmuted"></div>');
+			onYouTubeIframeAPIReady();
+			/*jQuery("body.notouchdevice .watch").removeAttr('href');
+			jQuery("body.notouchdevice .watch").on('click', function(){
+             
+				jQuery("body.notouchdevice").addClass("videolighbox");
+				//jQuery("body.notouchdevice.videolighbox .lightbox-wrapper").append('<div class="lightbox-video-content"></div>');
+				
+				
+			
+			var videoLBconent = '<div class="lightbox-video-content"><div class="closewrapper"><a class="" onclick="hideLB()">X</a></div><iframe id="youtube-lbvideo" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="390" src="https://www.youtube.com/embed/MyULDoZxAE4?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=MyULDoZxAE4&amp;autoplay=1&amp;iv_load_policy=3&amp;wmode=transparent&amp;origin=http%3A%2F%2Fwww.houndmouth.com&amp;widgetid=1"></iframe></div>'
+			jQuery('body.notouchdevice .lightbox-wrapper').append(videoLBconent);
+			jQuery("body.notouchdevice").addClass("videolighbox");
+			});*/
+			
+			jQuery('.sound-logo').on('click', function() {
+		//e.preventDefault();
+		toggleMute();
+		jQuery('.sound-logo').toggleClass("muted");
+	});
+	
+}
+
+window.addEventListener('load', function() { 
+		
+if(jQuery('body').hasClass('home')){
+	LoadVideo();
+}			
+
+
+jQuery(".social-menu a:contains('Home'),.pageNotFound .navlinks a:contains('Home')").on('click', function(){ 
+	var intervalforDOMCheck = setInterval(checkIfDOMLoaded , 500);
+	
+	function checkIfDOMLoaded(){
+		if(jQuery("body.notouchdevice .videoHeader").length > 0 && !(typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined')){
+			clearInterval(intervalforDOMCheck);
+			LoadVideo();
+			
+		}
+	}
+	console.log("inside home");
+	
+	 });
+	 
+
+
+	 
+		});
+
+	 
+</script>
+
+<style>
+.sound-logo{
+    position: fixed;
+    top: 116px;
+    right: 16px;
+//z-index:100000;
+z-index:1000;
+cursor:pointer;
+
+width:auto;
+}
+.sound-logo img.mute{
+display:none;
+}
+.sound-logo.muted img{
+display:none;
+}
+.sound-logo.muted img.mute{
+display:block;
+}
+
+
+</style>
+
+<style>
+
+
+.lightbox-wrapper.admin .watch{
+	cursor:pointer;
+}
+.lightbox-video-content{
+	display:none;
+}
+iframe#youtube-video {
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    width: 130vw;
+    height: 130vh;
+}
+@media only screen and (min-width: 1024px){
+body.videolighbox  .lightbox-wrapper.admin{
+    width: 100%;
+    background: none;
+    height: 100vh;
+}
+
+body.videolighbox div#lightbox-overlay {
+    background: rgba(0,0,0,1);
+	z-index: 1000;
+}
+
+body.videolighbox .insidecontent {
+    display: none;
+}
+
+body.videolighbox iframe#youtube-lbvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body.videolighbox .lightbox-video-content {
+    width: 100%;
+    height: 0;
+    display: block;
+    overflow:  hidden;
+    padding-top: 100vh;
+    position: relative;
+}
+
+body.videolighbox .closewrapper {
+    z-index: 10;
+    /* right: -20px; */
+}
+}
+
+</style>
+      
     {{ page_bottom }}
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
