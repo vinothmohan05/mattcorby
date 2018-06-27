@@ -211,11 +211,20 @@ color: #cda866;
 	  googletag.cmd = googletag.cmd || [];
 	</script>
   </head>
-  <body{{ attributes.addClass(body_classes) }}>   
+  <body{{ attributes.addClass(body_classes) }}> 
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>  
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.ed9c493422a42a5acfb2.bundle.js"></script>
+	
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.6ec6a3c602bf7b06d1a4.bundle.js"></script>
 	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.993b27c132df8425bf13.bundle.js"></script>	
 	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.649bc21450a6c2a50dad.bundle.js"></script>
     <script type="text/javascript" src="/{{ base_path ~ directory }}/main.a330cb536f5d05cdb9a6.bundle.js"></script>
@@ -230,14 +239,7 @@ color: #cda866;
         js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=190235525095218&autoLogAppEvents=1';
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-	  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+	  
     <!-- facebook Like Ends -->
   </body>
 </html>
