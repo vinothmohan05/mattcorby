@@ -117,13 +117,13 @@ function lightboxTrack(){
     _satellite.track("page view");
 }
 
-function hideLB(){
+/*function hideLB(){
  
     showLightBox = false;
     document.getElementsByClassName('lightbox-wrapper')[0].style.display = 'none';
     document.getElementsByClassName("lightbox-overlay")[0].style.display = 'none';
-    document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
-    document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
+    //document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
+    //document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
     document.body.classList.remove("lightboxshow");
     CallOmniture("Houndmouth:This Party Single:Lightbox:Close Lightbox Click");
     console.log("lightbox block");
@@ -151,7 +151,7 @@ function hideLB(){
 
     
     
-}
+}*/
 
 function CallOmniture(text) {
         var s = s_gi('wmg,wmgwbrglobal,wmghoundmouth.com');
@@ -569,13 +569,13 @@ a.listen:hover:before, a.watch:hover:before{
 		digitalData.page.pageInfo.pageName = "Houndmouth:Golden Age Pre-order:Lightbox", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Lightbox", digitalData.page.category.pageType = "Lightbox:Pre-order", _satellite.track("page view");
 	}
 
-	function hideLB() {
+	function hideLBadmin() {
 
 		showLightBox = false;
 		document.getElementsByClassName('lightbox-wrapper')[0].style.display = 'none';
 		document.getElementsByClassName("lightbox-overlay")[0].style.display = 'none';
-		document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
-		document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
+		//document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
+		//document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
 		document.body.classList.remove("lightboxshow");
 		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Close Lightbox Click");
 		console.log("lightbox block close");
@@ -593,13 +593,13 @@ a.listen:hover:before, a.watch:hover:before{
 
 	}
 
-	function CallOmniture(text) {
+	/*function CallOmniture(text) {
 		var s = s_gi('wmg,wmgwbrglobal,wmghoundmouth.com');
 		s.linkTrackVars = 'prop1,eVar4';
 		s.prop1 = 'Houndmouth';
 		s.eVar4 = 'Houndmouth';
 		s.tl(this, 'o', text);
-	}
+	}*/
 
 	function albumimageomniture() {
 		CallOmniture("Houndmouth:Golden Age Pre-order:Lightbox:Album Image Click");
