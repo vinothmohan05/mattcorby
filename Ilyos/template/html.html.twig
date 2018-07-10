@@ -201,37 +201,6 @@ color: #cda866;
         console.log('url matched news detail, loading script with a 5s timeout');
         setTimeout(function(){
           loadExternalScripts();
-		 
-          var element = document.getElementById("googletagId");
-        
-          if(element != null){
-           element.parentNode.removeChild(element);
-         }
-        var js = document.createElement('script');
-        js.setAttribute('type', 'text/javascript');
-        js.setAttribute('id', 'googletagId');
-        js.innerHTML = "googletag.destroySlots();var googletag = googletag || {};googletag.cmd = googletag.cmd || [];googletag.cmd.push(function() {  var mapslot1 = googletag.sizeMapping().addSize([0, 0], [300, 250]).addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build();"+ 
-          "var slot1 = googletag.defineSlot('/21664395848/ilyos/news', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1).addService(googletag.pubads()).setTargeting('pos', '1');"+
-          'googletag.pubads().setTargeting("pageURL", "blog").setTargeting("pagetype", ["article"]);'+
-          'console.log("inside news detail new");googletag.pubads().enableAsyncRendering();googletag.pubads().collapseEmptyDivs(true);'+
-          'googletag.pubads().setCentering(true);googletag.pubads().enableSingleRequest();googletag.enableServices();});';
-
-        document.getElementsByTagName('head')[0].appendChild(js);
-        
-      var adScript = document.createElement('script');
-    
-      adScript.innerHTML = "googletag.cmd.push(function() { googletag.display('dfp-ad-slot-1'); });";
-
-      try {
-        var contents = document.getElementById('dfp-ad-slot-1');
-        contents.appendChild(adScript);
-        
-        
-      } catch (err) {
-
-      }
-		  
-		  
         },2000);
       }
     }
