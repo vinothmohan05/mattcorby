@@ -1,13 +1,14 @@
 <!doctype html>
 <html manifest="application.caching">
+
 <head>
   <meta charset="utf-8">
   <title>The Staves | Official website | thestaves.com</title>
   <meta name="description" content="The Staves | Official site with news, tour dates and more." />
-  <base href="/sites/g/files/g2000007146/themes/site/sandbox">
+  <base href="/sites/g/files/g2000007176/themes/site/sandbox">
 
   <!-- Hammer JS -->
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,18 +17,43 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
-  <script src = "https://apis.google.com/js/platform.js"></script>
-  <script>digitalData={}</script>
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
+  <!--cookie -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://libraries.wmgartistservices.com/cookieplugin/cookie.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/cookieplugin/cookie-light.css"/>
+  <!--  cookie bar related spacing styles  -->		
+		
+  <script>
+    window.onload = function () {
+      const mb = window.matchMedia("(max-width: 767px)");
+      if (mb.matches) {
+      var cookieHeight = document.getElementById('cookieplugin').clientHeight;
+      jQuery('.content').css('margin-bottom', cookieHeight);
+      var cookiePluginEl = document.getElementById('cookieplugin');
+      var cookiePluginClose = document.getElementById('cookiepluginclose');
+
+      cookiePluginClose.onclick = function() {
+      cookiePluginEl.style.display = "none";
+      jQuery('.content').css('margin-bottom', '20px');
+    };
+    }
+    }
+  </script>
+  <script>digitalData = {}</script>
   <script src="//cdn.livefyre.com/Livefyre.js"></script>
-	<script async src = "https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
-<link href="/sites/g/files/g2000007146/themes/site/sandbox/styles.d39132f794ac5c112f38.bundle.css" rel="stylesheet"/></head>
+  <script async src="https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
+<link href="/sites/g/files/g2000007176/themes/site/sandbox/styles.635ed54dd036938ca296.bundle.css" rel="stylesheet"/></head>
+
 <body>
 
   <script>
     // START twttr initialization
-    window.twttr = (function(d, s, id) {
+    window.twttr = (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
+        t = window.twttr || {};
       if (d.getElementById(id)) return t;
       js = d.createElement(s);
       js.id = id;
@@ -35,17 +61,15 @@
       fjs.parentNode.insertBefore(js, fjs);
 
       t._e = [];
-      t.ready = function(f) {
+      t.ready = function (f) {
         t._e.push(f);
       };
 
       return t;
     }(document, "script", "twitter-wjs"));
     // END twttr initialization
-	
-	
   </script>
-  
+
   <div id="fb-root"></div>
   <script>(function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -56,19 +80,20 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
   <app-root class="animation animationNode">
-	    <div class="backgroundLoader">
-	    	<div class="container">
-	  			<div class="content">
-	    			<div class="css-gradients amethysttoemerald"></div>
-	    			<div class="css-gradients sapphiretoemerald"></div>
-				</div>
-			</div>
-		</div>
-	</app-root>
+    <div class="backgroundLoader">
+      <div class="container">
+        <div class="content">
+          <div class="css-gradients amethysttoemerald"></div>
+          <div class="css-gradients amethysttoemerald"></div>
+        </div>
+      </div>
+    </div>
+  </app-root>
 
   <script>
     // adds a tweet
   </script>
 
-<script type="text/javascript" src="/sites/g/files/g2000007146/themes/site/sandbox/inline.22fc8579a6f763726350.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007146/themes/site/sandbox/polyfills.d12c0bc664d635efb974.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007146/themes/site/sandbox/vendor.a682e6a1710ae68f42f8.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007146/themes/site/sandbox/main.922e876fa90d1e371619.bundle.js"></script></body>
+<script type="text/javascript" src="/sites/g/files/g2000007176/themes/site/sandbox/inline.f0bf0a774c04cd39fe0a.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007176/themes/site/sandbox/polyfills.fce17bcd35e6c358a842.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007176/themes/site/sandbox/vendor.485ab4a57ee7ac0782d7.bundle.js"></script><script type="text/javascript" src="/sites/g/files/g2000007176/themes/site/sandbox/main.948e24e723f06326f3aa.bundle.js"></script></body>
+
 </html>
