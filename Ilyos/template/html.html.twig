@@ -152,8 +152,6 @@ cursor:pointer;
 #toasterLightbox a{
 color: #cda866;
 }
-
-   
 </style>
   <!-- cookie js end -->
   
@@ -203,6 +201,37 @@ color: #cda866;
         console.log('url matched news detail, loading script with a 5s timeout');
         setTimeout(function(){
           loadExternalScripts();
+		 
+          var element = document.getElementById("googletagId");
+        
+          if(element != null){
+           element.parentNode.removeChild(element);
+         }
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.setAttribute('id', 'googletagId');
+        js.innerHTML = "googletag.destroySlots();var googletag = googletag || {};googletag.cmd = googletag.cmd || [];googletag.cmd.push(function() {  var mapslot1 = googletag.sizeMapping().addSize([0, 0], [300, 250]).addSize([997, 0], [[300, 250],[300, 600],[300, 1050]]).build();"+ 
+          "var slot1 = googletag.defineSlot('/21664395848/ilyos/news', [[300, 250],[300,600],[300, 1050]], 'dfp-ad-slot-1').defineSizeMapping(mapslot1).addService(googletag.pubads()).setTargeting('pos', '1');"+
+          'googletag.pubads().setTargeting("pageURL", "blog").setTargeting("pagetype", ["article"]);'+
+          'console.log("inside news detail new");googletag.pubads().enableAsyncRendering();googletag.pubads().collapseEmptyDivs(true);'+
+          'googletag.pubads().setCentering(true);googletag.pubads().enableSingleRequest();googletag.enableServices();});';
+
+        document.getElementsByTagName('head')[0].appendChild(js);
+        
+      var adScript = document.createElement('script');
+    
+      adScript.innerHTML = "googletag.cmd.push(function() { googletag.display('dfp-ad-slot-1'); });";
+
+      try {
+        var contents = document.getElementById('dfp-ad-slot-1');
+        contents.appendChild(adScript);
+        
+        
+      } catch (err) {
+
+      }
+		  
+		  
         },2000);
       }
     }
@@ -238,10 +267,10 @@ color: #cda866;
     {{ page }}
     {{ page_bottom }}
 	
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.09050c3b246459b7b78f.bundle.js"></script>
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.c0f1a47017cedb3852a1.bundle.js"></script>	
-	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.5d2ef460cb78308fcbcc.bundle.js"></script>
-    <script type="text/javascript" src="/{{ base_path ~ directory }}/main.c04663d6f7d3119c611f.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.14eefc4e7a1e0ee318ae.bundle.js"></script>
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.993b27c132df8425bf13.bundle.js"></script>	
+	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.649bc21450a6c2a50dad.bundle.js"></script>
+    <script type="text/javascript" src="/{{ base_path ~ directory }}/main.7ad213853d4208e5a135.bundle.js"></script>
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
     <!-- facebook Like Starts 
