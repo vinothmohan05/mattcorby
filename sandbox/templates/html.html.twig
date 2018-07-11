@@ -63,6 +63,26 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
 	
+		
+	<script type="text/javascript" src="https://libraries.wmgartistservices.com/cookieplugin/cookie.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/cookieplugin/cookie-light.css"/>
+	
+	<script>
+    window.onload = function () {
+      const mb = window.matchMedia("(max-width: 767px)");
+      if (mb.matches) {
+		var cookieHeight = document.getElementById('cookieplugin').clientHeight;
+		jQuery('.content').css('margin-bottom', cookieHeight);
+		var cookiePluginEl = document.getElementById('cookieplugin');
+		var cookiePluginClose = document.getElementById('cookiepluginclose');
+		cookiePluginClose.onclick = function() {
+				cookiePluginEl.style.display = "none";
+				jQuery('.content').css('margin-bottom', '20px');
+			};
+		}
+	}
+	</script>
+	
 	{% if _context.is_angular %}
 		
 		{% include "@sandbox/css-library.twig" %}
