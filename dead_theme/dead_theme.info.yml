@@ -1,9 +1,9 @@
-name: deadtheme
+name: dead_theme
 type: theme
 base theme: classy
 description: 'Theme for Greatful dead without Angular'
 package: Custom
-version: '1.0.3'
+version: '1.0.2'
 core: 8.x
 project: 'drupal'
 libraries:
