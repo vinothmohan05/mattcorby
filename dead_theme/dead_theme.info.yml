@@ -3,7 +3,7 @@ type: theme
 base theme: classy
 description: 'Theme for Greatful dead without Angular'
 package: Custom
-version: '1.0.2.1'
+version: '1.0.2.2'
 core: 8.x
 project: 'drupal'
 libraries:
@@ -17,7 +17,7 @@ regions:
   highlighted: Highlighted
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
-  content: 'Content (Angular Block)'
+  content: 'Content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'
