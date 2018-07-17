@@ -3,11 +3,9 @@ type: theme
 base theme: classy
 description: 'Theme for Greatful dead without Angular'
 package: Custom
-version: '1.0.2.3'
+version: '1.0.2.4'
 core: 8.x
 project: 'drupal'
-libraries:
-  - sandbox/extend-settings
 regions:
   header: Header
   primary_menu: 'Primary menu'
