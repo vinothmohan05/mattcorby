@@ -24,6 +24,7 @@ function dead_theme_theme(&$existing, $type, $theme, $path) {
   return $hooks;
 }*/
 
+/*
 function dead_theme_preprocess_html(&$variables) {
 
 	if ($node = \Drupal::request()->attributes->get('node')) {
@@ -64,6 +65,7 @@ function dead_theme_preprocess_html(&$variables) {
 	}
 	
 }
+*/
 
 /**
  * Implements hook_form_FORM_ID_alter().
