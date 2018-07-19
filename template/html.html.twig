@@ -46,20 +46,57 @@
 	<link href="/{{ base_path ~ directory }}/assets/normalize.css" rel="stylesheet" />
 	<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
-	<link href="/{{ base_path ~ directory }}/styles.b0c3bbcd43c07dab011a.bundle.css" rel="stylesheet" />
-	 <script>digitalData={}</script>
-  <script src="http://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
-  <script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
+	<!--link href="/{{ base_path ~ directory }}/styles.b0c3bbcd43c07dab011a.bundle.css" rel="stylesheet" /-->
+	<script>digitalData={}</script>
+	<script src="http://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
+	<script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
+	
+	{% if _context.is_angular %}
+		
+		{% include "@mattcorby/css-library.twig" %}
+		
+		{% if _context.is_staging %}
+		
+		{% include "@mattcorby/staging-code.twig" with {'code': 'css'} %}
+		
+		{% else %}
+		
+		{% include "@mattcorby/production-code.twig" with {'code': 'css'} %}
+		
+		{% endif %}
+		
+    {% endif %}
+	
   </head>
-  <body{{ attributes.addClass(body_classes) }}>   
+  <body{{ attributes.addClass(body_classes) }}>
+  
+	{% include "@mattcorby/inline-javascript.twig" %}
+  
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
+	
+	<!--
     <script type="text/javascript" src="/{{ base_path ~ directory }}/inline.c7fd0f9ea2de7b91ffde.bundle.js"></script>	
 	<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.cc9990d39953304c0b5c.bundle.js"></script>
     <script type="text/javascript" src="/{{ base_path ~ directory }}/main.e0028170e457d1df0fb1.bundle.js"></script>
 	<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.07287acdb098fb55b310.bundle.js"></script>
+	-->
+	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
+  {% if _context.is_angular %}		
+		
+		{% if _context.is_staging %}
+		
+		{% include "@mattcorby/staging-code.twig" with {'code': 'js'} %}
+		
+		{% else %}
+		
+		{% include "@mattcorby/production-code.twig" with {'code': 'js'} %}
+		
+		{% endif %}	
+
+	{% endif %}	
 </html>
