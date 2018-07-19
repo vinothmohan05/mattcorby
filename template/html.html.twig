@@ -54,15 +54,15 @@
 	
 	{% if _context.is_angular %}
 		
-		{% include "@mattcorby/css-library.twig" %}
+		{% include "css-library.twig" %}
 		
 		{% if _context.is_staging %}
 		
-		{% include "@mattcorby/staging-code.twig" with {'code': 'css'} %}
+		{% include "staging-code.twig" with {'code': 'css'} %}
 		
 		{% else %}
 		
-		{% include "@mattcorby/production-code.twig" with {'code': 'css'} %}
+		{% include "production-code.twig" with {'code': 'css'} %}
 		
 		{% endif %}
 		
@@ -71,7 +71,7 @@
   </head>
   <body{{ attributes.addClass(body_classes) }}>
   
-	{% include "@mattcorby/inline-javascript.twig" %}
+	{% include "inline-javascript.twig" %}
   
     {{ page_top }}
     {{ page }}
@@ -90,11 +90,11 @@
 		
 		{% if _context.is_staging %}
 		
-		{% include "@mattcorby/staging-code.twig" with {'code': 'js'} %}
+		{% include "staging-code.twig" with {'code': 'js'} %}
 		
 		{% else %}
 		
-		{% include "@mattcorby/production-code.twig" with {'code': 'js'} %}
+		{% include "production-code.twig" with {'code': 'js'} %}
 		
 		{% endif %}	
 
