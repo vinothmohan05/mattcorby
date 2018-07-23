@@ -1,4 +1,4 @@
 global-css:
   css:
     theme:
-	  style.css: {}	  
+	  css/style.css: {}	  
