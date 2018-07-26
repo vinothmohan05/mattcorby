@@ -533,11 +533,11 @@ body app-root>div.loading:not(.backgroundLoader) {
 
 @font-face {
     font-family: 'wmg-standard-library';
-    src:url(wmg-standard-library.eot);
-    src:url(wmg-standard-library.eot?#iefixp9a2n2) format('embedded-opentype'),
-        url(wmg-standard-library.woff) format('woff'),
-        url(wmg-standard-library.ttf) format('truetype'),
-        url(wmg-standard-library.svg#icomoon) format('svg');
+    src:url(/sites/g/files/g2000007796/themes/site/angular6/wmg-standard-library.eot);
+    src:url(/sites/g/files/g2000007796/themes/site/angular6/wmg-standard-library.eot?#iefixp9a2n2) format('embedded-opentype'),
+        url(/sites/g/files/g2000007796/themes/site/angular6/wmg-standard-library.woff) format('woff'),
+        url(/sites/g/files/g2000007796/themes/site/angular6/wmg-standard-library.ttf) format('truetype'),
+        url(/sites/g/files/g2000007796/themes/site/angular6/wmg-standard-library.svg#icomoon) format('svg');
     font-weight: normal;
     font-style: normal;
 }
