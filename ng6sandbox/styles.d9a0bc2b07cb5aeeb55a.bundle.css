@@ -229,7 +229,7 @@
 }
 
 #turnkeylightbox_Container .lightBoxContent .lightBoxClose.turnKeyClose a {
-    background-image: url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/bg_closebtn.png');
+    background-image: url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/bg_closebtn.png');
     background-repeat: no-repeat;
     display: block;
     height: 17px;
@@ -595,11 +595,11 @@ body app-root>div.loading:not(.backgroundLoader) {
 
 @font-face {
     font-family: 'icomoon';
-    src: url('/sites/g/files/g2000007791/themes/site/sandbox/assets/fonts/icomoon.eot?jf0j5c');
-    src: url('/sites/g/files/g2000007791/themes/site/sandbox/assets/fonts/icomoon.eot?jf0j5c#iefix') format('embedded-opentype'),
-         url('/sites/g/files/g2000007791/themes/site/sandbox/assets/fonts/icomoon.ttf?jf0j5c') format('truetype'),
-         url('/sites/g/files/g2000007791/themes/site/sandbox/assets/fonts/icomoon.woff?jf0j5c') format('woff'), 
-         url('/sites/g/files/g2000007791/themes/site/sandbox/assets/fonts/icomoon.svg?jf0j5c#icomoon') format('svg');
+    src: url('/sites/g/files/g2000006551/themes/site/sandbox/assets/fonts/icomoon.eot?jf0j5c');
+    src: url('/sites/g/files/g2000006551/themes/site/sandbox/assets/fonts/icomoon.eot?jf0j5c#iefix') format('embedded-opentype'),
+         url('/sites/g/files/g2000006551/themes/site/sandbox/assets/fonts/icomoon.ttf?jf0j5c') format('truetype'),
+         url('/sites/g/files/g2000006551/themes/site/sandbox/assets/fonts/icomoon.woff?jf0j5c') format('woff'), 
+         url('/sites/g/files/g2000006551/themes/site/sandbox/assets/fonts/icomoon.svg?jf0j5c#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1210,7 +1210,7 @@ app-social-buttons {
 } */
 
 .heroBlockCon {
-    background: url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/bg_hero.jpg') no-repeat;
+    background: url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/bg_hero.jpg') no-repeat;
     background-size: cover;
     min-height: 700px;
 }
@@ -1367,59 +1367,59 @@ span.social-links {
 **/
 
 .footer-social .fs-fb a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/fb.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/fb.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-fb a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/fb-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/fb-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-ig a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/in.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/in.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-ig a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/in-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/in-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-tw a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/twitter.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/twitter.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-tw a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/twitter-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/twitter-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-sp a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/spotify.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/spotify.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-sp a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/spotify-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/spotify-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-pin a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/pinterest.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/pinterest.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-pin a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/pinterest-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/pinterest-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-yt a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/yt.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/yt.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-yt a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/yt-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/yt-hover.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-vi a {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/vimeo.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/vimeo.svg') no-repeat scroll 0 0;
 }
 
 .footer-social .fs-vi a:hover {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/vimeo-hover.svg') no-repeat scroll 0 0;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/vimeo-hover.svg') no-repeat scroll 0 0;
 }
 
 /* .galleryPage ul.photos li {
@@ -1635,7 +1635,7 @@ body:not(.content-page) div.contextual {
 }
 
 article.embedded-entity>article {
-    background: transparent url('/sites/g/files/g2000007791/themes/site/sandbox/assets/i/loader.gif') no-repeat scroll center center;
+    background: transparent url('/sites/g/files/g2000006551/themes/site/sandbox/assets/i/loader.gif') no-repeat scroll center center;
     background-size: 10%;
 }
 
