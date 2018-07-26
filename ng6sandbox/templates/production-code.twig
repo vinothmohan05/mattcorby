@@ -1,0 +1,10 @@
+{% spaceless %}
+{% if code == "css" %}
+<link href="/{{ base_path ~ directory }}/styles.d9a0bc2b07cb5aeeb55a.bundle.css" rel="stylesheet" />
+{% else %}
+<script type="text/javascript" src="/{{ base_path ~ directory }}/0.89aab832186de9ee55f7.chunk.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.89aab832186de9ee55f7.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/styles.89aab832186de9ee55f7.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/main.89aab832186de9ee55f7.bundle.js"></script>
+{% endif %}
+{% endspaceless %}
