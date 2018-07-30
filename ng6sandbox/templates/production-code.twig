@@ -1,10 +1,11 @@
-{% spaceless %}
+
+    new CopyWebpackPlugin([{% spaceless %}
 {% if code == "css" %}
 <link href="/{{ base_path ~ directory }}/styles.f351994ae4b6ac5ad03f.bundle.css" rel="stylesheet" />
 {% else %}
-<script type="text/javascript" src="/{{ base_path ~ directory }}/1.822944bb262282bce97a.chunk.js"></script>
 <script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.6623a4af6586ee922ed7.bundle.js"></script>
 <script type="text/javascript" src="/{{ base_path ~ directory }}/styles.33bdd32458880cff26c5.bundle.js"></script>
-<script type="text/javascript" src="/{{ base_path ~ directory }}/main.73a499434182186e3472.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.6f6cecd34bd4301fafce.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/main.02c21350411c53137268.bundle.js"></script>
 {% endif %}
 {% endspaceless %}
