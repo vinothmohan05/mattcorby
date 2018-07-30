@@ -3,7 +3,7 @@ type: theme
 base theme: classy
 description: 'Sandbox WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
-version: '8.63.9'
+version: '8.64.0'
 core: 8.x
 project: 'drupal'
 libraries:
@@ -14,9 +14,9 @@ regions:
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-  highlighted: 'Highlighted'
+  highlighted: Highlighted
   featured_top: 'Featured top'
-  breadcrumb: 'Breadcrumb'
+  breadcrumb: Breadcrumb
   content: 'Content (Angular Block)'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
