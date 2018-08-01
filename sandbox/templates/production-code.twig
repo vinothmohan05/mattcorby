@@ -1,0 +1,13 @@
+{% spaceless %}
+{% if code == "css" %}
+<link href="/{{ base_path ~ directory }}/styles.14ea4929e339f5baed26.bundle.css" rel="stylesheet" />
+{% else %}
+<script type="text/javascript" src="/{{ base_path ~ directory }}/inline.f249f827e80a4d00c942.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/polyfills.58397b8fe33bfcb5f647.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/vendor.32f26258b07840d970ed.bundle.js"></script>
+<script type="text/javascript" src="/{{ base_path ~ directory }}/main.f006052b53f028d541b9.bundle.js"></script>
+{% endif %}
+{% endspaceless %}
+
+
+

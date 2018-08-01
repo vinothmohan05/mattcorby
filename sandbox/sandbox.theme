@@ -1,0 +1,147 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\block\Entity\Block;
+use Drupal\user\Entity\Role;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Unicode;
+
+function sandbox_theme(&$existing, $type, $theme, $path) {
+  $hooks = array();  
+  $hooks['user_login_form'] = array(
+      'render element' => 'form',
+      'template' => 'login/user-login-form'
+  );  
+  return $hooks;
+}
+
+function sandbox_preprocess_html(&$variables) {
+
+	if ($node = \Drupal::request()->attributes->get('node')) {
+		$variables['path_info']['args'] = $node->id();
+	}
+	
+	if(isThemeRestricted()){
+		$variables['is_angular'] = "true";
+		if(isStaginguser()){
+			$variables['is_staging'] = "true";
+		}
+	}
+	
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sandbox_form_system_theme_settings_alter(&$form, &$form_state) {
+  
+  $role_objects = Role::loadMultiple();
+  $system_roles = array_combine(array_keys($role_objects), array_map(function($a){ return $a->label();}, $role_objects));
+  
+  $form['theme'] = array(
+    '#type' => 'container',
+    '#tree' => TRUE,
+  );
+  
+  $form['theme']['pages_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Page Restriction Settings'),
+  );
+  
+  $form['theme']['pages_settings']['hidePages'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Pages'),
+    '#default_value' => theme_get_setting('hidePages'),
+    '#description' => t('Specify pages by using their paths. Enter one path per line. The "*" character is a wildcard. An example path is /user/* for every user page. <front> is the front page. Theme has not <b>visible</b> for these pages'),
+  );
+ 
+  $form['theme']['secondary_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Stage Theme Settings'),
+  );
+  
+  $form['theme']['secondary_menu']['enableStaging'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Staging'),
+    '#default_value' => theme_get_setting('enableStaging'),
+    '#description' => t('Enable staging theme for progressive development.'),
+  );
+  
+	$form['theme']['secondary_menu']['themeRoles'] = [
+	  '#type' => 'select',
+	  '#multiple' => TRUE,
+	  '#size' => 8,
+	  '#title' => t('Select Staging User Role'),
+	  '#options' => $system_roles,
+	  '#default_value' => theme_get_setting('themeRoles'),
+	];
+  
+	// Add your submission handler to the form.
+	$form['#submit'][] = 'sandbox_form_system_theme_settings_alter_submit';
+
+}
+
+function sandbox_form_system_theme_settings_alter_submit($form, FormStateInterface $form_state) {  
+  
+  $config = \Drupal::configFactory()->getEditable('sandbox.theme.' . $theme);
+  
+  $hidePages = $form_state->getValue("theme")['pages_settings']['hidePages'];
+  $form_state->setValue('hidePages', $hidePages);
+  
+  $themeRoles = $form_state->getValue("theme")['secondary_menu']['themeRoles'];
+  $form_state->setValue('themeRoles', $themeRoles);
+  
+  $enableStaging = $form_state->getValue("theme")['secondary_menu']['enableStaging'];
+  $form_state->setValue('enableStaging', $enableStaging);
+  
+  $values = $form_state->getValues();
+}
+
+function isThemeRestricted () {
+
+	$page_match = TRUE;
+
+	$hidePages = theme_get_setting('hidePages');
+	
+	$pages = Unicode::strtolower($hidePages);
+	
+	// Array ( [0] => /user/* [1] => /admin/* [2] => /rest/* )
+	/*
+	$paths = preg_split("(\r\n?|\n)", $hidePages);
+	foreach ($paths as $key => $path) {
+	  $paths[$key] = $path === '<front>' ? $path : '/' . ltrim($path, '/');
+	}*/	
+	
+	$current_path = HTML::escape(\Drupal::service('path.current')->getPath());
+    $path_alias = Unicode::strtolower(\Drupal::service('path.alias_manager')->getAliasByPath($current_path));
+	
+	$path_matches = \Drupal::service('path.matcher');
+    $page_match = $path_matches->matchPath($path_alias, $pages) || (($current_path != $path_alias) && $path_matches->matchPath($current_path, $pages));
+	
+	return !$page_match;
+}
+
+function isStaginguser () {
+
+	$enableStaging = theme_get_setting('enableStaging');
+	$themeRoles = theme_get_setting('themeRoles');
+	$themeRoles = array_keys($themeRoles);
+	$user = \Drupal::currentUser()->getRoles();
+	
+	return ($enableStaging == 1 ) && ( array_intersect($themeRoles, $user) );
+}
+
+function sandbox_variable_info($options) {
+	$variables['user_login'] = array(
+		'title' => t('Custom page title', array(), $options),
+		'description' => t('You can enter a value that will displayed at the title of the webpage e.g. "Page not found".'),
+		'default' => t('Custom page title', array(), $options)
+	  );
+  return $variables;  
+}
