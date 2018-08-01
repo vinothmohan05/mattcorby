@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the classy theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+function dead_theme_theme(&$existing, $type, $theme, $path) {
+  $hooks = array();  
+  $hooks['user_login_form'] = array(
+      'render element' => 'form',
+      'template' => 'login/user-login-form'
+  );  
+  return $hooks;
+}
+
+function dead_theme_preprocess_html(&$variables) {
+	if ($node = \Drupal::request()->attributes->get('node')) {
+		$variables['path_info']['args'] = $node->id();
+	}
+}
+
+function dead_theme_variable_info($options) {
+	$variables['user_login'] = array(
+		'title' => t('Custom page title', array(), $options),
+		'description' => t('You can enter a value that will displayed at the title of the webpage e.g. "Page not found".'),
+		'default' => t('Custom page title', array(), $options)
+	  );
+  return $variables;  
+}
