@@ -68,7 +68,7 @@
 	<link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/cookieplugin/cookie-light.css"/>
 	
 	<script>
-    jQuery(document).ready(function() {
+    window.onload = function () {
 				var cookieHeight = document.getElementById('cookieplugin').clientHeight;
 				jQuery('.footerPanel').css('margin-bottom', cookieHeight);
 				var cookiePluginEl = document.getElementById('cookieplugin');
@@ -77,7 +77,7 @@
 				cookiePluginEl.style.display = "none";
 				jQuery('.footerPanel').css('margin-bottom', '20px');
 			};
-			});
+			}
 	</script>
 	
 	{% if _context.is_angular %}
