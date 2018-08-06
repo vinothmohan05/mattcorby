@@ -68,19 +68,16 @@
 	<link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/cookieplugin/cookie-light.css"/>
 	
 	<script>
-    window.onload = function () {
-      const mb = window.matchMedia("(max-width: 767px)");
-      if (mb.matches) {
-		var cookieHeight = document.getElementById('cookieplugin').clientHeight;
-		jQuery('.content').css('margin-bottom', cookieHeight);
-		var cookiePluginEl = document.getElementById('cookieplugin');
-		var cookiePluginClose = document.getElementById('cookiepluginclose');
-		cookiePluginClose.onclick = function() {
+    jQuery(document).ready(function() {
+				var cookieHeight = document.getElementById('cookieplugin').clientHeight;
+				jQuery('.footerPanel').css('margin-bottom', cookieHeight);
+				var cookiePluginEl = document.getElementById('cookieplugin');
+				var cookiePluginClose = document.getElementById('cookiepluginclose');
+				cookiePluginClose.onclick = function() {
 				cookiePluginEl.style.display = "none";
-				jQuery('.content').css('margin-bottom', '20px');
+				jQuery('.footerPanel').css('margin-bottom', '20px');
 			};
-		}
-	}
+			});
 	</script>
 	
 	{% if _context.is_angular %}
