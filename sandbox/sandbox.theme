@@ -32,7 +32,14 @@ function sandbox_preprocess_html(&$variables) {
 		if(isStaginguser()){
 			$variables['is_staging'] = "true";
 		}
-	}
+  }
+  
+  if($variables['page']['#type'] == 'page'){
+    $url = explode('/',$_SERVER['REQUEST_URI']);
+    if($url[1] == 'livefyre'){
+      $variables['#attached']['library'][] = 'sandbox/livefyre';
+    }
+  }
 	
 }
 
