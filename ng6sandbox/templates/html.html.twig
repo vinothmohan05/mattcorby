@@ -88,7 +88,15 @@
     {{ page_bottom }}
 	
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-	
+			<script>
+				var gdprSiteConfig = {
+					label: 'ATL', //(Accepted values - "WBR" or "ATL" or "AA" or "WMN" or "WMI" or "RR" or "FBR", or "WMG")
+					pp_lightbox: false, //(Accepted values - true or false)
+					cookie_banner: true, //(Accepted values - true or false)
+					theme: 'light' // (Accepted values - 'light' or 'dark')
+				}
+			</script>
+	<script type="text/javascript" src="https://libraries.wmgartistservices.com/gdpr/script_v1.js "></script>
   </body>
 	{% if _context.is_angular %}		
 		
@@ -103,5 +111,6 @@
 		{% endif %}	
 
 	{% endif %}	
+
 </html>
 {% endspaceless %}
