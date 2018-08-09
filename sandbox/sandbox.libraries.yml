@@ -9,4 +9,4 @@ extend-settings:
 livefyre:
   header: true
   js:
-    https://cdn.livefyre.com/Livefyre.js: {external:true,minified:true}
+    https://cdn.livefyre.com/Livefyre.js : {external:true,minified:true}
