@@ -36,7 +36,7 @@ function sandbox_preprocess_html(&$variables) {
   
   if($variables['page']['#type'] == 'page'){
     $url = explode('/',$_SERVER['REQUEST_URI']);
-    if($url[2] == 'livefyre'){
+    if($url[1] == 'livefyre'){
       $variables['#attached']['library'][] = 'sandbox/livefyre';
     }
   }
