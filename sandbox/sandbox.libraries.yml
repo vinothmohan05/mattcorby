@@ -5,6 +5,7 @@ extend-settings:
   dependencies:
     - core/jquery
     - core/drupal
+
 livefyre:
   header: true
   js:
