@@ -530,7 +530,7 @@ app-home{
 
 /* Footer Stuff */
 .footer-block{
-	background: #b8b7bf;
+	background: #000000;
 	font-size:14px;	
 	text-align: center;
   padding: 43px 10px;
@@ -557,14 +557,14 @@ span.social-links {
 .footer-block .copyright-bar{
 	margin-top: 35px;
 	color: #1b214e;
-	letter-spacing: 3px;
+	/*letter-spacing: 3px;*/
   font-weight: 300;
 }
 .footer-block .copy{
 	margin-bottom: 18px;
 }
 .footer-block .footer-links a{
-	color: #1b214e;
+	color: #ffffff;
 	white-space: nowrap;
 }
 /**
@@ -824,3 +824,8 @@ article.embedded-entity > article {
 .home .merchPanel {
     display: none !important;
 }
+
+
+/* .mailinglistPanel a.editmslink {
+  display: none;
+} */
