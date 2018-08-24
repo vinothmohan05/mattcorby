@@ -91,7 +91,7 @@
             }
           }
           & .termsWrapper a.terms {
-            text-transform: uppercase;
+            text-transform: lowercase;
             text-decoration: underline;
           }
         }
