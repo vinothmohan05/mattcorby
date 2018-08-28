@@ -47,63 +47,13 @@
 	<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
 	<link href="/{{ base_path ~ directory }}/styles.2e40bf0a579f2d97f594.bundle.css" rel="stylesheet" />
-	<script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox.js"></script>
+	
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102096592-1"></script>
-  <link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
+  
   
   <!-- cookie js --> 
   <script>
-var toaster= function () {
-   
-    function injectDOM() {
-        document.write('<div style="display:none" id="toasterLightbox"><span class="toasterclose" id="toasterlbclose"></span>This site uses cookies. By clicking accept, you are agreeing to our use of cookies. We and our partners operate globally and use cookies for purposes such as analytics, personalization, site functionality and serving ads. Find out more <a href="https://www.wminewmedia.com/cookies/" target="_blank">here.</a><span class="accept-button"><a>Accept</a></span></div>');
-    }
 
-    function init() {
-        injectDOM();
-        var lightBoxElToaster = document.getElementById('toasterLightbox');
-		var lightBoxElCloseToaster = document.getElementById('toasterlbclose');		
-		var list = document.querySelectorAll(".toasterclose,.accept-button a");
-
-		var debug = getQueryVariable("debug");
-			
-        if((localStorage.getItem('toasterUpdate') != 'shown')||(debug == 'true')) {
-            lightBoxElToaster.style.display = "block";
-	
-        }
-   
-
-		for(i=0; i< list.length; i++){			
-		    list[i].onclick = function () {		  
-			    if(debug !="true"){
-                    localStorage.setItem('toasterUpdate','shown');
-			    }
-                lightBoxElToaster.style.display = "none";
-			    document.getElementsByClassName('overlay')[0].style.display = "none";
-		    }
-		 }		
-    }
-
-    function getQueryVariable(variable){
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-            var pair = vars[i].split("=");
-            if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
-    }
-   
-    function getCookie(name) {
-        var value = "; " + document.cookie;
-        var parts = value.split("; " + name + "=");
-        if (parts.length == 2) return parts.pop().split(";").shift();
-    }
-    return {
-        init: init
-    }
-}();
-toaster.init();
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 window.dataLayer = window.dataLayer || [];
