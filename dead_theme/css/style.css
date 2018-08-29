@@ -3,13 +3,18 @@
 }
 #block-tourarchiveblockhtmlstylingsandscripts {
 	max-width: 794px;
-	margin: 0 auto;
+	margin: 35px auto 8px;
 }
 .tourArchiveSorting {
 	width: 244px;
 }
 .tourArchiveSearching {
 	width: calc(100% - 262px);
+	font-size: 0px;
+	float: right;
+}
+.borderflower {
+	display: block;
 }
 .borderflower .left {
 	position: absolute;
@@ -53,7 +58,7 @@
 	display: none;
 	position: absolute;
 	top: 40px;
-	right: 0;
+	right: 9px;
 	background: #00101D;
 	padding: 8px 0 4px;
 	width: 158px;
@@ -67,6 +72,7 @@
 	display: block;
 	padding-bottom: 5px;
 	color: #F6F3F0;
+	letter-spacing: 1px;
 }
 .tourArchiveSorting .selectedOrder {
 	font-size: 15px;
@@ -80,6 +86,7 @@
 	line-height: 43px;
 	cursor: pointer;
 	position: relative;
+	letter-spacing: 1px;
 }
 .tourArchiveSorting.open .selectedOrder .fa-angle-up, .tourArchiveSorting .selectedOrder .fa-angle-down {
 	display: block;
@@ -95,12 +102,10 @@
 	display: inline-block;
 	vertical-align: top;
 }
-.tourArchiveSearching {
-	font-size: 0px;
-}
+
 .tourArchiveSearching .searchGo {
 	width: 73px;
-	margin-left: 1px;
+	margin-left: 3px;
 	font-size: 14px;
 	color: #FFFEFD;
 	height: 44px;
@@ -117,10 +122,11 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc2859', endColorstr='#ff2942', GradientType=1 );
 }
 .tourArchiveSearching input.search_box {
-	width: calc(100% - 74px);
+	width: calc(100% - 78px);
 	border: 0px;
 	text-transform: uppercase;
 	color: #FFFEFD;
+	-webkit-text-fill-color: #FFFEFD;
 	font-size: 15px;
 	text-align: center;
 	letter-spacing: 1px;
@@ -176,13 +182,19 @@
 	display: block;
 	border: 1px solid #23272A;
 	border-radius: 4px;
-	margin: 0;
+	margin: 0 0 9px 0;
 	padding: 9px 9px 9px 13px;
 	font-size: 0;
 }
-.tourArchiveStylings .views-field-field-show-date-1, .tourArchiveStylings .views-field-field-venue, .tourArchiveStylings .views-field-field-setlist, .tourArchiveStylings .views-field-nothing, .tourArchiveStylings .views-field-nothing .tags {
+.tourArchiveStylings .item-list ul {
+	margin: 0;
+}
+.tourArchiveStylings .views-field-nothing .tags.laminatetag span, .tourArchiveStylings .views-field-field-setlist span, .tourArchiveStylings .views-field-field-show-date-1, .tourArchiveStylings .views-field-field-venue, .tourArchiveStylings .views-field-field-setlist, .tourArchiveStylings .views-field-nothing, .tourArchiveStylings .views-field-view-node, .tourArchiveStylings .views-field-nothing .tags {
 	display: inline-block;
 	vertical-align: middle;
+}
+.tourArchiveStylings .views-field-field-setlist span.disabled {
+	opacity: 0.6;
 }
 .tourArchiveStylings .views-field-field-show-date-1 .month_date, .tourArchiveStylings .views-field-field-show-date-1 .year {
 	display: block;
@@ -196,12 +208,148 @@
 	font-size: 24px;
 	color: #01DEC7;
 }
+.tourArchiveStylings .views-field-field-show-date-1 {
+	width: 64px;
+}
 .tourArchiveStylings .views-field-field-venue {
 	font-size: 21px;
 	color: #FF334c;
-	padding: 0 0 0 21px;
+	padding: 0 0 0 2px;
+	width: 207px;
+}
+.tourArchiveStylings .views-field-nothing .tags .laminateimg, .tourArchiveStylings .views-field-field-setlist span.setlistImage {
+	width: 12px;
+	padding-right: 9px;
+}
+.tourArchiveStylings .views-field-nothing .tags .archiveicons {
+	padding-right: 9px;
 }
 .tourArchiveStylings .views-field-field-setlist, .tourArchiveStylings .views-field-nothing .tags {
+	padding-right: 23px
+}
+.tourArchiveStylings .views-field-field-setlist, .tourArchiveStylings .views-field-nothing .tags a {
 	font-size: 14px;
 	color: #272727;
+}
+.tourArchiveStylings .views-field-view-node a {
+	font-size: 13px;
+	color: #FFFEFD;
+	background: none #00111D;
+	width: 97px;
+	height: 41px;
+	display: block;
+	line-height: 41px;
+	text-align: center;
+	border-radius: 4px;
+}
+.view-footer a.viewAll {
+	font-family: "mr-eaves-modern", sans-serif;
+	text-transform: uppercase;
+	color: #FFFEFD;
+	font-size: 15px;
+	font-weight: bold;
+	background: none #00111D;
+	display: block;
+	text-align: center;
+	width: 219px;
+	height: 40px;
+	margin: 44px auto 42px;
+	line-height: 40px;
+	border-radius: 4px;
+}
+@media only screen and (max-width: 767px) {
+	.heading .newsheading {
+		font-size: 30px;
+	}
+	.tourArchiveStylings .views-field-nothing, .tourArchiveStylings .views-field-field-setlist, .tourArchiveStylings .views-field-nothing .tags, .heading img, .borderflower {
+		display: none;
+	}
+	.tourArchiveSearching {
+		float: none;
+		margin-bottom: 16px;
+	}
+	.tourArchiveSearching, .tourArchiveSorting {
+		display: block;
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	.tourArchiveSorting {
+		width: 230px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.tourArchiveSorting .selectedOrder, .tourArchiveSorting .sortLabel, .tourArchiveSearching input.search_box {
+		font-size: 12px;
+	}
+	.tourArchiveSorting.open .selectedOrder .fa-angle-up, .tourArchiveSorting .selectedOrder .fa-angle-down {
+		top: 3px;
+		font-size: 20px;
+	}
+	.tourArchiveSorting .selectedOrder {
+		background: #0072C3;
+		height: 26px;
+		width: 170px;
+		line-height: 26px;
+	}
+	.tourArchiveSorting .sortLabel {
+		padding-right: 12px;
+	}
+	.tourArchiveSorting .sortlist {
+		right: 1px;
+		padding: 9px 0 4px;
+		background: #0072C3;
+		width: 170px;
+		top: 19px;
+	}
+	.tourArchiveSearching input.search_box {
+		width: calc(100% - 55px);
+	}
+	.tourArchiveSorting .sortlist a {
+		font-size: 12px;
+	}
+	.tourArchiveSearching .searchGo {
+		font-size: 14px;
+		width: 52px;
+	}
+	#block-tourarchiveblockhtmlstylingsandscripts {
+		margin: 18px auto 16px;
+	}
+	.tourArchiveStylings {
+		margin: 0 16px;
+	}
+	.tourArchiveStylings li {
+		padding: 0px 0px 0px 13px;
+		margin: 0 0 5px 0;
+		font-size: 0;
+	}
+	.tourArchiveStylings .views-field-field-show-date-1{
+		/*width: 61px;*/
+		width: 22%;
+	}
+	.tourArchiveStylings .views-field-field-show-date-1 .year {
+		font-size: 18px;		
+	}
+	.tourArchiveStylings .views-field-field-venue {
+		font-size: 16px;
+		/*width: 128px;*/
+		width: 49%;
+		padding: 0;
+	}
+	.tourArchiveStylings .views-field-view-node {
+		width: 29%;
+	}
+	.tourArchiveStylings .views-field-view-node a {
+		font-size: 11px;
+		width: 100%;
+		border-radius: 4px;
+		border-top-right-radius: 1px;
+		border-bottom-right-radius: 1px;
+	}
+	.view-footer a.viewAll {
+		width: calc(100% - 32px);
+		font-size: 12px;
+		box-sizing: border-box;
+		margin: 14px auto 26px;
+	}
 }
