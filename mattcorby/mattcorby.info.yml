@@ -1,7 +1,7 @@
-name: TheRhythm
+name: Maniacs
 type: theme
 description: This is the Angular Based theme in Drupal Lightning
 package: Custom
-version: '3.0'
+version: '3.1'
 core: '8.x'
 project: 'drupal'
