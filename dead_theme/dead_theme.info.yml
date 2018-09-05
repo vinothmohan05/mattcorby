@@ -3,7 +3,7 @@ type: theme
 base theme: classy
 description: 'Theme for Greatful dead without Angular'
 package: Custom
-version: '1.0.5.4'
+version: '1.0.5.5'
 core: 8.x
 regions:
   header: 'Header'    
