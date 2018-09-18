@@ -52,12 +52,57 @@
     <script type="text/javascript" src="https://libraries.wmgartistservices.com/songkick/widget_min.js" ></script>
     <script type="text/javascript" src="https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js" ></script>
     <script type="text/javascript" src="https://libraries.wmgartistservices.com/mailing-list.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />	
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script type="text/javascript">
+		var digitalData = {
+			settings : {
+				reportSuites : "WMG,WMGRHI,WMGrhinobrand,WMGgratefuldead.rhino.com"
+			},
+			page : {
+				pageInfo : {
+					pageName : "Grateful Dead:Homepage",
+					server : "Grateful Dead:Site",
+					platform : "Drupal 8:Starter Site"
+				},
+				category : {
+					primaryCategory : "Grateful Dead:Homepage",
+					pageType : "Homepage"
+				}
+			},
+			content : {
+				artist:"Grateful Dead",				
+				label:"Rhino"
+			}
+		};
+
+		var _callOmnitureClick = function(str, page) {
+			var o = "Grateful Dead:Homepage";
+
+			if (page) {
+				o += ":" + page;
+			}
+
+			o += ":" + str;
+
+			// Omniture Call
+			var s = s_gi("WMG,WMGRHI,WMGrhinobrand,WMGgratefuldead.rhino.com");
+			s_dtm.linkTrackVars = "prop1,eVar4";
+			s_dtm.prop1 = "Grateful Dead";
+			s_dtm.eVar4 = "Grateful Dead";
+			s_dtm.tl(this, "o", o);
+		};
+
+	</script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+	
+	<script type='text/javascript'>
+		//DTM Footer Code
+		_satellite.pageBottom();
+	</script>
   </body>
 </html>
