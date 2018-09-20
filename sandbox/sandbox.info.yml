@@ -4,7 +4,7 @@ base theme: classy
 description: 'Sandbox WMG, This is the Angular Based theme in Drupal Lightning.'
 package: Custom
 
-version: '4.4'
+version: '4.5'
 
 core: 8.x
 project: 'drupal'
