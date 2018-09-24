@@ -1,7 +1,8 @@
 var videoTrackingFlag = true;
 var i = 0;
+
 function videoTracking() {		
-	if (document.getElementById('homepageVideoCarousel') != null && videoTrackingFlag) {		
+	if (document.getElementById('homepageVideoCarousel') != null && videoTrackingFlag && typeof(onPlayerStateChange)== "function") {		
 		var videoIframes = {};
 		var thumbnailElements = document.querySelectorAll('#homepageVideoCarousel .thumbnailImage');
 
