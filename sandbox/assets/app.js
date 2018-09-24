@@ -1,5 +1,6 @@
 var videoTrackingFlag = true;
-function videoTracking() {
+var i = 0;
+function videoTracking() {		
 	if (document.getElementById('homepageVideoCarousel') != null && videoTrackingFlag) {		
 		var videoIframes = {};
 		var thumbnailElements = document.querySelectorAll('#homepageVideoCarousel .thumbnailImage');
@@ -22,7 +23,7 @@ function videoTracking() {
 				console.info(event.target.parentElement);
 				event.target.parentElement.style.display = "none";
 				event.target.parentElement.parentElement.children[1].style.display = "block";
-				var currentPlayerID = event.target.parentElement.children[1].innerHTML;
+				var currentPlayerID = event.target.parentElement.children[2].innerHTML;
 
 				// var videoIframekeys = Object.keys(videoIframes)
 				// console.info(videoIframekeys);
@@ -42,6 +43,4 @@ function videoTracking() {
 	}
 }
 
-function onYouTubeIframeAPIReady() {
-	videoTracking();
-}
+videoTracking();
