@@ -251,6 +251,7 @@ img {
     width: 100%;
     height: auto;
 }
+
 /*reset library styles*/
 .col {
   padding-right: 1rem;
@@ -822,4 +823,72 @@ article.embedded-entity > article {
 }
 .home .merchPanel {
     display: none !important;
+}
+
+/* body.tourPage{
+  background: olive !important;
+}
+
+
+.tourPage .tour-list-block .date {
+  font-size: 26px;
+}
+/* .tourPage .tour-list-block .grid.venue {
+  display: block;
+  float:left;
+} 
+.tourPage .tour-list-block .grid.venue .place{
+  font-size:49.42px;
+  /* display: block;
+  float:left; 
+}
+.tourPage .tour-list-block .grid.venue .location{
+  font-size:97.69px;
+   display: block;
+  /*float:left; 
+} */
+
+
+
+
+.tourPage h2{
+  display: none;
+}
+
+.tourPage .tour-list-block .date {
+  font-size: 26px;
+  float:right;
+  @media (--mq-tablet-narrower){
+      font-size:3vw;
+  }
+}
+.tourPage .tour-list-block .grid.venue {
+  display: block;
+  float:left;
+  text-transform: uppercase;
+}
+.tourPage .tour-list-block .grid.venue .place{
+  font-size:40px;
+  display: block;
+  width:100%;
+  max-width:100%;
+  @media (--mq-tablet-narrower){
+      font-size:4vw;
+  }
+}
+.tourPage .tour-list-block .grid.venue .location{
+  font-size:50px;
+   display: block;
+   width:100%;
+   max-width:100%;
+   @media (--mq-tablet-narrower){
+      font-size:4vw;
+  }
+}
+.tourPage .tour-list-block li {
+  padding: 60px 0;
+  border-bottom: 2px solid #fff;
+  @media (--mq-tablet-narrower){
+      padding:30px 0;
+  }
 }
