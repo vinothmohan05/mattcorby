@@ -26,13 +26,20 @@ function sandbox_preprocess_html(&$variables) {
 	if ($node = \Drupal::request()->attributes->get('node')) {
 		$variables['path_info']['args'] = $node->id();
 	}
-	
-	if(isThemeRestricted()){
-		$variables['is_angular'] = "true";
-		if(isStaginguser()){
-			$variables['is_staging'] = "true";
-		}
-	}
+  $status = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
+  if ($status && ($status->getStatusCode() == 404 || $status->getStatusCode() == 403)) {
+    $variables['is_misc'] = 'true';
+  }else{
+    $variables['is_misc'] = 'false';
+  }
+	if($variables['is_misc'] == 'false'){
+    if(isThemeRestricted()){
+      $variables['is_angular'] = "true";
+      if(isStaginguser()){
+        $variables['is_staging'] = "true";
+      }
+    }
+  }
 	
 }
 
