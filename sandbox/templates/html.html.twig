@@ -98,9 +98,11 @@
     {{ page }}
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
      <script>
-     	jQuery('body.homev2 .leftinner .preOrderNow a.ng-tns-c2-1').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
-     	jQuery('body.homev2 .leftinner a.interactive').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
-     	jQuery('body.splash-pagev2 .leftinner a.interactive').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
+     	jQuery(window).load(function(){
+	     	jQuery('body.homev2 .leftinner .preOrderNow a.ng-tns-c2-1').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
+	     	jQuery('body.homev2 .leftinner a.interactive').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
+	     	jQuery('body.splash-pagev2 .leftinner a.interactive').attr('href','https://kimbra.lnk.to/PHReimaginedPreorder');
+     });
      </script>
   
     {{ page_bottom }}	
