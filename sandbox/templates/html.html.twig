@@ -118,11 +118,11 @@ function showbox(){
 function lightboxTrack(){
     console.info('lightboxTrack');  
     //s_dtm.clearVars();                                                                                    
-    digitalData.page.pageInfo.pageName = "Houndmouth:This Party Single:Lightbox",
+    digitalData.page.pageInfo.pageName = "Houndmouth:California Voodoo EP Available Now:Lightbox",
     digitalData.page.pageInfo.server = "Houndmouth:Site",
     digitalData.page.pageInfo.platform = "Drupal 8",
     digitalData.page.category.primaryCategory = "Houndmouth:Lightbox",
-    digitalData.page.category.pageType = "Lightbox:Single Release",
+    digitalData.page.category.pageType = "Lightbox:Album Release",
     _satellite.track("page view");
 }
 /*function hideLB(){
@@ -544,7 +544,7 @@ a.listen:hover:before, a.watch:hover:before{
 	function lightboxTrackNew() {
 		console.info('lightbox Admin Track');
 		s_dtm.clearVars();
-		digitalData.page.pageInfo.pageName = "Houndmouth:Golden Age Available Now:Lightbox", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Lightbox", digitalData.page.category.pageType = "Lightbox:Pre-order", _satellite.track("page view");
+		digitalData.page.pageInfo.pageName = "Houndmouth:California Voodoo EP Available Now:Lightbox", digitalData.page.pageInfo.server = "Houndmouth:Site", digitalData.page.pageInfo.platform = "Drupal 8", digitalData.page.category.primaryCategory = "Houndmouth:Lightbox", digitalData.page.category.pageType = "Lightbox:Album Release", _satellite.track("page view");
 	}
 	function hideLB() {
 		showLightBox = false;
@@ -553,7 +553,7 @@ a.listen:hover:before, a.watch:hover:before{
 		//document.getElementsByClassName('lightbox-wrapper')[1].style.display = 'none';
 		//document.getElementsByClassName("lightbox-overlay")[1].style.display = 'none';
 		document.body.classList.remove("lightboxshow");
-		CallOmniture("Houndmouth:Golden Age Available Now:Lightbox:Close Lightbox Click");
+		CallOmniture("Houndmouth:California Voodoo EP Available Now:Lightbox:Close Lightbox Click");
 		console.log("lightbox block close");
 		if (ytplayer != undefined) {
 			ytplayer.playVideo();
@@ -574,16 +574,16 @@ a.listen:hover:before, a.watch:hover:before{
 		s.tl(this, 'o', text);
 	}*/
 	function albumimageomniture() {
-		CallOmniture("Houndmouth:Golden Age Available Now:Lightbox:Album Image Click");
+		CallOmniture("Houndmouth:California Voodoo EP Available Now:Lightbox:Album Image Linkfire Click");
 	}
 	function listenomniture() {
-		CallOmniture("Houndmouth:Golden Age Available Now:Lightbox:Listen Text Click");
+		CallOmniture("Houndmouth:California Voodoo EP Available Now:Lightbox:Listen Text Linkfire Click");
 	}
 	function preorderomniture() {
-		CallOmniture("Houndmouth:Golden Age Available Now:Lightbox:Pre-order Text Click");
+		CallOmniture("Houndmouth:California Voodoo EP Available Now:Lightbox:Pre-order Text Click");
 	}
 	function watchvideoomniture() {
-		CallOmniture("Houndmouth:Golden Age Available Now:Lightbox:Watch Video Click");
+		CallOmniture("Houndmouth:California Voodoo EP Available Now:Lightbox:Lightbox:Watch Video Click");
 	}
 	window.onload = function() {
 		if (document.body.classList.contains('home')) {
@@ -614,24 +614,24 @@ a.listen:hover:before, a.watch:hover:before{
 			<a class="" onclick="hideLB()">X</a>
 		</div>
 		<div class="temp" style="display:none;">
-			<h2>The New Album <br>"Golden Age" Out Now</h2>
+			<h2>The New EP <br>"California Voodoo" Out&nbsp;Now</h2>
 		</div>
 		<div class="leftWrapper">
-			<a href="https://wbr.ec/golden-age" target="_blank" onclick="albumimageomniture()"> <img class="desk" src="/sites/g/files/g2000007451/files/artimage.png" alt=""> <img class="mob" src="/sites/g/files/g2000007451/files/artimagemob.png" alt="" style="display:none;"> </a>
+			<a href="https://wbr.ec/golden-age" target="_blank" onclick="albumimageomniture()"> <img class="desk" src="/sites/g/files/g2000007451/files/California%20Voodoo%20Cover.png" alt=""> <img class="mob" src="/sites/g/files/g2000007451/files/California%20Voodoo%20Cover.png" alt="" style="display:none;"> </a>
 		</div>
 		<div class="rightWrapper">
-			<h2 class="hide" style="text-align: center">The New Album <br>"Golden Age" Out Now</h2>
+			<h2 class="hide" style="text-align: center">The New EP <br>"California Voodoo"  Out&nbsp;Now</h2>
 			<span class="desk"></span>
-			<h2>Listen to <a href="https://wbr.ec/thisparty" target="_blank" onclick="listenomniture()">"This Party"</a>
+			<h2>Listen to <a href="https://wbr.ec/thisparty" target="_blank" onclick="listenomniture()">"California Voodoo"</a>
 			<br>
                 and <a href="https://wbr.lnk.to/HMModernLove" target="_blank" onclick="listenomniture()">"Modern Love"</a> Now.</h2>
 			<span class="mob" style="display:none;"></span>
-			<a class="watch" href="https://WBR.lnk.to/GoldenAge" target="_blank" onclick="listenomniture()">
+			<a class="watch" href="https://wbr.ec/CaliforniaVoodoo" target="_blank" onclick="listenomniture()">
 			<p>
-				listen to <span class="party">"Golden Age"</span>
+				listen to <span class="party">"California Voodoo"</span>
 			</p></a>
-			<a class="watch official" href="https://youtu.be/SmAj2qW18YU" target="_blank"  onclick="watchvideoomniture()"><p>
-				watch  <span class="party">"Golden Age"</span> official music video</p></a>			
+			<!--<a class="watch official" href="https://youtu.be/SmAj2qW18YU" target="_blank"  onclick="watchvideoomniture()"><p>
+				watch  <span class="party">"Golden Age"</span> official music video</p></a>-->			
 		</div>
 	</div>
 </div>
@@ -641,7 +641,7 @@ a.listen:hover:before, a.watch:hover:before{
 		text-transform: none;
 	}
 	.lightbox-wrapper.admin {
-		background: rgba(180, 58, 62 ,0.9);
+		background: rgba(219,172,201,0.8);
 	}
 	.lightbox-wrapper.admin .rightWrapper h2 {
 		color: #fff;
@@ -656,16 +656,16 @@ a.listen:hover:before, a.watch:hover:before{
         border-bottom: 1px solid #fff;
 	}
 	.lightbox-wrapper.admin span.party {
-		color: #f9c2a2;
+		color: #222128;
 	}
 	.lightbox-wrapper.admin .closewrapper a {
-		color: #f9c2a2;
+		color: #222128;
 	}
 	body.user-logged-in .contextual-region {
 		position: static;
 	}
 	.lightbox-wrapper.admin .listen:before, .lightbox-wrapper.admin .watch:before {
-		background: url(/sites/g/files/g2000007451/files/playicon1.png);
+		background: url(/sites/g/files/g2000007451/files/playicon1_new.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		margin-right: 5px;
@@ -778,8 +778,9 @@ a.listen:hover:before, a.watch:hover:before{
 			padding-top: 14px;
 		}
 		.lightbox-wrapper.admin .leftWrapper {
-			width: 100%;
+			width: 56%;
 			margin: 0 auto;
+			display: block;
 		}
 		.lightbox-wrapper.admin .rightWrapper h2.hide {
 			display: none;
