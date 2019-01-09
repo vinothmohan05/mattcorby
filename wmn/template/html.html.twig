@@ -51,7 +51,69 @@
 	<link href="/{{ base_path ~ directory }}/assets/normalize.css?cache=v2" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
 	<link href="/{{ base_path ~ directory }}/assets/style.css?cache=v2.2.3" rel="stylesheet" />
-	 <script>digitalData={}</script>
+	 <script>var digitalData = {
+		settings : {
+			reportSuites : "wmg, wmgwbrn, wmgwbrwbrnashvillecom"
+		},
+		page : {
+			pageInfo : {
+				pageName : "Warner Music Nashville:Homepage",
+				server : "Warner Music Nashville:Site",
+				platform : "Drupal 8"
+			},
+			category : {
+				primaryCategory : "Warner Music Nashville:Homepage",
+				pageType : "Homepage"
+			}
+		},
+		content : {
+			artist : "Warner Music Nashville"
+			label : "Warner Music Nashville",
+		},
+                user:{				
+	                profile:{			
+		                       profileID:"<USER ID (IF LOGGED IN)>"		
+	               }			
+                }
+	};
+	
+	var string = window.location.pathname.replace(/^\/|\/$/g, '');
+	
+	var pageMapping = {
+        "studios" : "Studios",
+        "wmnsweeps":"CMA Fest 2019 Flyaway Sweeps:Landing",
+		"videosplash-crs2017" : "Warner Music Monday",
+		"crs2017" : "WMNashville:Warner Music Monday Video:Landing"
+    };
+	var pageNameMapping = {
+        "studios" : "Studios:Landing",
+        "wmnsweeps":"Landing Page:Sweepstakes",
+		"videosplash-crs2017" : "Basic page",
+		"crs2017" : "Basic page"
+    };
+	
+	digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + pageMapping[string];
+    digitalData.page.category.pageType = pageNameMapping[string];
+	
+	switch (string) {
+		case "studios" : 
+			digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];
+			break;
+		case "wmnsweeps" : 
+			digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];
+			break;
+		case "videosplash-crs2017" : 
+			digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];			
+			break;
+		case "crs2017" : 
+			digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];
+			
+		break;
+		default:
+			digitalData.page.category.primaryCategory = digitalData.content.artist + ":" + pageMapping[string];
+			break;
+	}
+	</script>
 	  <script async src="//assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>
   
 
