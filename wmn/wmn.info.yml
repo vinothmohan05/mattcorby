@@ -2,6 +2,6 @@ name: WMN
 type: theme
 description: Warner Music Nashville Official Site theme
 package: Custom
-version: '2.8'
+version: '2.9'
 core: '8.x'
 project: 'drupal'
