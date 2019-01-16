@@ -3931,10 +3931,10 @@ body:not(.loading):not(.home) .loaderAnimation-logo {
          -webkit-transform: translate(-50% , -2%) scale(1.65);
         position: absolute;
         /* opacity: 0; */
-         transition: 1s ease ;
+         /* transition: 1s ease ;
          -ms-transition: 1s ease ;
          -moz-transition: 1s ease ;
-        -webkit-transition: 1s ease ;
+        -webkit-transition: 1s ease ; */
         /* position: fixed; */
         z-index:1;
         max-width:38vh;
