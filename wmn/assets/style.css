@@ -1973,7 +1973,7 @@ h3.featuredArtistname  {
  .herovideoBlock span.sitelogo {
         width: 100%;
         height: calc(100% - 153px);
-        background: url(i/site-logo.png) no-repeat;
+        background: url(/sites/g/files/g2000007136/themes/site/wmn/assets/i/site-logo.png) no-repeat;
         background-size:100%;
         display: block;
         background-position: center center;
@@ -3907,7 +3907,7 @@ body:not(.loading):not(.home) .loaderAnimation-logo {
         left: 50%;
         height: 100vh;
         top: 0;
-        background: url(i/site-logo.png) no-repeat;
+        background: url(/sites/g/files/g2000007136/themes/site/wmn/assets/i/site-logo.png) no-repeat;
         background-size: 100%;
         background-position: center center;
         opacity: 1;
