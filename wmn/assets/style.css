@@ -2252,7 +2252,9 @@ ul.featuredArtist h2.block-title {
 
     }
 }
-
+.mailing-list-outer-wrapper{
+    -webkit-text-size-adjust: none;
+}
 /* tablet resolution */
 
 @media only screen and (min-width:768px ) and (max-width: 1023px){
