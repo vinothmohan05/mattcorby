@@ -7,5 +7,5 @@ regions:
   content: Content
   footer: Footer
 libraries:
-  - wmg/global-styling
-  - wmg/global-scripts
+  - wmg_acapop/global-styling
+  - wmg_acapop/global-scripts
