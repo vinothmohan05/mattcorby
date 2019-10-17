@@ -31,9 +31,6 @@ global-scripts:
     https://libraries.wmgartistservices.com/songkick/widget_min.js:
         type: external
         minified: true
-    https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js:
-        type: external
-        minified: true
     https://libraries.wmgartistservices.com/mailing-list.js:
         type: external
         minified: true
