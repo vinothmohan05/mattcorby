@@ -31,8 +31,3 @@ global-scripts:
     https://libraries.wmgartistservices.com/songkick/widget_min.js:
         type: external
         minified: true
-    https://libraries.wmgartistservices.com/mailing-list.js:
-        type: external
-        minified: true
-        attributes:
-            charset: utf-8
