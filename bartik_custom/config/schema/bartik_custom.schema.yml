@@ -1,5 +1,0 @@
-# Schema for the configuration files of the Batrik Custom theme.
-
-bartik_custom.settings:
-  type: theme_settings
-  label: 'Batrik Custom settings'
