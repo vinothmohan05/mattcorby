@@ -47,7 +47,27 @@
 	<link href="/{{ base_path ~ directory }}/css/global-style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.0.8/gridlex.min.css">
 <link href="/{{ base_path ~ directory }}/styles.fb940325ef48245c9820.bundle.css" rel="stylesheet" />
-	 <script>digitalData={}</script>
+	 <script>digitalData = {
+    settings: {
+        reportSuites: "wmg,wmgau,wmgmaniacsau"
+    },
+    content: {
+        artist: "Maniacs",
+        label: "Warner Music International",
+        sublabel: "Warner Music Australia"
+    },
+    page: {
+        pageInfo: {
+            pageName: '',
+            server: "",
+            platform: "Drupal 8"
+        },
+        category: {
+            primaryCategory: "",
+            pageType: ""
+        }
+    }
+}</script>
   <!--<script src="http://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js"></script>-->
   <script type="text/javascript" src="https://libraries.wmgartistservices.com/pplightbox/lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="https://libraries.wmgartistservices.com/pplightbox/lightbox-light.css"/>
@@ -64,14 +84,7 @@
   </script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-      <div id="fb-root"></div>
-	<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>  
+    
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
